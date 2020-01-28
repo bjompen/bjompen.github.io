@@ -1,4 +1,3 @@
 - other links
-  - [Bjompen @ github](http://github.com/bjompen/
-  - [Bjompen @ Twitter](http://twitter.com/bjompen/
-  
+  - [![Bjompen at GitHub](./images/mark.png "Bjompen at GitHub")](http://github.com/bjompen/)
+  - [![Bjompen at Twitter](./images/twitter.png "Bjompen at Twitter")](http://twitter.com/bjompen/)
