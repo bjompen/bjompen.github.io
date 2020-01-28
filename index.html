@@ -12,7 +12,15 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-        loadSidebar: true
+        alias: {
+            '/.*/_navbar.md': '/_navbar.md',
+        },
+        loadNavbar: true,
+        mergeNavbar: true,
+        loadSidebar: true,
+        repo: 'https://github.com/bjompen/',
+        auto2top: true,
+        name: 'bjompen'
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
