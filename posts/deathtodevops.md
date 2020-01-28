@@ -1,11 +1,9 @@
 # DevOps without dev?
 
-```Quote
-The world is changed.
-I feel it in the water.
-I feel it in the earth.
-I smell it in the air.
-```
+> The world is changed.
+<br>I feel it in the water.
+<br>I feel it in the earth.
+<br>I smell it in the air.
 
 For quite a while I have spent most of my reading time, most of my work time, and a lot of my spare time, evangelising the DevOps movement. I see it as one of the biggest revolutions in work place structure I have ever heard of, but I am often met with scepsis.
 
@@ -20,12 +18,10 @@ Lots of it is also, just like with all work ideologies, stolen from other strate
 
 ## But lets start with some background...
 
-```Quote
-The Road goes ever on and on
-Down from the door where it began.
-Now far ahead the Road has gone,
-And I must follow, if I can..
-```
+> The Road goes ever on and on
+<br>Down from the door where it began.
+<br>Now far ahead the Road has gone,
+<br>And I must follow, if I can..
 
 I started my workdays in tech many years ago, working my way from support, to config, to backoffice, to systems engineer and so on. Quite a standard journey for a techie I would say.
 
@@ -47,13 +43,9 @@ Yes, but the gap between the DevOps movement and traditional IT is still huge.
 
 ## Back to the DevOps Movement
 
-```Quote
-One Ring to bring them all..
-```
+> One Ring to bring them all..
 
-```Quote
-DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools.
-```
+> DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools.
 
 In my social media feeds lately i have seen terms like "DevSecOps" (or is it "SecDevOps"?), and "DevSalesOps" (Yes, really).
 
@@ -61,9 +53,7 @@ The problem with this, I believe, is that both security and Sales should have be
 
 ## People, Process and Products - In that order!
 
-```Quote
-Three Rings for the Elven-kings under the sky
-```
+> Three Rings for the Elven-kings under the sky
 
 * DevOps' first focus is about the people. Enable your people to be the best they can, grow as much as they can, and trust them with the knowledge of what's best for their part of work.
 
@@ -83,9 +73,7 @@ But it should not be the focus of DevOps. It's a consequence of it.
 
 ## How to talk to your dog about DevOps
 
-```Quote
-I want to be a healer, and love all things that grow and are not barren.
-```
+> I want to be a healer, and love all things that grow and are not barren.
 
 Before I get into what could sound a lot like pure negativity I would like to mention some ways I believe even the simplest IT department can use the principles of DevOps to become a fantastic place.
 
@@ -119,11 +107,9 @@ Before I get into what could sound a lot like pure negativity I would like to me
 
 ## The death (and rebirth) of DevOps
 
-```Quote
-PIPPIN: I didn't think it would end this way.
+> PIPPIN: I didn't think it would end this way.
+<br>GANDALF: End? No, the journey doesn't end here. Death is just another path, one that we all must take. The grey rain-curtain of this world rolls back, and all turns to silver glass, and then you see it.
 
-GANDALF: End? No, the journey doesn't end here. Death is just another path, one that we all must take. The grey rain-curtain of this world rolls back, and all turns to silver glass, and then you see it.
-```
 
 So where does this take us? I believe one of the main problems of DevOps adoption lies within the name itself.
 If I dont work with Dev, I dont need DevOps, right? Theres only Ops left, and that's what we're already doing, right?
