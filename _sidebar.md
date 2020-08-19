@@ -1,3 +1,17 @@
 - Blogposts
 
-  - [Death to DevOps](posts/deathtodevops.md "Death to DevOps!")
+  - [28 Jan 2020 - Death to DevOps](posts/deathtodevops.md "Death to DevOps!")
+
+- Old stuff, from some old page. Things here may have bad links, missing pictures, and so on.
+
+  - [09 Aug 2018 - Summer project – PowerShell IoT – pt 3. Needles and Pins.](posts/old/iotpt3.md "Summer project – PowerShell IoT – pt 3. Needles and Pins.")
+  - [31 Jul 2018 - Summer project - PowerShell IoT - pt 2. Installation and prereqs.](posts/old/iotpt2.md "Summer project - PowerShell IoT - pt 2. Installation and prereqs.")
+  - [31 Jul 2018 - Summer project - PowerShell IoT - pt 1. The prequel.](posts/old/iotpt1.md "Summer project - PowerShell IoT - pt 1. The prequel.")
+  - [30 Apr 2018 - New work, new life, new blogpost.](posts/old/newlife.md "New work, new life, new blogpost.")
+  - [29 Aug 2017 - ping? pong!](posts/old/pingpong.md "ping? pong!")
+  - [24 Aug 2017 - Silence is golden.](posts/old/silence.md "Silence is golden.")
+  - [19 Jun 2017 - Note to self; select-string.](posts/old/selectstring.md "Note to self; select-string.")
+  - [08 Jun 2017 - And now for something completely different..](posts/old/somethingdifferent.md "And now for something completely different..")
+  - [07 Jun 2017 - What's in that string?](posts/old/whatsinthatstring.md "What's in that string?")
+  - [22 May 2017 - The wonderful world of DateTime.](posts/old/datetime.md "The wonderful world of DateTime.")
+  - [15 May 2017 - PSConf 2017](posts/old/psconf2017.md "PSConf 2017")
