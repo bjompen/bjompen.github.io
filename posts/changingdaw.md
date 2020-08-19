@@ -102,7 +102,7 @@ So, did I achieve my goals? other impressions?
     - [Manda Audio PowerDrumkit2](https://www.powerdrumkit.com/), free and awesome drum kit.
     - IR's from [Soundwoofer](https://soundwoofer.com/Library/Index) and [Kalthallen](https://shop.kalthallen.de/?page_id=423) (Hey Markus, we used to hang in the Katatonia forums!)
 
-So in the end, instead of a new Mac and a new big audio card, I paid about 200$ for everything, and is up and running again.
+So in the end, instead of a new Mac and a new big audio card, I paid about 300$ for everything, and is up and running again.
 
 I still have a lot to test and try (like daisy chaining the M-Audio), but I'm really looking forward to trying and testing this new setup.
 
