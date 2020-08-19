@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [19 Aug 2020 - How I switched DAW and lived to tell the tale.](posts/changingdaw.md "How I switched DAW and lived to tell the tale.")
   - [28 Jan 2020 - Death to DevOps](posts/deathtodevops.md "Death to DevOps!")
 
 - Old stuff, from some old page. Things here may have bad links, missing pictures, and so on.
