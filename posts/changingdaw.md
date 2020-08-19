@@ -8,7 +8,7 @@ See, I have a [M-Audio ProFire 2626](https://m-audio.com/products/view/profire-2
 - enough inputs to record a drum set (8 mics)
 - small(ish) enough to hide in a wardrobe when not used.
 
-I've recorded a number of demos on it, with various results. [Some of them released](www.tautriadelta.com), some not.
+I've recorded a number of demos on it, with various results. [Some of them released](http://www.tautriadelta.com), some not.
 
 ### But...
 
