@@ -7,74 +7,124 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
-			<title>24 Aug 2020 - F12. Your friendly neighborhood gossip person</title>
-			<link>https://www.bjompen.com/posts/f12.md</link>
-			<description>F12. Your friendly neighborhood gossip person</description>
+			<title>F12. Your friendly neighborhood gossip person</title>
+			<link>https://www.bjompen.com/#/posts/f12.md</link>
+			<description># F12 - Your friendly neighborhood gossip person
+
+*I'm bored. There was a long time since I had any new project to work on, and I can't figure out wh...</description>
+			<pubDate>24 Aug 2020</pubDate>
 		</item> 
 		<item>
-			<title>19 Aug 2020 - How I switched DAW and lived to tell the tale.</title>
-			<link>https://www.bjompen.com/posts/changingdaw.md</link>
-			<description>How I switched DAW and lived to tell the tale.</description>
+			<title>How I switched DAW and lived to tell the tale.</title>
+			<link>https://www.bjompen.com/#/posts/changingdaw.md</link>
+			<description># So, I recently switched DAW
+
+I have been a long time user of Logic (9) on my MacBook, and really like it, but there was trouble growing in studio b...</description>
+			<pubDate>19 Aug 2020</pubDate>
 		</item> 
 		<item>
-			<title>28 Jan 2020 - Death to DevOps</title>
-			<link>https://www.bjompen.com/posts/deathtodevops.md</link>
-			<description>Death to DevOps!</description>
+			<title>Death to DevOps</title>
+			<link>https://www.bjompen.com/#/posts/deathtodevops.md</link>
+			<description># DevOps without dev?
+
+> The world is changed.
+<br>I feel it in the water.
+<br>I feel it in the earth.
+<br>I smell it in the air.
+
+For quite a w...</description>
+			<pubDate>28 Jan 2020</pubDate>
 		</item> 
 		<item>
-			<title>09 Aug 2018 - Summer project – PowerShell IoT – pt 3. Needles and Pins.</title>
-			<link>https://www.bjompen.com/posts/old/iotpt3.md</link>
-			<description>Summer project – PowerShell IoT – pt 3. Needles and Pins.</description>
+			<title>Summer project – PowerShell IoT – pt 3. Needles and Pins.</title>
+			<link>https://www.bjompen.com/#/posts/old/iotpt3.md</link>
+			<description>Disclaimer: Pictures and GIFs are crap here. Deal with it.
+
+So, I finaly got my PI working as expected, and was ready to start testing stuff.
+Lookin...</description>
+			<pubDate>09 Aug 2018</pubDate>
 		</item> 
 		<item>
-			<title>31 Jul 2018 - Summer project - PowerShell IoT - pt 2. Installation and prereqs.</title>
-			<link>https://www.bjompen.com/posts/old/iotpt2.md</link>
-			<description>Summer project - PowerShell IoT - pt 2. Installation and prereqs.</description>
+			<title>pt 2. Installation and prereqs.</title>
+			<link>https://www.bjompen.com/#/posts/old/iotpt2.md</link>
+			<description>Disclaimer: This is just what I did. some of this might actually be unneccesary, irrelevant or just plain weird. If so, let me know, and Ill try and up...</description>
+			<pubDate>31 Jul 2018 - Summer project - PowerShell IoT</pubDate>
 		</item> 
 		<item>
-			<title>31 Jul 2018 - Summer project - PowerShell IoT - pt 1. The prequel.</title>
-			<link>https://www.bjompen.com/posts/old/iotpt1.md</link>
-			<description>Summer project - PowerShell IoT - pt 1. The prequel.</description>
+			<title>pt 1. The prequel.</title>
+			<link>https://www.bjompen.com/#/posts/old/iotpt1.md</link>
+			<description>Disclaimer, This is jut a prequel, no code is here. If you are just curious about how to get going, read chapter two directly.
+
+Summertime is upon us...</description>
+			<pubDate>31 Jul 2018 - Summer project - PowerShell IoT</pubDate>
 		</item> 
 		<item>
-			<title>30 Apr 2018 - New work, new life, new blogpost.</title>
-			<link>https://www.bjompen.com/posts/old/newlife.md</link>
-			<description>New work, new life, new blogpost.</description>
+			<title>New work, new life, new blogpost.</title>
+			<link>https://www.bjompen.com/#/posts/old/newlife.md</link>
+			<description>Well.. as expected, my plan for once a week went south.
+But I finally had something to write about, so here goes.
+
+I was recently tasked with writin...</description>
+			<pubDate>30 Apr 2018</pubDate>
 		</item> 
 		<item>
-			<title>29 Aug 2017 - ping? pong!</title>
-			<link>https://www.bjompen.com/posts/old/pingpong.md</link>
-			<description>ping? pong!</description>
+			<title>ping? pong!</title>
+			<link>https://www.bjompen.com/#/posts/old/pingpong.md</link>
+			<description>Good morning internet!
+
+If you don't already do this, 
+you should start reading <a href="https://www.reddit.com/r/PowerShell">/r/PowerShell on Reddi...</description>
+			<pubDate>29 Aug 2017</pubDate>
 		</item> 
 		<item>
-			<title>24 Aug 2017 - Silence is golden.</title>
-			<link>https://www.bjompen.com/posts/old/silence.md</link>
-			<description>Silence is golden.</description>
+			<title>Silence is golden.</title>
+			<link>https://www.bjompen.com/#/posts/old/silence.md</link>
+			<description><a href="https://www.youtube.com/watch?v=EAxL-SFF32k">I bet you thought this was going to be a different song.</a>
+
+So, I have been of grid for a whi...</description>
+			<pubDate>24 Aug 2017</pubDate>
 		</item> 
 		<item>
-			<title>19 Jun 2017 - Note to self; select-string.</title>
-			<link>https://www.bjompen.com/posts/old/selectstring.md</link>
-			<description>Note to self; select-string.</description>
+			<title>Note to self; select-string.</title>
+			<link>https://www.bjompen.com/#/posts/old/selectstring.md</link>
+			<description>So.. another Monday shorty.
+I promised a while ago to make a longer one soon,
+and I will.. Big news ahead, but I am not ready to tell you yet.
+
+Any...</description>
+			<pubDate>19 Jun 2017</pubDate>
 		</item> 
 		<item>
-			<title>08 Jun 2017 - And now for something completely different..</title>
-			<link>https://www.bjompen.com/posts/old/somethingdifferent.md</link>
-			<description>And now for something completely different..</description>
+			<title>And now for something completely different..</title>
+			<link>https://www.bjompen.com/#/posts/old/somethingdifferent.md</link>
+			<description>So, I named this blog 'A blog about things and stuff.'
+It´s time for something other than powershell.
+
+Apart from Code I do have a lot of interests,...</description>
+			<pubDate>08 Jun 2017</pubDate>
 		</item> 
 		<item>
-			<title>07 Jun 2017 - What's in that string?</title>
-			<link>https://www.bjompen.com/posts/old/whatsinthatstring.md</link>
-			<description>What's in that string?</description>
+			<title>What's in that string?</title>
+			<link>https://www.bjompen.com/#/posts/old/whatsinthatstring.md</link>
+			<description>Happy Monday!
+
+Yes, I know, it´s Wednesday, but yesterday was <a href="https://en.wikipedia.org/wiki/National_Day_of_Sweden">the national day of Swed...</description>
+			<pubDate>07 Jun 2017</pubDate>
 		</item> 
 		<item>
-			<title>22 May 2017 - The wonderful world of DateTime.</title>
-			<link>https://www.bjompen.com/posts/old/datetime.md</link>
-			<description>The wonderful world of DateTime.</description>
+			<title>The wonderful world of DateTime.</title>
+			<link>https://www.bjompen.com/#/posts/old/datetime.md</link>
+			<description>Regularity is a good thing, and much needed when starting a blog,
+so I was hoping to, at least for now, post one thing every week at least.
+I have so...</description>
+			<pubDate>22 May 2017</pubDate>
 		</item> 
 		<item>
-			<title>15 May 2017 - PSConf 2017</title>
-			<link>https://www.bjompen.com/posts/old/psconf2017.md</link>
-			<description>PSConf 2017</description>
+			<title>PSConf 2017</title>
+			<link>https://www.bjompen.com/#/posts/old/psconf2017.md</link>
+			<description>On my way home from one more visit to Hannover, and the PSConfEU conference.</strong>
+Tobias has once again superseded my expectations of a well-organ...</description>
+			<pubDate>15 May 2017</pubDate>
 		</item>
 	</channel>
 

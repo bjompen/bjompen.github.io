@@ -24,14 +24,17 @@ function Build-Rss {
 
     $Res = $Header
     $Res += $SideBar | ForEach-Object {
-        $Null = $_ -match '\[(?<Title>.*)]\((?<Link>.+\.md)\s+"(?<description>[^"]*)'
+        $Null = $_ -match '\[(?<pubdate>.*)\s+-\s+(?<Title>.*)]\((?<Link>.+\.md)\s+"(?<description>[^"]*)'
         $Title = $Matches.Title
         $Link = $Matches.Link
-        $Description = $Matches.Description
+        $PubDate = $Matches.pubdate
+        $Description = "$(-join (Get-Content $PSScriptRoot\..\$Link -Raw)[0..150])..."
+        
 "`n`t`t<item>
 `t`t`t<title>$Title</title>
-`t`t`t<link>https://www.bjompen.com/$Link</link>
+`t`t`t<link>https://www.bjompen.com/#/$Link</link>
 `t`t`t<description>$Description</description>
+`t`t`t<pubDate>$PubDate</pubDate>
 `t`t</item>"
     }
     $Res += $Footer
