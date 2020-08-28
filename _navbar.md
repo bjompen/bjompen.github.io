@@ -1,3 +1,4 @@
 - other links
   - [![Bjompen at GitHub](./images/mark.png "Bjompen at GitHub")](http://github.com/bjompen/)
   - [![Bjompen at Twitter](./images/twitter.png "Bjompen at Twitter")](http://twitter.com/bjompen/)
+  - [![Bjompen as a service (RSS)](./images/baas.png "Bjompen as a service (RSS)")](http://bjompen.com/rss/rss.xml)
