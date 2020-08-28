@@ -28,7 +28,7 @@ function Build-Rss {
         $Title = $Matches.Title
         $Link = $Matches.Link
         $PubDate = $Matches.pubdate
-        $Description = "$(-join (Get-Content $PSScriptRoot\..\$Link -Raw)[0..150])..."
+        $Description = "$(-join (Get-Content $PSScriptRoot\..\$Link -Raw)[0..150])..." -replace '<[^>]*>',''
         
 "`n`t`t<item>
 `t`t`t<title>$Title</title>
