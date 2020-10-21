@@ -20,7 +20,7 @@ Enter **Secret Management**
 
 ## So what is Secret Management?
 
-Well, The short answer is best taken from the [Secret Management GitHub page](https://github.com/bjompen/SecretManagement)
+Well, The short answer is best taken from the [Secret Management GitHub page](https://github.com/PowerShell/SecretManagement)
 
 > PowerShell SecretManagement module provides a convenient way for a user to store and retrieve secrets.
 
