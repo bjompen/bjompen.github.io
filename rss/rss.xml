@@ -7,6 +7,18 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Shh... Let me tell you a secret</title>
+			<link>https://www.bjompen.com/#/posts/secretmanagement.md</link>
+			<description># Shh... Let me tell you a secret
+
+## I think it's time to talk some PowerShell again
+
+I haven't done so in quite some time.
+
+That doesn't mean I...</description>
+			<pubDate>21 Oct 2020</pubDate>
+		</item> 
+		<item>
 			<title>F12. Your friendly neighborhood gossip person</title>
 			<link>https://www.bjompen.com/#/posts/f12.md</link>
 			<description># F12 - Your friendly neighborhood gossip person
