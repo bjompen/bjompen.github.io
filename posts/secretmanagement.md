@@ -113,7 +113,7 @@ Unfortunately, there is no documentation in the help file that says what tests a
 ### Adding and reading secrets
 
 ```PowerShell
-> Set-Secret -Name 'MyTestSecret' -Secret 'SuperSecretString'
+Set-Secret -Name 'MyTestSecret' -Secret 'SuperSecretString'
 ```
 
 The first thing noticed is that even though the vault registration worked, We still need to supply a password for the creation of our vault storage.
@@ -194,9 +194,9 @@ BOOM!
 
 So I have two out of my three wishes done and figured out.
 
-A couple of things to note now is that we will always have a Default vault, and it is possible to have the same secret name in multiple vaults, so:
+Worth noting is that we will always have a Default vault, and it is possible to have the same secret name in multiple vaults, so:
 
-### All commands run without the parameter '-Vault' set will be placed or read in your default Vault
+*All commands run without the parameter '-Vault' set will be placed or read in your default Vault*
 
 ```PowerShell
 PS> Get-SecretInfo
@@ -212,11 +212,7 @@ PS> Get-Secret -Name 'MyAzureSecret' -Vault 'AKVault' -AsPlainText
 SuperSecretAzureMessage
 ```
 
-### Of course there are more commands to explore
-
-But I'm going to leave some work to you, the reader..
-
-### But did we actually solve the secrets problem
+## But did we actually solve the secrets problem
 
 Well, yes and no.
 
@@ -239,6 +235,9 @@ I may come of as negative here complaining about error messages, but that is abs
 Finally, some shout outs to the involved people. You are all amazing!
 
 [Paul Higinbotham](https://twitter.com/pshdev)
+
 [Steve Lee](https://twitter.com/Steve_MSFT)
+
 [Sydney Smith](https://twitter.com/sydneysmithreal)
+
 [Justin Grote](https://twitter.com/JustinWGrote)
