@@ -22,7 +22,7 @@ The result of adding both "Authentication" using Azure, and a Managed Identity, 
 
 for your managed identity, you have to use powershell or az CLI.
 
-Bonus thank you to [Simon Wåhlin](www.twitter.com/SimonWahlin) for helping me learn this, and writing the code.
+Bonus thank you to [Simon Wåhlin](http://www.twitter.com/SimonWahlin) for helping me learn this, and writing the code.
 
 [You can find it all here](https://blog.simonw.se/azure-functions-and-azure-ad-authorization/)
 
