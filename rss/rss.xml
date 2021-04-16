@@ -7,6 +7,16 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>A quick note on Azure functions</title>
+			<link>https://www.bjompen.com/#/posts/azfuncidentity.md</link>
+			<description># A quick note on Azure functions
+
+## I will not rant today. Promise!
+
+No, really, I tend to write way longer than I plan to do, but this time I ju...</description>
+			<pubDate>04 Apr 2021</pubDate>
+		</item> 
+		<item>
 			<title>On unary operators</title>
 			<link>https://www.bjompen.com/#/posts/unary.md</link>
 			<description># On unary operators
