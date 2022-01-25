@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [25 JAn 2022 - PSConfEU 2022 - I'm presenting!](posts/psconfpresenter.md "PSConfEU 2022 - I'm presenting!")
   - [04 Apr 2021 - A quick note on Azure functions](posts/azfuncidentity.md "A quick note on Azure functions")
   - [30 Mar 2021 - On unary operators](posts/unary.md "On unary operators")
   - [21 Oct 2020 - Shh... Let me tell you a secret](posts/secretmanagement.md "Shh... Let me tell you a secret")

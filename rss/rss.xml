@@ -7,6 +7,16 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>I'm presenting!</title>
+			<link>https://www.bjompen.com/#/posts/psconfpresenter.md</link>
+			<description># PSConfEU - I'm presenting!
+
+Last couple of years have been exhausting. We all know it. Corona has taken a toll on everything and everyone.
+
+Me, I...</description>
+			<pubDate>25 JAn 2022 - PSConfEU 2022</pubDate>
+		</item> 
+		<item>
 			<title>A quick note on Azure functions</title>
 			<link>https://www.bjompen.com/#/posts/azfuncidentity.md</link>
 			<description># A quick note on Azure functions
