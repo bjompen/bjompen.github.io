@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The phantom DevOps </title>
+			<link>https://www.bjompen.com/#/posts/azdo.createaccount.md</link>
+			<description># Azure DevOps part I - The phantom DevOps
+
+For a long time now I've been wanting to write more, but haven't really known what about. Most topics see...</description>
+			<pubDate>27 Jan 2022 - Azure DevOps part I</pubDate>
+		</item> 
+		<item>
 			<title>I'm presenting!</title>
 			<link>https://www.bjompen.com/#/posts/psconfpresenter.md</link>
 			<description># PSConfEU - I'm presenting!
@@ -14,7 +22,7 @@
 Last couple of years have been exhausting. We all know it. Corona has taken a toll on everything and everyone.
 
 Me, I...</description>
-			<pubDate>25 JAn 2022 - PSConfEU 2022</pubDate>
+			<pubDate>25 Jan 2022 - PSConfEU 2022</pubDate>
 		</item> 
 		<item>
 			<title>A quick note on Azure functions</title>
