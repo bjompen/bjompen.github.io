@@ -7,6 +7,17 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Hold my decompiler</title>
+			<link>https://www.bjompen.com/#/posts/holdmydecompiler.md</link>
+			<description># Set-AzDoRepoPermission
+
+There is a saying at [imgur](imgur.com): finished results first..
+So if you're only curious in the result:
+
+[**Here it i...</description>
+			<pubDate>29 Jan 2022 - Set-AzDoRepoPermission</pubDate>
+		</item> 
+		<item>
 			<title>The phantom DevOps </title>
 			<link>https://www.bjompen.com/#/posts/azdo.createaccount.md</link>
 			<description># Azure DevOps part I - The phantom DevOps
