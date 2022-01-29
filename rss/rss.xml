@@ -7,6 +7,18 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>A lesson in powershell behaviour.</title>
+			<link>https://www.bjompen.com/#/posts/variables.md</link>
+			<description># Variables - A lesson in powershell behaviour.
+
+WTH IS GOING ON?! TWO POSTS IN A DAY? 
+
+After a year of silence, 4 posts in a week?
+
+Well this i...</description>
+			<pubDate>29 Jan 2022 - Variables</pubDate>
+		</item> 
+		<item>
 			<title>Hold my decompiler</title>
 			<link>https://www.bjompen.com/#/posts/holdmydecompiler.md</link>
 			<description># Set-AzDoRepoPermission
