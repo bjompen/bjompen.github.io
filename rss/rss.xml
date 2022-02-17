@@ -7,12 +7,20 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
-			<title>Attack of the Git Clones </title>
+			<title>Bjompen Potter and the hair pulling case of the missing commits</title>
+			<link>https://www.bjompen.com/#/posts/missingcommits.md</link>
+			<description># Bjompen Potter and the hair pulling case of the missing commits
+
+In my research around Azure DevOps I recentyl stumbled on an interesting problem....</description>
+			<pubDate>17 Feb 2022</pubDate>
+		</item> 
+		<item>
+			<title>Attack of the Git Clones</title>
 			<link>https://www.bjompen.com/#/posts/azdo.gitrepos.md</link>
 			<description># Azure DevOps part II - Attack of the Git Clones
 
 After a brief intervention of getting my brand spanking new Outlook account blocked I'm back for a...</description>
-			<pubDate>27 Jan 2022 - Azure DevOps part II</pubDate>
+			<pubDate>09 Feb 2022 - Azure DevOps part II</pubDate>
 		</item> 
 		<item>
 			<title>A lesson in powershell behaviour.</title>
@@ -38,7 +46,7 @@ So if you're only curious in the result:
 			<pubDate>29 Jan 2022 - Set-AzDoRepoPermission</pubDate>
 		</item> 
 		<item>
-			<title>The phantom DevOps </title>
+			<title>The phantom DevOps</title>
 			<link>https://www.bjompen.com/#/posts/azdo.createaccount.md</link>
 			<description># Azure DevOps part I - The phantom DevOps
 

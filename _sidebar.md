@@ -1,9 +1,10 @@
 - Blogposts
 
-  - [27 Jan 2022 - Azure DevOps part II - Attack of the Git Clones ](posts/azdo.gitrepos.md "Azure DevOps part II - Attack of the Git Clones")
+  - [17 Feb 2022 - Bjompen Potter and the hair pulling case of the missing commits](posts/missingcommits.md "Bjompen Potter and the hair pulling case of the missing commits")
+  - [09 Feb 2022 - Azure DevOps part II - Attack of the Git Clones](posts/azdo.gitrepos.md "Azure DevOps part II - Attack of the Git Clones")
   - [29 Jan 2022 - Variables - A lesson in powershell behaviour.](posts/variables.md "Variables - A lesson in powershell behaviour.")
   - [29 Jan 2022 - Set-AzDoRepoPermission - Hold my decompiler](posts/holdmydecompiler.md "Set-AzDoRepoPermission - Hold my decompiler")
-  - [27 Jan 2022 - Azure DevOps part I - The phantom DevOps ](posts/azdo.createaccount.md "Azure DevOps part I - The phantom DevOps")
+  - [27 Jan 2022 - Azure DevOps part I - The phantom DevOps](posts/azdo.createaccount.md "Azure DevOps part I - The phantom DevOps")
   - [25 Jan 2022 - PSConfEU 2022 - I'm presenting!](posts/psconfpresenter.md "PSConfEU 2022 - I'm presenting!")
   - [04 Apr 2021 - A quick note on Azure functions](posts/azfuncidentity.md "A quick note on Azure functions")
   - [30 Mar 2021 - On unary operators](posts/unary.md "On unary operators")
