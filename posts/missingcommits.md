@@ -130,3 +130,10 @@ But untill anyone can explain this, I guess I'm manually chigeddy-checking my co
 ## Shoutout
 
 Huge thank you and shoutout to my absolutely brilliant colleagues [Jens Nilsson](https://twitter.com/nilssonjensa) and [Sebastian Claesson](https://twitter.com/SebClaesson) for figuring this out. I couldn't have done it without you. Literally, since Jensa wa the one who found it 😁
+
+## Update:
+
+After compairing even more pipelines there seems to be cases where commits do show up even though no checkout value is set.
+I'm not sure why this is, but from the examples I've seen so far they all use different, non standard, triggers.
+I'm still working on the concept that it does have something with the Git checkouts to do,
+but the plot still thickens!
