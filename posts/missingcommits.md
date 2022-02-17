@@ -1,11 +1,11 @@
 # Bjompen Potter and the hair pulling case of the missing commits
 
-In my research around Azure DevOps I recentyl stumbled on an interesting problem.
+In my research around Azure DevOps I recently stumbled on an interesting problem.
 I wanted to add [Environments](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops) to add some easy and fancy traceability to my pipelines.
 
 ## Always start with reading the docs
 
-Accordign to the documentation linked above, getting started with environments is easy:
+According to the documentation linked above, getting started with environments is easy:
 
 - Create an environment
 - or dont and we'll create it for you.
@@ -25,7 +25,7 @@ but...
 
 ## Dude, where's my commits?
 
-The feature I was currently looking at in environments were the [Deploymen history](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops#deployment-history), and more exactly, the commit history.
+The feature I am currently looking at in environments is the [Deployment history](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops#deployment-history), and more exactly, the commit history.
 
 So after setting everything up according to the documentation, I had a pipeline looking like this:
 
@@ -63,8 +63,8 @@ Of course, we needed to figure out exactly what makes a change show up here, so 
 
 - Adding and linking workitems? No change.
 - Using pull requests instead of #PTMF? Nope.
-- Having the pipeline in the same or a different repo as the code? Njet.
-- Adding a PublishPipelineArtifact step to the pipeline? YES! Well, no, it worked for one pipeline it turns out, but not all.
+- Having the pipeline in the same or a different repo as the code? No difference at all.
+- Adding a PublishPipelineArtifact step to the pipeline? YES! Well, no, turns out to be a false positive. Back to the drawing board.
 
 Untill Jens cracked it.
 
