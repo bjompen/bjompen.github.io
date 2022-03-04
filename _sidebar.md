@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [04 Mar 2022 - Azure DevOps part III - Revenge of the build](posts/azdo.pipelines.md "Azure DevOps part III - Revenge of the build")
   - [17 Feb 2022 - Bjompen Potter and the hair pulling case of the missing commits](posts/missingcommits.md "Bjompen Potter and the hair pulling case of the missing commits")
   - [09 Feb 2022 - Azure DevOps part II - Attack of the Git Clones](posts/azdo.gitrepos.md "Azure DevOps part II - Attack of the Git Clones")
   - [29 Jan 2022 - Variables - A lesson in powershell behaviour.](posts/variables.md "Variables - A lesson in powershell behaviour.")

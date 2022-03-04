@@ -7,11 +7,21 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Revenge of the build</title>
+			<link>https://www.bjompen.com/#/posts/azdo.pipelines.md</link>
+			<description># Azure DevOps part III - Revenge of the build
+
+A week turned two, turned three, turned four.
+
+Times still are weird, and to top it of a dictator (...</description>
+			<pubDate>04 Mar 2022 - Azure DevOps part III</pubDate>
+		</item> 
+		<item>
 			<title>Bjompen Potter and the hair pulling case of the missing commits</title>
 			<link>https://www.bjompen.com/#/posts/missingcommits.md</link>
 			<description># Bjompen Potter and the hair pulling case of the missing commits
 
-In my research around Azure DevOps I recentyl stumbled on an interesting problem....</description>
+In my research around Azure DevOps I recently stumbled on an interesting problem....</description>
 			<pubDate>17 Feb 2022</pubDate>
 		</item> 
 		<item>
