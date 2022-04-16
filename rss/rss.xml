@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Using Azure privileged access to protect your Azure DevOps resources</title>
+			<link>https://www.bjompen.com/#/posts/PIMAzDO.md</link>
+			<description># Using Azure privileged access (PIM) to protect your Azure DevOps resources
+
+In my research around my forthcomming presentations I recently stumbled...</description>
+			<pubDate>16 Apr 2022</pubDate>
+		</item> 
+		<item>
 			<title>Revenge of the build</title>
 			<link>https://www.bjompen.com/#/posts/azdo.pipelines.md</link>
 			<description># Azure DevOps part III - Revenge of the build
