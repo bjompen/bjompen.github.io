@@ -32,11 +32,12 @@ We can do it, but we need to jump a few hoops. Let's go jumping, shall we?
 
 The first thing we need to do is create a PIM enabled group in our Azure AD. Unfortunately you need to have a Azure AD Premium P2 (or similar) license to use Azure PIM, but they aren't all to expensive. Once we have that, we can go to our Azure AD Group management blade and create a new group.
 
-The imnportant thing here is **we need to set the "Azure AD roles.." switch to "yes"** in order for our group to be PIM enabled. Other than this, go for whatever you want.
+The imnportant thing here is we need to set the **"Azure AD roles.."** switch to **"yes"** in order for our group to be PIM enabled. Other than this, go for whatever you want.
 
 ![Create group](../images/PIMAzDO/1.CreateGroup.png)
 
 Once the group is created, we get a new fancy button in the group setting named **Privileged access (preview)**
+
 ![Privileged access button](../images/PIMAzDO/2.PrivAcc.png)
 
 And this button in turn takes us to this page:
@@ -51,7 +52,7 @@ After enabling PIM on our group, we can now add assignments to it. This is the u
 
 If we click "Add Assignment" We are greeted with a role selection page.
 
-Important to note here is the **Role** we nned to select. The options we have are **Owner** or **Member**.
+Important to note here is the **Role** we need to select. The options we have are **Owner** or **Member**.
 
 Basically, it tells PIM what your user should be allowed to do to the group once the privilege is in place. Since we are not going to use the group for more than access, we'll go with **Member**.
 
@@ -101,7 +102,7 @@ In the **My roles** blade, under the **Privileged access groups** menu, assuming
 
 ![Activation time!](../images/PIMAzDO/12.Activate.png)
 
-Clicking the **Axtivate** button here, slides in our activation window where we need to give a reason for our escalation request. (Yes, we can of course write [lorem ipsum](https://www.lipsum.com/) in it, but lets hope security will react if we do..)
+Clicking the **Axtivate** button here slides in our activation window where we need to give a reason for our escalation request. (Yes, we can of course write [lorem ipsum](https://www.lipsum.com/) in it, but lets hope security will react if we do..)
 
 ![Lorem ipsum dolor sit administrate](../images/PIMAzDO/13.ActivateWindow.png)
 
