@@ -202,7 +202,7 @@ And by scoping it like this we can also make sure _all deploys and access to our
 
 Now of course, there are more considerations than what we looked at here as well.
 
-There are settings for saving machines if build fails so you can log in to them and see what happened. In our example we use SSH and a key to log in, and this might not be the best for you.
+There are settings for saving machines if build fails so you can log in to them and see what happened. In our example we use SSH and a key to log in, and this might not be the best for you, but it is pretty straight forward if you use Linux machines. After all, this post is about scale sets, not AAD/Kerberos/Auth. If you do this, remember to store the downloaded key though. Without it you wont be able to log in. (Note: I have _very_ rarely needed to, but famius last words and all that.)
 
 You may also want to consider the price of machines. VMSS is just a number of exact copied VMs, and they cost like the same size VM costs in Azure. If you set the "keep on standby" setting high, you will pay for it quite literally.
 
