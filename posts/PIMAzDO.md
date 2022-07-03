@@ -102,7 +102,7 @@ In the **My roles** blade, under the **Privileged access groups** menu, assuming
 
 ![Activation time!](../images/PIMAzDO/12.Activate.png)
 
-Clicking the **Axtivate** button here slides in our activation window where we need to give a reason for our escalation request. (Yes, we can of course write [lorem ipsum](https://www.lipsum.com/) in it, but lets hope security will react if we do..)
+Clicking the **Activate** button here slides in our activation window where we need to give a reason for our escalation request. (Yes, we can of course write [lorem ipsum](https://www.lipsum.com/) in it, but lets hope security will react if we do..)
 
 ![Lorem ipsum dolor sit administrate](../images/PIMAzDO/13.ActivateWindow.png)
 
