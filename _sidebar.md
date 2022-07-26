@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [26 July 2022 - Using your scale set. Secret deploys to NFS!](posts/AzdoNFS.md "Using your scale set. Secret deploys to NFS!")
   - [03 July 2022 - Setting up Azure VM Scale Set for your pipelines](posts/AzdoVMSS.md "Setting up Azure VM Scale Set for your pipelines")
   - [16 Apr 2022 - Using Azure privileged access to protect your Azure DevOps resources](posts/PIMAzDO.md "Using Azure privileged access to protect your Azure DevOps resources")
   - [04 Mar 2022 - Azure DevOps part III - Revenge of the build](posts/azdo.pipelines.md "Azure DevOps part III - Revenge of the build")

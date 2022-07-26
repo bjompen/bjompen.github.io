@@ -7,6 +7,17 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Using your scale set. Secret deploys to NFS!</title>
+			<link>https://www.bjompen.com/#/posts/AzdoNFS.md</link>
+			<description># Using NFS as a secure storage for pipeline data
+
+(Long title, but I'm short of ideas of catchy ones, so thi has to do..)
+
+## Back from vacation
+...</description>
+			<pubDate>26 July 2022</pubDate>
+		</item> 
+		<item>
 			<title>Setting up Azure VM Scale Set for your pipelines</title>
 			<link>https://www.bjompen.com/#/posts/AzdoVMSS.md</link>
 			<description># Back from the... living?
