@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Flexing your Biceps</title>
+			<link>https://www.bjompen.com/#/posts/AzdoVMSSBicep.md</link>
+			<description># Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps
+
+I have a confession to make. I talk a lot. I have opinions on many th...</description>
+			<pubDate>05 Aug 2022 - Setting up Azure VM Scale Set for your pipelines pt. 2</pubDate>
+		</item> 
+		<item>
 			<title>Using your scale set. Secret deploys to NFS!</title>
 			<link>https://www.bjompen.com/#/posts/AzdoNFS.md</link>
 			<description># Using NFS as a secure storage for pipeline data
