@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>I've discovered something amazing!</title>
+			<link>https://www.bjompen.com/#/posts/SomethingAmazing.md</link>
+			<description># I've discovered something amazing
+
+[![I've discovered something amazing!](../images/SomethingAmazing/1.png)](https://www.youtube.com/watch?v=Jo6dkH...</description>
+			<pubDate>16 Aug 2022</pubDate>
+		</item> 
+		<item>
 			<title>Flexing your Biceps</title>
 			<link>https://www.bjompen.com/#/posts/AzdoVMSSBicep.md</link>
 			<description># Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps

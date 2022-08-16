@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [16 Aug 2022 - I've discovered something amazing!](posts/SomethingAmazing.md "I've discovered something amazing!")
   - [05 Aug 2022 - Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps](posts/AzdoVMSSBicep.md "Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps")
   - [26 July 2022 - Using your scale set. Secret deploys to NFS!](posts/AzdoNFS.md "Using your scale set. Secret deploys to NFS!")
   - [03 July 2022 - Setting up Azure VM Scale Set for your pipelines](posts/AzdoVMSS.md "Setting up Azure VM Scale Set for your pipelines")
