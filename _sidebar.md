@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [03 Oct 2022 - A whole lot of nothing going on](posts/nothingnew.md "A whole lot of nothing going on")
   - [01 Sep 2022 - Azure Chaos Studio. Loads of chaos of the wrong kind](posts/AzureChaosStudio.md "Azure Chaos Studio. Loads of chaos of the wrong kind")
   - [16 Aug 2022 - I've discovered something amazing!](posts/SomethingAmazing.md "I've discovered something amazing!")
   - [05 Aug 2022 - Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps](posts/AzdoVMSSBicep.md "Setting up Azure VM Scale Set for your pipelines pt. 2 - Flexing your Biceps")

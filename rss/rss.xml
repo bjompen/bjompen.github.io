@@ -7,6 +7,15 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>A whole lot of nothing going on</title>
+			<link>https://www.bjompen.com/#/posts/nothingnew.md</link>
+			<description># Todays topic: Nothing
+
+I've been inactive for far to long and feel like I need to write something, yet I have no idea what to write about.
+Normall...</description>
+			<pubDate>03 Oct 2022</pubDate>
+		</item> 
+		<item>
 			<title>Azure Chaos Studio. Loads of chaos of the wrong kind</title>
 			<link>https://www.bjompen.com/#/posts/AzureChaosStudio.md</link>
 			<description># Azure Chaos Studio
