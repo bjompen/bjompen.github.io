@@ -55,6 +55,7 @@ In the end, No complaints about the presenters, I know they had way to little ti
 ... Ok, one complaint about presenters: Many of the presenters are native English speakers, and speak fast. Since I'm not I would have preferred them to speak slower. Remember, I have to translate all that you say to understand it. I have limited processing power.
 
 ![Waiting for the keynote](../images/ignite2022/2.png)
+
 Pictured, left to right: [Tomas](https://twitter.com/TomasLepa), [Markus](https://twitter.com/Degerlunden), [Daniel](https://twitter.com/DanielKallstrom), [Emanuel](https://twitter.com/PalmEmanuel?), and me, waiting for a keynote.
 
 _\* ([Scott Hanselman](https://twitter.com/shanselman) and [Mark Russinovich](https://twitter.com/markrussinovich) was truly a work of stage nerd magic. [Go watch!](https://ignite.microsoft.com/en-US/sessions/6b3aecf1-92ba-41f7-81eb-fdad7b4b4138))_
