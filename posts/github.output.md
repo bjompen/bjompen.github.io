@@ -49,7 +49,7 @@ How does this look?
 
 GitHub refers to this not as output, but as [workflow commands](https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions), and we can use these to send notifications to our GitHub runner and change the output to console and runs.
 
-The basic format for all of these, like for example ::group:: is
+The basic format for all of these, like for example \:\:group\:\: is
 
 ```PowerShell
 Write-Output "::<command>::Message to show
@@ -102,7 +102,7 @@ Worth noting is that the log does not output any metadata. The summary on the ot
 
 Nice!
 
-Trying the other two workflow commands, ::warning:: and ::error::, gives a very similar, yet coloured output with different icons.
+Trying the other two workflow commands, \:\:warning\:\: and \:\:error\:\:, gives a very similar, yet coloured output with different icons.
 
 the code block
 
