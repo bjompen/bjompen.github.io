@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [06 Nov 2022 - Its alive!](posts/azdo.itsalive.md "Its alive!")
   - [25 Oct 2022 - GitHub. Light, Camera, Action(s)](posts/github.output.md "GitHub. Light, Camera, Action(s)")
   - [14 Oct 2022 - Ignite 2022 - The good, the bad, and the ugly](posts/ignite2022.md "Ignite 2022 - The good, the bad, and the ugly")
   - [03 Oct 2022 - A whole lot of nothing going on](posts/nothingnew.md "A whole lot of nothing going on")

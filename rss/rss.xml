@@ -7,6 +7,16 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Its alive!</title>
+			<link>https://www.bjompen.com/#/posts/azdo.itsalive.md</link>
+			<description># It's alive!
+
+![Its alive gif from the 1931 movie Frankenstein](../images/azdo.itsalive/alive.gif)
+
+I Wrote some time ago in a side note that my A...</description>
+			<pubDate>06 Nov 2022</pubDate>
+		</item> 
+		<item>
 			<title>GitHub. Light, Camera, Action(s)</title>
 			<link>https://www.bjompen.com/#/posts/github.output.md</link>
 			<description># GitHub. Light, Camera, Action(s)
