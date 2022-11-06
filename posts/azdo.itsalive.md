@@ -30,7 +30,7 @@ Thats the short of it.
 
 ## So lets look at how to find and solve this issue
 
-First of all we need to verify what service account we are working with. The easiest way to see this is to go to the permissions page, and the user tab. The Default name for these accounts is `Agent Pool Service (nn)` where `nn` is a unique number. You may have more than one of these accounts.
+First of all we need to verify what service account we are working with. The easiest way to see this is to go to the permissions page, and the user tab. The Default name for these accounts is `Agent Pool Service (nn)` where `nn` is a unique number.
 
 Once you've found it, click on it to verify that it is a member of the `Security Service Group`
 
@@ -38,9 +38,11 @@ Once you've found it, click on it to verify that it is a member of the `Security
 
 Unfortunately when we checked this we got the impression that it was correct and we needed to go in to the API to verify stuff.
 
+The reason is simple and stupid: We never got around to verify the account we checked was the account actually running and you may have more than one of these accounts. You normaly dont, but you may. I can't really figure out why my organization decided to create a new one, but it correlates strangely in time to when I started messing about with undocumented APIs..
+
 ## Using the API to find pool agent users
 
-Unfortunately there is no easy way that I know of to connect all of the needed pieces here together, but lets see what we can find out.
+There is no easy way that I know of to connect all of the needed pieces here together, but lets see what we can find out.
 
 To start with, using the users API we can get all users. Users whos domain property is `AgentPool` is, logically enough, agent pool users.
 
