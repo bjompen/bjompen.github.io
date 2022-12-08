@@ -109,7 +109,7 @@ Done! That's it. All you need.
 Some explanation might be good here:
 
 - I didn't set any trigger because it makes it easier to lab around it
-- We "need" to run windows latest as some tools seems to require non default config to run on ubuntu. more on that later.
+- We "need" to run windows latest right now. more on that in one of the notes.
 - The task will run, and it will run most of the available tools with default settings.
 
 We should of course give it a fancy display name, and there are actually some requirements we need to install as well, so lets make it a bit better before we click "save and run".
@@ -135,7 +135,9 @@ steps:
   displayName: 'Microsoft Security DevOps'
 ```
 
-> Note: according to [documentation over at MS learn](https://learn.microsoft.com/en-us/azure/defender-for-cloud/azure-devops-extension#configure-your-pipelines-using-yaml) we also need to include .net version 5, however according to [the documentation at GitHub](https://github.com/microsoft/security-devops-azdevops#dependencies) .net 5 _isn't_ needed. From my testing so far GitHub is correct, and we do not need to include version 5 for now at least.
+> Note: According to [documentation over at MS learn](https://learn.microsoft.com/en-us/azure/defender-for-cloud/azure-devops-extension#configure-your-pipelines-using-yaml) we also need to include .net version 5, however according to [the documentation at GitHub](https://github.com/microsoft/security-devops-azdevops#dependencies) .net 5 _isn't_ needed. From my testing so far GitHub is correct, and we do not need to include version 5 for now at least.
+
+> Note: Right now only windows is supported, but work is on its way to get everything working in Ubuntu as well. You _can_ run it in Ubuntu today, but some tools seems to require non default config to run and I haven't spent enough time to figure this out yet.
 
 Lets click "Save and run" and see what we end up with!
 
