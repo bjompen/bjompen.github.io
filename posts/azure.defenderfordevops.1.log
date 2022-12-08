@@ -1,0 +1,718 @@
+##[section]Starting: Microsoft Security DevOps
+==============================================================================
+Task         : Microsoft Security DevOps
+Description  : Run the Microsoft Security DevOps CLI for static analysis.
+Version      : 1.6.0
+Author       : Microsoft Corporation
+Help         : Runs the [Microsoft Security DevOps CLI](https://aka.ms/msdo-nuget) for security analysis.
+==============================================================================
+------------------------------------------------------------------------------
+Installing Microsoft Security DevOps Cli...
+[command]C:\hostedtoolcache\windows\dotnet\dotnet.exe restore D:\a\_tasks\MicrosoftSecurityDevOps_8d616517-6390-454f-b369-6fd038d8fe96\1.6.0\node_modules\microsoft-security-devops-azdevops-task-lib\msdo-task-lib.proj /p:MsdoPackageVersion=0.* --packages D:\a\_msdo\versions --source https://api.nuget.org/v3/index.json
+  Determining projects to restore...
+  Restored D:\a\_tasks\MicrosoftSecurityDevOps_8d616517-6390-454f-b369-6fd038d8fe96\1.6.0\node_modules\microsoft-security-devops-azdevops-task-lib\msdo-task-lib.proj (in 1.68 sec).
+------------------------------------------------------------------------------
+[command]C:\Windows\system32\cmd.exe /D /S /C "D:\a\_msdo\versions\microsoft.security.devops.cli\0.131.0\tools\guardian.cmd init --force"
+Init:
+  Creating guardian repo at: D:\a\1\s
+  Created a settings file at: D:\a\1\s\.gdn\.gdnsettings
+  Added D:\a\1\s\.gdn\.gitignore file to ignore internal files. Please commit this file.
+  Guardian repository created at: D:\a\1\s\.gdn
+  Please commit everything in the .gdn folder to source control. You can now use "guardian run" to run tools.
+[command]C:\Windows\system32\cmd.exe /D /S /C "D:\a\_msdo\versions\microsoft.security.devops.cli\0.131.0\tools\guardian.cmd run -p microsoft --rich-exit-code --logger-pipeline --export-breaking-results-to-file D:\a\1\a\.gdn\msdo.sarif --telemetry-environment azdevops"
+Run:
+  Installing Microsoft.Security.CodeAnalysis.Policy.Names
+  ------------------------------------------------------------------------------
+      GET https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/registrations2-semver2/microsoft.security.codeanalysis.policy.names/index.json
+      OK https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/registrations2-semver2/microsoft.security.codeanalysis.policy.names/index.json 216ms
+    Attempting to gather dependency information for package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+    Gathering dependency information took 32 ms
+    Attempting to resolve dependencies for package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2' with DependencyBehavior 'Lowest'
+    Resolving dependency information took 0 ms
+    Resolving actions to install package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2'
+    Resolved actions to install package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2'
+    Retrieving package 'Microsoft.Security.CodeAnalysis.Policy.Names 1.0.2' from 'MSCA.Policy'.
+      GET https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/flat2/microsoft.security.codeanalysis.policy.names/1.0.2/microsoft.security.codeanalysis.policy.names.1.0.2.nupkg
+      OK https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/flat2/microsoft.security.codeanalysis.policy.names/1.0.2/microsoft.security.codeanalysis.policy.names.1.0.2.nupkg 249ms
+    Installed Microsoft.Security.CodeAnalysis.Policy.Names 1.0.2 from https://pkgs.dev.azure.com/secdevtools/SecDevTools/_packaging/MSCA.Policy/nuget/v3/index.json with content hash lKczibLTr21FxujtNmSe5ZzgUgkZfB9CzmGlbxxA6hVH3VHvaF8AItILNgiiiGaz/PWr8cT85AZPyW1KcXAhNw==.
+    Adding package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2' to folder 'D:\a\_msdo\packages\nuget'
+    Added package 'Microsoft.Security.CodeAnalysis.Policy.Names.1.0.2' to folder 'D:\a\_msdo\packages\nuget'
+    Successfully installed 'Microsoft.Security.CodeAnalysis.Policy.Names 1.0.2' to D:\a\_msdo\packages\nuget
+    Executing nuget actions took 796 ms
+  ------------------------------------------------------------------------------
+  Installing Microsoft.Security.CodeAnalysis.Policy.Microsoft
+  ------------------------------------------------------------------------------
+      GET https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/registrations2-semver2/microsoft.security.codeanalysis.policy.microsoft/index.json
+      OK https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/registrations2-semver2/microsoft.security.codeanalysis.policy.microsoft/index.json 225ms
+    Attempting to gather dependency information for package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+    Gathering dependency information took 1 ms
+    Attempting to resolve dependencies for package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3' with DependencyBehavior 'Lowest'
+    Resolving dependency information took 0 ms
+    Resolving actions to install package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3'
+    Resolved actions to install package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3'
+    Retrieving package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft 1.2.3' from 'MSCA.Policy'.
+      GET https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/flat2/microsoft.security.codeanalysis.policy.microsoft/1.2.3/microsoft.security.codeanalysis.policy.microsoft.1.2.3.nupkg
+      OK https://pkgs.dev.azure.com/secdevtools/fbe8430b-c7d4-4187-8c71-a0083ead3d4b/_packaging/a2fd5474-7706-4971-8654-fd0403cf8e6a/nuget/v3/flat2/microsoft.security.codeanalysis.policy.microsoft/1.2.3/microsoft.security.codeanalysis.policy.microsoft.1.2.3.nupkg 222ms
+    Installed Microsoft.Security.CodeAnalysis.Policy.Microsoft 1.2.3 from https://pkgs.dev.azure.com/secdevtools/SecDevTools/_packaging/MSCA.Policy/nuget/v3/index.json with content hash CbMei00DRKcadPe5J9U02AaY4uJrAOhVCLbvMFXFPqKwJUw2bsraswe395/jMA5C0h7y+zxvb07i15mjOW5qsQ==.
+    Adding package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3' to folder 'D:\a\_msdo\packages\nuget'
+    Added package 'Microsoft.Security.CodeAnalysis.Policy.Microsoft.1.2.3' to folder 'D:\a\_msdo\packages\nuget'
+    Successfully installed 'Microsoft.Security.CodeAnalysis.Policy.Microsoft 1.2.3' to D:\a\_msdo\packages\nuget
+    Executing nuget actions took 345 ms
+  ------------------------------------------------------------------------------
+  The target directory is not provided. Defaults to the working directory: D:\a\1\s.
+  The platform is not provided. Defaults to the current OS: Windows.
+  Starting tools applicability analysis...
+  Tools Applicability Infomation:
+  Applicable Tools:
+  Tool Name: bandit
+  Tool Version: 1.6.3.1
+  Tool Config File Path: D:\a\1\s\.gdn\c\bandit.gdntool
+  
+  Tool Name: binskim
+  Tool Version: 1.9.5
+  Tool Config File Path: D:\a\1\s\.gdn\c\binskim.gdntool
+  
+  Tool Name: credscan
+  Tool Version: 2.5.0.5
+  Tool Config File Path: D:\a\1\s\.gdn\c\credscan.gdntool
+  
+  Tool Name: eslint
+  Tool Version: 7.32.0.2
+  Tool Config File Path: D:\a\1\s\.gdn\c\eslint.gdntool
+  
+  Tool Name: templateanalyzer
+  Tool Version: 0.3.1
+  Tool Config File Path: D:\a\1\s\.gdn\c\templateanalyzer.gdntool
+  
+  Tool Name: terrascan
+  Tool Version: 1.14.0.1
+  Tool Config File Path: D:\a\1\s\.gdn\c\terrascan.gdntool
+  
+  Tool Name: trivy
+  Tool Version: 0.19.2.1
+  Tool Config File Path: D:\a\1\s\.gdn\c\trivy.gdntool
+  
+  Completed tools applicability analysis.
+  Install:
+    Installing Microsoft.Guardian.BanditRedist_windows_amd64
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 414 ms
+      Attempting to resolve dependencies for package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1'
+      Resolved actions to install package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1'
+      Retrieving package 'Microsoft.Guardian.BanditRedist_windows_amd64 1.6.3.1' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.banditredist_windows_amd64/1.6.3.1/microsoft.guardian.banditredist_windows_amd64.1.6.3.1.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.banditredist_windows_amd64/1.6.3.1/microsoft.guardian.banditredist_windows_amd64.1.6.3.1.nupkg 1011ms
+      Installed Microsoft.Guardian.BanditRedist_windows_amd64 1.6.3.1 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash 8Dpl+v01jBUezTNrr3mH/18O5lb5Hu9n/A+juHIOUPVWgpjPV5/i/Zy0kIY3px31TgVkFiTbUn/L+zgxjDxnxw==.
+      Adding package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Microsoft.Guardian.BanditRedist_windows_amd64 1.6.3.1' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 21.29 sec
+    ------------------------------------------------------------------------------
+    Installing Microsoft.CodeAnalysis.BinSkim
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Microsoft.CodeAnalysis.BinSkim.1.9.5' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 246 ms
+      Attempting to resolve dependencies for package 'Microsoft.CodeAnalysis.BinSkim.1.9.5' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Microsoft.CodeAnalysis.BinSkim.1.9.5'
+      Resolved actions to install package 'Microsoft.CodeAnalysis.BinSkim.1.9.5'
+      Retrieving package 'Microsoft.CodeAnalysis.BinSkim 1.9.5' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.codeanalysis.binskim/1.9.5/microsoft.codeanalysis.binskim.1.9.5.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.codeanalysis.binskim/1.9.5/microsoft.codeanalysis.binskim.1.9.5.nupkg 231ms
+      Installed Microsoft.CodeAnalysis.BinSkim 1.9.5 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash tdVOBZ7gcfeLXeqTul9wT4pa6XRbnpFoyRLxfH1bfe1lyFd6/FS83JxIO6dumlhT4szeJiY3blsLxjyM4dgSVg==.
+      Adding package 'Microsoft.CodeAnalysis.BinSkim.1.9.5' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Microsoft.CodeAnalysis.BinSkim.1.9.5' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Microsoft.CodeAnalysis.BinSkim 1.9.5' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 19.73 sec
+    ------------------------------------------------------------------------------
+    Installing Microsoft.Security.CredScan
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Microsoft.Security.CredScan.2.5.0.5' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 503 ms
+      Attempting to resolve dependencies for package 'Microsoft.Security.CredScan.2.5.0.5' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Microsoft.Security.CredScan.2.5.0.5'
+      Resolved actions to install package 'Microsoft.Security.CredScan.2.5.0.5'
+      Retrieving package 'Microsoft.Security.CredScan 2.5.0.5' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.security.credscan/2.5.0.5/microsoft.security.credscan.2.5.0.5.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.security.credscan/2.5.0.5/microsoft.security.credscan.2.5.0.5.nupkg 223ms
+      Installed Microsoft.Security.CredScan 2.5.0.5 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash McjB/jxC1/X5krARjdywkneWjEHcvCqL+S+JCYUXAVvH8smjPZvsXZp9LnIebloqFu5MYy1olSFWsVJGi/+SPg==.
+      Adding package 'Microsoft.Security.CredScan.2.5.0.5' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Microsoft.Security.CredScan.2.5.0.5' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Microsoft.Security.CredScan 2.5.0.5' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 26.7 sec
+    ------------------------------------------------------------------------------
+    Installing eslint
+    ------------------------------------------------------------------------------
+    C:\Program Files\nodejs\npm.cmd install --loglevel error eslint@7.32.0 typescript@4.3.2 @microsoft/eslint-plugin-sdl@0.1.7 eslint-plugin-react@7.24.0 eslint-plugin-security@1.4.0 @typescript-eslint/typescript-estree@4.27.0 @typescript-eslint/parser@4.27.0 @typescript-eslint/eslint-plugin@4.27.0 @microsoft/eslint-formatter-sarif@2.1.5 eslint-plugin-node@11.1.0 --prefix D:\a\_msdo\packages\node_modules\eslint --global
+    
+    added 296 packages, and audited 297 packages in 22s
+    
+    69 packages are looking for funding
+      run `npm fund` for details
+    
+    4 vulnerabilities (1 moderate, 2 high, 1 critical)
+    
+    To address all issues (including breaking changes), run:
+      npm audit fix --force
+    
+    Run `npm audit` for details.
+    ------------------------------------------------------------------------------
+    Installing Azure.Templates.Analyzer.CommandLine.win-x64
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 546 ms
+      Attempting to resolve dependencies for package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1'
+      Resolved actions to install package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1'
+      Retrieving package 'Azure.Templates.Analyzer.CommandLine.win-x64 0.3.1' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/azure.templates.analyzer.commandline.win-x64/0.3.1/azure.templates.analyzer.commandline.win-x64.0.3.1.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/azure.templates.analyzer.commandline.win-x64/0.3.1/azure.templates.analyzer.commandline.win-x64.0.3.1.nupkg 301ms
+      Installed Azure.Templates.Analyzer.CommandLine.win-x64 0.3.1 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash Wqu5KYRTVWqvws1bU1Zq0awOoqjYHqIXrZL7511SXDXvf4QDWrM9mhC1zGnZP6n7i3ISeq6VmZVBEHHFn1/OAg==.
+      Adding package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Azure.Templates.Analyzer.CommandLine.win-x64 0.3.1' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 32.69 sec
+    ------------------------------------------------------------------------------
+    Installing Microsoft.Guardian.TerrascanRedist_windows_amd64
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 531 ms
+      Attempting to resolve dependencies for package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1'
+      Resolved actions to install package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1'
+      Retrieving package 'Microsoft.Guardian.TerrascanRedist_windows_amd64 1.14.0.1' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.terrascanredist_windows_amd64/1.14.0.1/microsoft.guardian.terrascanredist_windows_amd64.1.14.0.1.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.terrascanredist_windows_amd64/1.14.0.1/microsoft.guardian.terrascanredist_windows_amd64.1.14.0.1.nupkg 224ms
+      Installed Microsoft.Guardian.TerrascanRedist_windows_amd64 1.14.0.1 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash ST+t38YQiraMF0kp1LYYTKALeauEHCl0SnKhnMYDM3Fs7i70OEuWAjelhtxzYagX9Ru1OqQhpykNsvXsF+Vl0w==.
+      Adding package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Microsoft.Guardian.TerrascanRedist_windows_amd64 1.14.0.1' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 1.35 sec
+    ------------------------------------------------------------------------------
+    Installing Microsoft.Guardian.TrivyRedist_windows_amd64
+    ------------------------------------------------------------------------------
+      Attempting to gather dependency information for package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1' with respect to project 'D:\a\_msdo\packages\nuget', targeting 'Any,Version=v0.0'
+      Gathering dependency information took 282 ms
+      Attempting to resolve dependencies for package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1' with DependencyBehavior 'Lowest'
+      Resolving dependency information took 0 ms
+      Resolving actions to install package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1'
+      Resolved actions to install package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1'
+      Retrieving package 'Microsoft.Guardian.TrivyRedist_windows_amd64 0.19.2.1' from 'SecDevTools'.
+        GET https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.trivyredist_windows_amd64/0.19.2.1/microsoft.guardian.trivyredist_windows_amd64.0.19.2.1.nupkg
+        OK https://pkgs.dev.azure.com/secdevtools/_packaging/7dd0007f-da6c-4759-86e3-8edd2376c227/nuget/v3/flat2/microsoft.guardian.trivyredist_windows_amd64/0.19.2.1/microsoft.guardian.trivyredist_windows_amd64.0.19.2.1.nupkg 218ms
+      Installed Microsoft.Guardian.TrivyRedist_windows_amd64 0.19.2.1 from https://pkgs.dev.azure.com/secdevtools/_packaging/SecDevTools/nuget/v3/index.json with content hash qtI1mPKoT4U0lWltxFcEwiXWYK/388xhJyvNIsfnH27Knceox+EZ+d3mNufIqj48VYiCjfPpm7tbwEmJmBkiFg==.
+      Adding package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1' to folder 'D:\a\_msdo\packages\nuget'
+      Added package 'Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1' to folder 'D:\a\_msdo\packages\nuget'
+      Successfully installed 'Microsoft.Guardian.TrivyRedist_windows_amd64 0.19.2.1' to D:\a\_msdo\packages\nuget
+      Executing nuget actions took 850 ms
+    ------------------------------------------------------------------------------
+  Clear:
+    Clearing folder: D:\a\1\s\.gdn\.r
+    Clearing folder: D:\a\1\s\.gdn\rc
+  Analyze:
+    Running Bandit 1.6.3.1
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Microsoft.Guardian.BanditRedist_windows_amd64.1.6.3.1\tools\bandit_runner.exe --tests=B102,B110,B112,B303,B304,B312,B321,B324,B413,B501,B502,B503,B504,B505 --format=sarif --output=D:\a\1\s\.gdn\.r\bandit\001\bandit.sarif D:\a\1\s\DFDOFiles\insecure.py
+    [main]	INFO	profile include tests: None
+    [main]	INFO	profile exclude tests: None
+    [main]	INFO	cli include tests: B102,B110,B112,B303,B304,B312,B321,B324,B413,B501,B502,B503,B504,B505
+    [main]	INFO	cli exclude tests: None
+    [main]	INFO	running on Python 3.8.3
+    [formatter]	INFO	SARIF output written to file: D:\a\1\s\.gdn\.r\bandit\001\bandit.sarif
+    Tool run time: 0.872289 seconds
+    ------------------------------------------------------------------------------
+    Bandit completed with exit code 1
+    ------------------------------------------------------------------------------
+    
+    Running BinSkim 1.9.5
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Microsoft.CodeAnalysis.BinSkim.1.9.5\tools\netcoreapp3.1\win-x64\BinSkim.exe analyze --config default --hashes --statistics --sarif-output-version OneZeroZero --output D:\a\1\s\.gdn\.r\binskim\001\binskim.sarif @D:\a\1\s\.gdn\.r\binskim\001\.gdntoolinput
+    Analyzing...
+    D:\a\1\s\DFDOFiles\licecap.exe: error BA2009: 'licecap.exe' is not marked as DYNAMICBASE. This means that the binary is not eligible for relocation by Address Space Layout Randomization (ASLR). ASLR is an important mitigation that makes it more difficult for an attacker to exploit memory corruption vulnerabilities. To resolve this issue, configure your tools to build with this feature enabled. For C and C++ binaries, add /DYNAMICBASE to your linker command line. For .NET applications, use a compiler shipping with Visual Studio 2008 or later.
+    D:\a\1\s\DFDOFiles\licecap.exe: error BA2016: 'licecap.exe' is not marked NX compatible. The NXCompat bit, also known as "Data Execution Prevention" (DEP) or "Execute Disable" (XD), is a processor feature that allows a program to mark a piece of memory as non-executable. This helps mitigate memory corruption vulnerabilities by preventing an attacker from supplying direct shellcode in their exploit, because the exploit comes in the form of input data to the exploited program on a data segment, rather than on an executable code segment. To resolve this issue, ensure that your tools are configured to mark your binaries as NX compatible, e.g. by passing /NXCOMPAT to the C/C++ linker.
+    D:\a\1\s\DFDOFiles\licecap.exe: error BA2018: 'licecap.exe' is an x86 binary which does not contain a load configuration table, indicating that it does not enable the SafeSEH mitigation. SafeSEH makes it more difficult to exploit memory corruption vulnerabilities that can overwrite SEH control blocks on the stack, by verifying that the location to which a thrown SEH exception would jump is indeed defined as an exception handler in the source program (and not shellcode). To resolve this issue, supply the /SafeSEH flag on the linker command line. Note that you will need to configure your build system to supply this flag for x86 builds only, as the /SafeSEH flag is invalid when linking for ARM and x64.
+    D:\a\1\s\DFDOFiles\licecap.exe : error ERR997.ExceptionLoadingPdb : 'licecap.exe' was not evaluated because its PDB could not be loaded (E_PDB_NO_DEBUG_INFO).
+    
+    Done. 1 files scanned.
+    
+    One or more rules was disabled for an analysis target, as it was determined not to be applicable to it (this is a common condition). Pass --verbose on the command-line for more information.
+    
+    Analysis did not complete due to one or more unrecoverable execution conditions.
+    Unexpected fatal runtime condition(s) observed: ExceptionLoadingPdb
+    
+    Tool run time: 1.3627592 seconds
+    ------------------------------------------------------------------------------
+    BinSkim completed with exit code 1
+##[error]Error running binskim job: 1 of 1
+##[error]GuardianErrorExitCodeException: binskim completed with an Error exit code: 1. BinSkim failed. Verify the target(s) to be scanned. BinSkim targets must be a specific filename, or a pattern with a wildcard like *.dll, dir\*.dll, or dir\*
+    ------------------------------------------------------------------------------
+    
+    Running Credential Scanner 2.5.0.5
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Microsoft.Security.CredScan.2.5.0.5\lib/net6.0/CredentialScanner.exe -I ./ -f sarif -e true -O D:\a\1\s\.gdn\.r\credscan\001\credscan
+    Start credential scanner
+    Initializing...
+    Initialization completed.
+    Start file scanning...
+    Detected 2 issue(s) in D:\a\1\s\DFDOFiles\TestSecret.txt
+    NumberOfAsset : 194
+    NumberOfAssetScanned : 28
+    NumberOfAssetBytes : 1,789,299
+    NumberOfAssetBytesScanned : 57,061
+    NumberOfScanResult: 1
+    NumberOfRankedResult : 1
+    NumberOfCredentialRecord: 2
+    NumberOfSuppressedRecord: 0
+    NumberOfScanError: 0
+    
+    Scan completed in 4.74 seconds
+    Tool run time: 5.0546067 seconds
+    ------------------------------------------------------------------------------
+    Credential Scanner completed with exit code 4
+    ------------------------------------------------------------------------------
+    
+    Running ESLint 7.32.0.2
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\node_modules\eslint\eslint.cmd --no-eslintrc --config D:\a\_msdo\packages\node_modules\eslint/node_modules/@microsoft/eslint-plugin-sdl/config/required.js --ext .js --ext .ts --ignore-pattern *.d.ts --format D:\a\_msdo\packages\node_modules\eslint\node_modules\@microsoft\eslint-formatter-sarif\sarif.js --output-file D:\a\1\s\.gdn\.r\eslint\001\eslint.sarif **/*.{js,ts}
+    Tool run time: 1.7496987 seconds
+    ------------------------------------------------------------------------------
+    ESLint completed with exit code 1
+    ------------------------------------------------------------------------------
+    
+    Running ARM Template Best Practice Analyzer 0.3.1
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Azure.Templates.Analyzer.CommandLine.win-x64.0.3.1\tools\TemplateAnalyzer.exe analyze-directory D:\a\1\s --report-format sarif --output-file-path D:\a\1\s\.gdn\.r\templateanalyzer\001\templateanalyzer.sarif
+    
+    
+    Directory: D:\a\1\s
+    
+    Analyzed 2 files.
+    
+    Execution summary:
+    	The execution completed successfully
+    Wrote 102 results to D:\a\1\s\.gdn\.r\templateanalyzer\001\templateanalyzer.sarif
+    Tool run time: 8.3891246 seconds
+    ------------------------------------------------------------------------------
+    ARM Template Best Practice Analyzer completed with exit code 20
+    ------------------------------------------------------------------------------
+    
+    Running Terrascan 1.14.0.1
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Microsoft.Guardian.TerrascanRedist_windows_amd64.1.14.0.1\tools/terrascan.exe scan --output github-sarif --iac-dir D:\a\1\s --use-colors auto
+    { - 
+      "version": "2.1.0",
+      "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+      "runs": [
+        { - 
+          "tool": { - 
+            "driver": { - 
+              "name": "terrascan",
+              "version": "1.14.0",
+              "informationUri": "https://github.com/accurics/terrascan",
+              "rules": [
+                { - 
+                  "id": "AC_DOCKER_0041",
+                  "name": "imageVersionnotusinglatest",
+                  "shortDescription": { - 
+                    "text": "Ensure platform flag with FROM command is not used for Docker file"
+                  }, - 
+                  "properties": { - 
+                    "category": "Infrastructure Security",
+                    "severity": "MEDIUM"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0087",
+                  "name": "runAsNonRootCheck",
+                  "shortDescription": { - 
+                    "text": "Minimize Admission of Root Containers"
+                  }, - 
+                  "properties": { - 
+                    "category": "Identity and Access Management",
+                    "severity": "HIGH"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0080",
+                  "name": "secCompProfile",
+                  "shortDescription": { - 
+                    "text": "Default seccomp profile not enabled will make the container to make non-essential system calls"
+                  }, - 
+                  "properties": { - 
+                    "category": "Identity and Access Management",
+                    "severity": "MEDIUM"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0070",
+                  "name": "nolivenessProbe",
+                  "shortDescription": { - 
+                    "text": "No liveness probe will ensure there is no recovery in case of unexpected errors"
+                  }, - 
+                  "properties": { - 
+                    "category": "Security Best Practices",
+                    "severity": "LOW"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0064",
+                  "name": "securityContextUsed",
+                  "shortDescription": { - 
+                    "text": "Apply Security Context to Your Pods and Containers"
+                  }, - 
+                  "properties": { - 
+                    "category": "Infrastructure Security",
+                    "severity": "MEDIUM"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0085",
+                  "name": "privilegeEscalationCheck",
+                  "shortDescription": { - 
+                    "text": "Containers Should Not Run with AllowPrivilegeEscalation"
+                  }, - 
+                  "properties": { - 
+                    "category": "Compliance Validation",
+                    "severity": "HIGH"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0051",
+                  "name": "secretsAsEnvVariables",
+                  "shortDescription": { - 
+                    "text": "Prefer using secrets as files over secrets as environment variables"
+                  }, - 
+                  "properties": { - 
+                    "category": "Infrastructure Security",
+                    "severity": "HIGH"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0073",
+                  "name": "appArmorProfile",
+                  "shortDescription": { - 
+                    "text": "AppArmor profile not set to default or custom profile will make the container vulnerable to kernel level threats"
+                  }, - 
+                  "properties": { - 
+                    "category": "Identity and Access Management",
+                    "severity": "MEDIUM"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0069",
+                  "name": "imageWithoutDigest",
+                  "shortDescription": { - 
+                    "text": "Image without digest affects the integrity principle of image security"
+                  }, - 
+                  "properties": { - 
+                    "category": "Infrastructure Security",
+                    "severity": "MEDIUM"
+                  } - 
+                }, - 
+                { - 
+                  "id": "AC_K8S_0078",
+                  "name": "readOnlyFileSystem",
+                  "shortDescription": { - 
+                    "text": "Container images with readOnlyRootFileSystem set as false mounts the container root file system with write permissions"
+                  }, - 
+                  "properties": { - 
+                    "category": "Identity and Access Management",
+                    "severity": "MEDIUM"
+                  } - 
+                } - 
+              ]
+            } - 
+          }, - 
+          "results": [
+            { - 
+              "ruleId": "AC_DOCKER_0041",
+              "level": "warning",
+              "message": { - 
+                "text": "Ensure platform flag with FROM command is not used for Docker file"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\Dockerfile",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "Dockerfile",
+                      "kind": "docker_from"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0087",
+              "level": "error",
+              "message": { - 
+                "text": "Minimize Admission of Root Containers"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0080",
+              "level": "warning",
+              "message": { - 
+                "text": "Default seccomp profile not enabled will make the container to make non-essential system calls"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0070",
+              "level": "note",
+              "message": { - 
+                "text": "No liveness probe will ensure there is no recovery in case of unexpected errors"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0064",
+              "level": "warning",
+              "message": { - 
+                "text": "Apply Security Context to Your Pods and Containers"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0085",
+              "level": "error",
+              "message": { - 
+                "text": "Containers Should Not Run with AllowPrivilegeEscalation"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0051",
+              "level": "error",
+              "message": { - 
+                "text": "Prefer using secrets as files over secrets as environment variables"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0073",
+              "level": "warning",
+              "message": { - 
+                "text": "AppArmor profile not set to default or custom profile will make the container vulnerable to kernel level threats"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0069",
+              "level": "warning",
+              "message": { - 
+                "text": "Image without digest affects the integrity principle of image security"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            }, - 
+            { - 
+              "ruleId": "AC_K8S_0078",
+              "level": "warning",
+              "message": { - 
+                "text": "Container images with readOnlyRootFileSystem set as false mounts the container root file system with write permissions"
+              }, - 
+              "locations": [
+                { - 
+                  "physicalLocation": { - 
+                    "artifactLocation": { - 
+                      "uri": "DFDOFiles\\K8s-cassandra-statefulset.yaml",
+                      "uriBaseId": "D:\\a\\1\\s"
+                    }, - 
+                    "region": { - 
+                      "startLine": 1
+                    } - 
+                  }, - 
+                  "logicalLocations": [
+                    { - 
+                      "name": "cassandra",
+                      "kind": "kubernetes_stateful_set"
+                    } - 
+                  ]
+                } - 
+              ]
+            } - 
+          ]
+        } - 
+      ]
+    } - 
+    Tool run time: 52.458119 seconds
+    ------------------------------------------------------------------------------
+    Terrascan completed with exit code 5
+    ------------------------------------------------------------------------------
+    
+    Running Trivy 0.19.2.1
+    ------------------------------------------------------------------------------
+    D:\a\_msdo\packages\nuget\Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1\tools\trivy.exe filesystem --exit-code 100 --template @D:\a\_msdo\packages\nuget\Microsoft.Guardian.TrivyRedist_windows_amd64.0.19.2.1\tools\sarif.tpl --format template --output D:\a\1\s\.gdn\.r\trivy\001\trivy.sarif .
+    2022-12-07T07:53:21.731Z	[34mINFO[0m	Need to update DB
+    2022-12-07T07:53:21.789Z	[34mINFO[0m	Downloading DB...
+    2022-12-07T07:53:23.976Z	[34mINFO[0m	Number of language-specific files: 0
+    2.57 MiB / 30.54 MiB [----->_________________________________________________________] 8.40% ? p/s ?5.76 MiB / 30.54 MiB [----------->__________________________________________________] 18.86% ? p/s ?9.27 MiB / 30.54 MiB [------------------>___________________________________________] 30.34% ? p/s ?12.98 MiB / 30.54 MiB [-------------------->___________________________] 42.49% 17.27 MiB p/s ETA 1s16.79 MiB / 30.54 MiB [-------------------------->_____________________] 54.97% 17.27 MiB p/s ETA 0s21.04 MiB / 30.54 MiB [--------------------------------->______________] 68.89% 17.27 MiB p/s ETA 0s25.32 MiB / 30.54 MiB [--------------------------------------->________] 82.92% 17.48 MiB p/s ETA 0s29.80 MiB / 30.54 MiB [---------------------------------------------->_] 97.59% 17.48 MiB p/s ETA 0s30.54 MiB / 30.54 MiB [---------------------------------------------------] 100.00% 21.00 MiB p/s 1s
+    Tool run time: 2.4864074 seconds
+    ------------------------------------------------------------------------------
+    Trivy completed with exit code 0
+    ------------------------------------------------------------------------------
+    
+##[error]Error running tool 2 of 7: binskim
+##[error]Error running binskim job: 1 of 1
+##[error]GuardianErrorExitCodeException: binskim completed with an Error exit code: 1. BinSkim failed. Verify the target(s) to be scanned. BinSkim targets must be a specific filename, or a pattern with a wildcard like *.dll, dir\*.dll, or dir\*
+##[error]MSDO CLI exited with an error exit code: 1
+##[section]Finishing: Microsoft Security DevOps

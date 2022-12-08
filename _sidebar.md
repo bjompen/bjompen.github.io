@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [08 Dec 2022 - Defender for DevOps pt.1: MSDO](posts/azure.defenderfordevops.md "Defender for DevOps pt.1: MSDO")
   - [06 Nov 2022 - Its alive!](posts/azdo.itsalive.md "Its alive!")
   - [25 Oct 2022 - GitHub. Light, Camera, Action(s)](posts/github.output.md "GitHub. Light, Camera, Action(s)")
   - [14 Oct 2022 - Ignite 2022 - The good, the bad, and the ugly](posts/ignite2022.md "Ignite 2022 - The good, the bad, and the ugly")
