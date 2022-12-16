@@ -7,6 +7,16 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Defender for DevOps pt.2: DFDO</title>
+			<link>https://www.bjompen.com/#/posts/azure.defenderfordevops.pt2.md</link>
+			<description># Defender for DevOps and MSDO - An introduction pt.2
+
+## It's fascinating how much can happen in such a short time
+
+I released the first part of t...</description>
+			<pubDate>16 Dec 2022</pubDate>
+		</item> 
+		<item>
 			<title>Defender for DevOps pt.1: MSDO</title>
 			<link>https://www.bjompen.com/#/posts/azure.defenderfordevops.md</link>
 			<description># Defender for DevOps and MSDO - An introduction
