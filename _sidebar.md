@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [16 Dec 2022 - Defender for DevOps pt.2: DFDO](posts/azure.defenderfordevops.pt2.md "Defender for DevOps pt.2: DFDO")
   - [08 Dec 2022 - Defender for DevOps pt.1: MSDO](posts/azure.defenderfordevops.md "Defender for DevOps pt.1: MSDO")
   - [06 Nov 2022 - Its alive!](posts/azdo.itsalive.md "Its alive!")
   - [25 Oct 2022 - GitHub. Light, Camera, Action(s)](posts/github.output.md "GitHub. Light, Camera, Action(s)")
