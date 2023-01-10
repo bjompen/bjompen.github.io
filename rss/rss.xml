@@ -7,6 +7,18 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>New year old code: Finding old tasks in AZDO</title>
+			<link>https://www.bjompen.com/#/posts/azdo.oldtasksinuse.md</link>
+			<description># New year, old code
+
+> ----
+>
+> If you only want the code, the complete code block is at the very bottom of this page!
+>
+> If you copy parts whi...</description>
+			<pubDate>10 Jan 2023</pubDate>
+		</item> 
+		<item>
 			<title>Defender for DevOps pt.2: DFDO</title>
 			<link>https://www.bjompen.com/#/posts/azure.defenderfordevops.pt2.md</link>
 			<description># Defender for DevOps and MSDO - An introduction pt.2
