@@ -224,7 +224,7 @@ SAy you have installed an extension containing a task - How do you know it is se
 For example something like this:
 
 ```PowerShell
-Get-ADOPSPipelineTask -Name $_.Task -Organization $Organization | 
+Get-ADOPSPipelineTask -Name $_.name -Organization $Organization | 
     Where-Object -FilterScript {$_.version.major -eq $version} |
     Save-ADOPSPipelineTask -Path $SavePath
 ```
@@ -301,7 +301,7 @@ if (-Not (Test-Path $SavePath)) {
 
 $old | ForEach-Object {
     $version = $_.version
-    Get-ADOPSPipelineTask -Name $_.Task -Organization $Organization | 
+    Get-ADOPSPipelineTask -Name $_.name -Organization $Organization | 
         Where-Object -FilterScript {$_.version.major -eq $version} |
         Save-ADOPSPipelineTask -Path $SavePath
 }
