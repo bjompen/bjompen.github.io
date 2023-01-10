@@ -225,7 +225,7 @@ For example something like this:
 
 ```PowerShell
 Get-ADOPSPipelineTask -Name $_.Task -Organization $Organization | 
-    Where-Object -FilterScript {$_.version.major -eq $_.version} |
+    Where-Object -FilterScript {$_.version.major -eq $version} |
     Save-ADOPSPipelineTask -Path $SavePath
 ```
 
@@ -300,8 +300,10 @@ if (-Not (Test-Path $SavePath)) {
 }
 
 $old | ForEach-Object {
+    $version = $_.version
     Get-ADOPSPipelineTask -Name $_.Task -Organization $Organization | 
-        Where-Object -FilterScript {$_.version.major -eq $_.version} |
+        Where-Object -FilterScript {$_.version.major -eq $version} |
         Save-ADOPSPipelineTask -Path $SavePath
 }
+
 ```
