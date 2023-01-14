@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>On Get-Member, and the less helpful helpfulness of PowerShell</title>
+			<link>https://www.bjompen.com/#/posts/pwsh.getmember.md</link>
+			<description># On Get-Member, and the less helpful helpfulness of PowerShell
+
+If my employer ever tries to get me to go back full time to the office I have some r...</description>
+			<pubDate>14 Jan 2023</pubDate>
+		</item> 
+		<item>
 			<title>New year old code: Finding old tasks in AZDO</title>
 			<link>https://www.bjompen.com/#/posts/azdo.oldtasksinuse.md</link>
 			<description># New year, old code

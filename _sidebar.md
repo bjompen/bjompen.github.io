@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [14 Jan 2023 - On Get-Member, and the less helpful helpfulness of PowerShell](posts/pwsh.getmember.md "On Get-Member, and the less helpful helpfulness of PowerShell")
   - [10 Jan 2023 - New year old code: Finding old tasks in AZDO](posts/azdo.oldtasksinuse.md "New year old code: Finding old tasks in AZDO")
   - [16 Dec 2022 - Defender for DevOps pt.2: DFDO](posts/azure.defenderfordevops.pt2.md "Defender for DevOps pt.2: DFDO")
   - [08 Dec 2022 - Defender for DevOps pt.1: MSDO](posts/azure.defenderfordevops.md "Defender for DevOps pt.1: MSDO")
