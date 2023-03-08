@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>On Azure DevOps, GitVersion, and the art of changing built in defaults</title>
+			<link>https://www.bjompen.com/#/posts/azdo.GitVersionShallow.md</link>
+			<description># On Azure DevOps, GitVersion, and the art of changing built in defaults...
+
+I've been wanting to write something for quite some time now, but haven'...</description>
+			<pubDate>08 Mar 2023</pubDate>
+		</item> 
+		<item>
 			<title>On Get-Member, and the less helpful helpfulness of PowerShell</title>
 			<link>https://www.bjompen.com/#/posts/pwsh.getmember.md</link>
 			<description># On Get-Member, and the less helpful helpfulness of PowerShell
