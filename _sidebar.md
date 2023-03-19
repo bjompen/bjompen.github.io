@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [19 Mar 2023 - yapg. Yet Another Password Generator](posts/yapg.md "yapg. Yet Another Password Generator")
   - [08 Mar 2023 - On Azure DevOps, GitVersion, and the art of changing built in defaults](posts/azdo.GitVersionShallow.md "On Azure DevOps, GitVersion, and the art of changing built in defaults")
   - [14 Jan 2023 - On Get-Member, and the less helpful helpfulness of PowerShell](posts/pwsh.getmember.md "On Get-Member, and the less helpful helpfulness of PowerShell")
   - [10 Jan 2023 - New year old code: Finding old tasks in AZDO](posts/azdo.oldtasksinuse.md "New year old code: Finding old tasks in AZDO")

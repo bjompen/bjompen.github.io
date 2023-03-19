@@ -7,6 +7,15 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>yapg. Yet Another Password Generator</title>
+			<link>https://www.bjompen.com/#/posts/yapg.md</link>
+			<description># YAPG - Yet another password generator
+
+I like to write blog posts. When I first started doing this for real I struggled a bit with it.
+Partly beca...</description>
+			<pubDate>19 Mar 2023</pubDate>
+		</item> 
+		<item>
 			<title>On Azure DevOps, GitVersion, and the art of changing built in defaults</title>
 			<link>https://www.bjompen.com/#/posts/azdo.GitVersionShallow.md</link>
 			<description># On Azure DevOps, GitVersion, and the art of changing built in defaults...
