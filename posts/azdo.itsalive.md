@@ -81,13 +81,13 @@ InvokeADOPSRestMethod -Uri $gu -Method Get | Select-Object displayName, principa
 
 ![Group memberships](../images/azdo.itsalive/5.png)
 
-[* on variables](./variables.md)
+[* on variables](posts/variables.md)
 
 So using this, and a bit of loop magic instead of `$r[0]`, we can now verify and add the groups that is not members of the `Security service group`
 
-## But which service account is _actually_ beeing used to start this specific pipeline?
+## But which service account is _actually_ being used to start this specific pipeline?
 
-Well, truth be told I still haven't found an API that exposes this to me. Might be something hidden in the [undocumented stuff?](./SomethingAmazing.md)
+Well, truth be told I still haven't found an API that exposes this to me. Might be something hidden in the [undocumented stuff?](posts/SomethingAmazing.md)
 
 The default is that the id of your agent pool, which can be found in your URL by going to `organization settings` -> `Agent pools`
 

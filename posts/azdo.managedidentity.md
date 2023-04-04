@@ -40,14 +40,14 @@ Today we're going to set up a project in Azure DevOps, with a pipeline running o
 
 ## Setting up a VMSS
 
-Since we [already have done this in another post](./AzdoVMSSBicep.md) I'm not going to go in to details on this. The important things that we need to think about is this:
+Since we [already have done this in another post](posts/AzdoVMSSBicep.md) I'm not going to go in to details on this. The important things that we need to think about is this:
 
 - We should isolate this VMSS in either it's own subscription or at least a separate resource group. Remember, this VMSS will have _a lot_ of access to our systems. 
 - We need a system assigned managed identity on our scale set
 - We do not need any network connectivity except to fetch software
 - If we use the default MS Ubuntu image we will need to manually install some software in the pipeline.
 
-Once we have our VMSS set up it's time to connect it to our Azure DevOps project. This process can also be found in my [earlier posts](./AzdoVMSS.md) so no need to repeat myself.
+Once we have our VMSS set up it's time to connect it to our Azure DevOps project. This process can also be found in my [earlier posts](posts/AzdoVMSS.md) so no need to repeat myself.
 
 What I can say is that I've set up a separate project to easier isolate this one from the ones we want to manage.
 

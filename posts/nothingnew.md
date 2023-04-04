@@ -3,7 +3,7 @@
 I've been inactive for far to long and feel like I need to write something, yet I have no idea what to write about.
 Normally I'd just pick the last thing I worked on that I found cool, but I have some issues with it: About a mnth ago my Azure DevOps subscription went titsup.
 
-I'm not saying it's connected, but it was pretty soon after I complained about [Azure Chaos studio](./AzureChaosStudio.md) and told the world about [the amazingly odd yet cool apis in Azure DevOps](./SomethingAmazing.md).
+I'm not saying it's connected, but it was pretty soon after I complained about [Azure Chaos studio](posts/AzureChaosStudio.md) and told the world about [the amazingly odd yet cool apis in Azure DevOps](posts/SomethingAmazing.md).
 
 ![Seems just a little crazy, doesnt it?!](../images/NothingNew/crazy-conspiracy.gif)
 

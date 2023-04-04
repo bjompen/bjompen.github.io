@@ -172,7 +172,7 @@ Like I've said before, there are approximately a million levels of ACLs in Azure
 In our case, the protected resource is the code repo.
 
 Clicking "view" followed by "permit" grants the pipeline the correct access.
-(see [part II](./azdo.gitrepos.md) for details of how to find git repo security)
+(see [part II](posts/azdo.gitrepos.md) for details of how to find git repo security)
 ![pipeline access granted](../images/azdo.pipelines/9.png)
 
 After we have approved this we get a nice, green, pipeline run!

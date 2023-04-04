@@ -19,7 +19,7 @@ Like I said, I like to write blog posts, but I still ever so often reach a point
 I haven't really made no great discoveries lately, nor built anything super cool (at least nothing I can talk about publicly),
 Yet I want to write something.
 
-That's why I have posts such as [this](./nothingnew.md) in my history.
+That's why I have posts such as [this](posts/nothingnew.md) in my history.
 
 And that's why todays post is written.
 

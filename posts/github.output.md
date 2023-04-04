@@ -2,7 +2,7 @@
 
 Poor poor Bjompen!
 
-I'm sick. After comming back from [Ignite](./ignite2022.md) I spent the week celebrating the birthdays of two kiddos and one wife, and I'm fairly sure someone brought me the gift of strep throat.
+I'm sick. After comming back from [Ignite](posts/ignite2022.md) I spent the week celebrating the birthdays of two kiddos and one wife, and I'm fairly sure someone brought me the gift of strep throat.
 
 So here I am, spending my days drifting in and out of sleep, watching movies, unable to talk.
 

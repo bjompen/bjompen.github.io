@@ -8,7 +8,7 @@ I have talked to many people about Bicep. Its simplicity compared to ARM. Its am
 
 I have been involved in the [GitHub Bicep module](https://github.com/PSBicep/PSBicep)
 
-I regularely attend the [Bicep community calls](https://github.com/Azure/bicep/issues?q=is%3Aopen+%22Bicep+community+call%22)
+I regularly attend the [Bicep community calls](https://github.com/Azure/bicep/issues?q=is%3Aopen+%22Bicep+community+call%22)
 
 Yet I have _extremely_ little experience in writing it for real.
 
@@ -16,24 +16,24 @@ Time to make a change.
 
 ## A couple of posts ago
 
-I wrote about how to [set up a VMSS to run your pipelines](./AzdoVMSS.md). Fine and dandy, but wwe can't be running large scale operations using clicks right? Let go explore and try to set up everything again, but this time using code!
+I wrote about how to [set up a VMSS to run your pipelines](posts/AzdoVMSS.md). Fine and dandy, but we can't be running large scale operations using clicks right? Let go explore and try to set up everything again, but this time using code!
 
 Before we can get going there are a few things we need to set up to be able to write and run Bicep code.
 Like always, [there's a guide on docs for it](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install), but like always I will go through how I did it as well.
 
 ## Bicep tooling
 
-The first thing we need is of course the Bicep CLI. There are a number of different ways to install and run this depending on how and what your prefered way of working is.
+The first thing we need is of course the Bicep CLI. There are a number of different ways to install and run this depending on how and what your preferred way of working is.
 
 - [Download](https://github.com/Azure/bicep/releases/latest/) and install directly from latest over at GitHub. Bicep is released as a self containing executable, and you can run it from the CLI. Remember to add it to your path though.
-- (do not?) Install it using [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/). If you are using Azure PowerShell to deploy Bicep files it will run whatever Bicep is installed to your CLI. Basically, this will wrap the `bicep.exe <command>` in some powershell magic.
-- Install it with the [az cli](https://docs.microsoft.com/en-us/cli/azure/). This is kind of the odd one out here. If you run `az Bicep install` (or `az Bicep upgrade`) to get the latest and greatest, az cli will install a self contained version of the Bicep executable. This one will _not_ be available to the other CLIs or commandline to run.
+- (do not?) Install it using [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/). If you are using Azure PowerShell to deploy Bicep files it will run whatever Bicep is installed to your CLI. Basically, this will wrap the `bicep.exe <command>` in some PowerShell magic.
+- Install it with the [az cli](https://docs.microsoft.com/en-us/cli/azure/). This is kind of the odd one out here. If you run `az Bicep install` (or `az Bicep upgrade`) to get the latest and greatest, az cli will install a self contained version of the Bicep executable. This one will _not_ be available to the other CLIs or command line to run.
 
 The downside here is of course that **if you run multiple tools and use them all to deploy Bicep code, you may have different versions of the tooling depending on where and how you run it, and hence you might get different results from different tools**
 
 Since I run PowerShell and az cli on my computer I simply have to update and maintain two different Bicep installs on my computer.
 
-After the CLI is installed, we also need to install the VSCode tooling. Fortunately this is a bit easier to do. Search for `bicep` in the extension manager, or go to [marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep) and click install. Thats it.
+After the CLI is installed, we also need to install the VSCode tooling. Fortunately this is a bit easier to do. Search for `bicep` in the extension manager, or go to [marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep) and click install. That's it.
 
 We're ready to dive in to code.
 
@@ -70,7 +70,7 @@ When the Bicep plugin is installed we get a whole lot of help from it. Remember 
 
 Lets start by using those two things!
 
-Already by typing `resource` the plugin starts heping us.
+Already by typing `resource` the plugin starts helping us.
 
 ![One resource, extra cheese, plz](../images/AzdoVMSSBicep/4.png)
 
@@ -93,7 +93,7 @@ Now remember again the type we just found? Lets complete the line with a name an
 There are a few things worth noting here:
 
 - The name is only internal for this Bicep file. We will use this later, but for now it doesn't really matter what you put here.
-- As soon as I start to type the **resourceType** (VirtualMachineScaleSets) it searches through all existing types. This is what actually exists in Azure. All of them. (My point is even if you dont know the resource type you can use this to search and explore!)
+- As soon as I start to type the **resourceType** (VirtualMachineScaleSets) it searches through all existing types. This is what actually exists in Azure. All of them. (My point is even if you don't know the resource type you can use this to search and explore!)
 - As soon as you pick the resource type, it will automatically give you all the available API versions for this particular type. (Pick the newest unless you need something specific)
 - Last but not least, again the autocompleter comes alive! we select `=` followed by `required-properties` and it will automatically generate everything we need to fill in!
 
@@ -106,15 +106,15 @@ resource myVmss 'Microsoft.Compute/virtualMachineScaleSets@2022-03-01' = {
 }
 ```
 
-And thats it! You may now deplonaaaaah it's almost that easy, but not quite.
+And that's it! You may now deplonaaaaah it's almost that easy, but not quite.
 
 ## The devil's in the details
 
 So we have found the resource type, and we have found how to create a Bicep resource, but there are probably a _lot_ of things you want to set that isn't `name` and `location`. Remember, in the original article we set the scaling policy, the network, and the managed identity amongst others... And also, the original post created four resources (think of the keyword _resources_ here).
 
-Again the Bicep plugin canb help us with quite a lot here. Start by making a new line, and click **CTRL + SPACE** and you will be greeted with something like this
+Again the Bicep plugin can help us with quite a lot here. Start by making a new line, and click **CTRL + SPACE** and you will be greeted with something like this
 
-![It _realy_ is magic!](../images/AzdoVMSSBicep/6.gif)
+![It _really_ is magic!](../images/AzdoVMSSBicep/6.gif)
 
 - First of all it tells us _exactly_ what properties can be set on this resource. (Everything with a wrench is a property of some kind)
 - Once we pick our property we again click **CTRL + SPACE** and it tells us what values are accepted (with a square icon, in this case a hashtable denoted by `{}`)
@@ -131,7 +131,7 @@ The last piece of the puzzle here is what we already have done. If we again go u
 
 And if we look at the above drop down (new line -> **CTRL + SPACE**) we see, amongst others, a `sku` property.
 
-Connecting the helpfullness of the plugin, reading the API docs, and seeing what we actually have created before, we can now pretty much recreate our entire deployment in bicep.
+Connecting the helpfulness of the plugin, reading the API docs, and seeing what we actually have created before, we can now pretty much recreate our entire deployment in bicep.
 
 Do we want to though? well, no.
 
@@ -145,7 +145,7 @@ Just like before, we can simply click **CTRL + SPACE**, select `properties`, cli
 
 ![Settings](../images/AzdoVMSSBicep/8.png)
 
-We can now continue reading docs, see what we want, and set stuff untill we have something like this
+We can now continue reading docs, see what we want, and set stuff until we have something like this
 
 ```Bicep
 resource vmss 'Microsoft.Compute/virtualMachineScaleSets@2022-03-01' = {
@@ -191,9 +191,9 @@ In this case, if we click `Quick fix` followed by `Create new parameter...` it w
 
 ### Parameters you say? Can we make this reusable? Absolutely
 
-Unfortunately this is one place where we have to do some manual work. The linter ocly helps us convert certain predefined properties of the resource, so for example the `name` we have to convert ourselves. Since we now can see how a parameter works thats no biggie though! Lets repeat it and add more parameters.
+Unfortunately this is one place where we have to do some manual work. The linter only helps us convert certain predefined properties of the resource, so for example the `name` we have to convert ourselves. Since we now can see how a parameter works that's no biggie though! Lets repeat it and add more parameters.
 
-The standard for a parameter follows pretty much teh same pattern as the resource, albeit with new keywords
+The standard for a parameter follows pretty much the same pattern as the resource, albeit with new keywords
 
 ```Bicep
 param <parameterName> <parameterType> = 'default value'
@@ -271,9 +271,9 @@ Yes there are! First of, lets look at the `location` parameter.
 
 You are correct! Oddly enough though not all people live in Sweden.
 
-There are functions we can use to do some magic in Bicep. One of those beeing the `resourceGroup()` function. This function simply returns the resource group we are currently targeting with this folder. Adding the `.location` to it returns the value of the location property of the resource group.
+There are functions we can use to do some magic in Bicep. One of those being the `resourceGroup()` function. This function simply returns the resource group we are currently targeting with this folder. Adding the `.location` to it returns the value of the location property of the resource group.
 
-The result beeing if the resource group where I am deploying my VMSS is located 'Sweden central', my VMSS will be in 'Sweden central'. If the resource group is located in 'West europe', my VMSS will be in 'West europe'.
+The result being if the resource group where I am deploying my VMSS is located 'Sweden central', my VMSS will be in 'Sweden central'. If the resource group is located in 'West europe', my VMSS will be in 'West europe'.
 
 This is also just a default value, so it is overrideable. We'll look at that in the deploy chapter.
 
@@ -328,7 +328,7 @@ We need to connect our VMSS to a subnet, and to do that we need a subnet id, and
 
 In Bicep there are two ways to connect multiple resources like this: Running them in the same Bicep file, or making sure the Bicep deploy outputs any value you need to bring to the next deploy step. Which one you choose is mostly dependent on the scenario.
 
-No matter, we need to create a subnet, and a subnet needs a vnet, and it should probably also need a NSG for somew basic protection.
+No matter, we need to create a subnet, and a subnet needs a vnet, and it should probably also need a NSG for some basic protection.
 
 Using the skills above, reading the docs, and looking at the resource I created, I ended up with this:
 
@@ -383,7 +383,7 @@ The resulting ARM template will now have this dependency in place, and even thou
 1. virtualNetworks
 1. networkSecurityGroups
 
-It will actually create the resources the oppisite way. Magic dependency managing is magic!
+It will actually create the resources the opposite way. Magic dependency managing is magic!
 
 We also introduce another concept here: String interpolation.
 Instead of giving the NSG one name, and the subnet another, I want them to share name with different postfixes.
@@ -453,7 +453,7 @@ Neat, Innit! Some minor cleanup and we are done deploying our resources using Bi
 
 Again, observant of you. The nic created in the original post is actually a subresource created using the vmss.bicep file. We don't need to create it specifically _unless we want to_ as it is implicitly created and connected to our subnet.
 
-And the SSH resource? Well instead of downloading and recreating a million different public keys Im just using the onle I already have on my computer
+And the SSH resource? Well instead of downloading and recreating a million different public keys I'm just using the one I already have on my computer
 
 ```PowerShell
 $sshPubKey = Get-Content C:\Users\bjompen\.ssh\id_rsa.pub
@@ -475,7 +475,7 @@ Connect-ADOPS -Username 'MyAzdoUser' -Organization 'MyAzdoOrganization' -Persona
 
 ### Creating the service connection
 
-When we set it up in Azure DevOps the first thing we needed was a service connection. A service connection is actualy two things:
+When we set it up in Azure DevOps the first thing we needed was a service connection. A service connection is actually two things:
 
 - An identity in Azure AD with access to the resource(s) you want
 - A service connection in Azure DevOps that uses this identity.
@@ -486,7 +486,7 @@ The first thing we need to do this manually is the identity...
 
 ...And those can't be created using Bicep yet 🤦
 
-Instead lets run the PowerShell command `New-AzADServicePrincipal` to create it. This command created a registered app and a related enterprice app in Azure AD that we then can use to connect our Azure DevOps organization. This identity, The enterprice app, can then be granted the "contributer" role on our resource group.
+Instead lets run the PowerShell command `New-AzADServicePrincipal` to create it. This command created a registered app and a related enterprise app in Azure AD that we then can use to connect our Azure DevOps organization. This identity, The enterprise app, can then be granted the "contributor" role on our resource group.
 
 ```Bicep
 param principalId string
@@ -506,7 +506,7 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-10-01-prev
 }
 ```
 
-The first recourse actually fetches the build in contributor role which ID we then use to grant our service principal the access needed. We introduce yet one more function here, the `guid()` function, and also we use the keyword `existing` _before_ our `=` when declairing our resource in order to fetch a resource instead of creating it.
+The first recourse actually fetches the build in contributor role which ID we then use to grant our service principal the access needed. We introduce yet one more function here, the `guid()` function, and also we use the keyword `existing` _before_ our `=` when declaring our resource in order to fetch a resource instead of creating it.
 
 Once we have set up our service principal we can use the `New-ADOPSServiceConnection` from the ADOPS module to create our service connection.
 
@@ -541,7 +541,7 @@ $ElasticPool = New-ADOPSElasticPool -ElasticPoolObject $ElasticPoolObject -PoolN
 
 [All the code that this blog post resulted in can be found at my github page](https://github.com/bjompen/AZDOVMSSDeploy)
 
-There are still a couple of things I want to add before I drop out and make this friday a friday. These are some of the questions I had during the research for this post.
+There are still a couple of things I want to add before I drop out and make this Friday a Friday. These are some of the questions I had during the research for this post.
 
 - How come you set up the subnet as part of the vnet instead of as its own resource?
   - A Bicep deploy _only changes what needs to be changed_. If something is already in a correct state nothing will happen. If I create subnet resource and then connect that one to my vnet, a redeploy may in some cases end up deploying the vnet _without any subnets_, then check and see the subnet exists, and reconnect it. See [this article on docs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks#configure-subnets-by-using-the-subnets-property)

@@ -14,7 +14,7 @@ Back to the presentations.
 
 And that's what I plan to write about today.
 
-Some time ago I, along with a bunch of colleagues, went to Ignite in Seattle. I wrote about it [here](./ignite2022.md) in not all positive words, but like stated I did go home with a couple of things worth researching. Defender for DevOps being one.
+Some time ago I, along with a bunch of colleagues, went to Ignite in Seattle. I wrote about it [here](posts/ignite2022.md) in not all positive words, but like stated I did go home with a couple of things worth researching. Defender for DevOps being one.
 
 ## I often say I'm not a security person
 

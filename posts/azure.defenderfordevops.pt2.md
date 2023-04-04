@@ -17,7 +17,7 @@ Apart from this I had time for some family holiday traditions, but those are not
 
 ## So... Pt. 2 - Lets look at Defender for DevOps this time
 
-[Last time](./azure.defenderfordevops.md) we set up MSDO and scanned our pipelines, configured some pipeline settings, and looked at some build results and how to fix them, and of course we all know this is all that really matters, but I have heard rumours about another type of people. Weird people.
+[Last time](posts/azure.defenderfordevops.md) we set up MSDO and scanned our pipelines, configured some pipeline settings, and looked at some build results and how to fix them, and of course we all know this is all that really matters, but I have heard rumours about another type of people. Weird people.
 
 __People who works in GUIs.__
 
@@ -138,7 +138,7 @@ One thing I got stuck on was the `azureDevOpsConnectors` resource requiring a au
 
 yet nothing about what authorization code it means, nor where to get it.
 
-A bit of [f12](./f12.md) and my good friend and colleague [Emanuel](https://github.com/PalmEmanuel) figured out that this application uses a static URL link to generate this token that looks like this:
+A bit of [f12](posts/f12.md) and my good friend and colleague [Emanuel](https://github.com/PalmEmanuel) figured out that this application uses a static URL link to generate this token that looks like this:
 
 > https://app.vssps.visualstudio.com/oauth2/authorize?client_id=15aaae2a-1f1a-4f02-9762-47cf0ec5591f&response_type=Assertion&state=R0RwSGZKaGh4QzNNUWFhQkxtWFRvNWhsR09HM29BdC9hMkg0U2M5Qlpncz0=&scope=vso.agentpools%20vso.auditlog%20vso.auditstreams_manage%20vso.build_execute%20vso.code_write%20vso.entitlements%20vso.extension%20vso.graph%20vso.identity%20vso.memberentitlementmanagement%20vso.notification_diagnostics%20vso.packaging%20vso.project%20vso.release%20vso.securefiles_read%20vso.serviceendpoint%20vso.symbols%20vso.taskgroups_read%20vso.threads_full%20vso.variablegroups_read%20vso.work_write%20vso.hooks_write&redirect_uri=https://portal.azure.com/tokenAuthorize
 
