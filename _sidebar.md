@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [18 Apr 2023 - On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell](posts/pwsh.unwrappingobjects.md "On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell")
   - [03 Apr 2023 - Azure DevOps and managed identities](posts/azdo.managedidentity.md "Azure DevOps and managed identities")
   - [31 Mar 2023 - Changes. Git changes that is.](posts/chchchchchanges.md "Changes. Git changes that is.")
   - [19 Mar 2023 - yapg. Yet Another Password Generator](posts/yapg.md "yapg. Yet Another Password Generator")

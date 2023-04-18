@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell</title>
+			<link>https://www.bjompen.com/#/posts/pwsh.unwrappingobjects.md</link>
+			<description># On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell
+
+In a mere two days I'm leaving for [PowerShell + DevOps global summi...</description>
+			<pubDate>18 Apr 2023</pubDate>
+		</item> 
+		<item>
 			<title>Azure DevOps and managed identities</title>
 			<link>https://www.bjompen.com/#/posts/azdo.managedidentity.md</link>
 			<description># Managed identity support in Azure DevOps
@@ -100,7 +108,7 @@ I Wrote some time ago in a side note that my A...</description>
 
 Poor poor Bjompen!
 
-I'm sick. After comming back from [Ignite](./ignite2022.md) I spent the week celebrating th...</description>
+I'm sick. After comming back from [Ignite](posts/ignite2022.md) I spent the week celebratin...</description>
 			<pubDate>25 Oct 2022</pubDate>
 		</item> 
 		<item>
