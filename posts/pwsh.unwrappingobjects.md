@@ -362,7 +362,7 @@ Array:
 
 String:
 
-![Outputstring](../images/pwsh.unwrappingobjects/3.gif)
+![OutputString](../images/pwsh.unwrappingobjects/3.gif)
 
 While unknown.. well.. does nothing.
 
