@@ -7,6 +7,15 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Azure DevOps with interactive processes</title>
+			<link>https://www.bjompen.com/#/posts/azdo.process.clean.md</link>
+			<description># Azure DevOps and long living processes
+
+Long time no write again.
+I've been keeping busy as b***s though, presenting at PowerShell and DevOps glob...</description>
+			<pubDate>29 May 2023</pubDate>
+		</item> 
+		<item>
 			<title>On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell</title>
 			<link>https://www.bjompen.com/#/posts/pwsh.unwrappingobjects.md</link>
 			<description># On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell
