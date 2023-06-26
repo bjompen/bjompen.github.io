@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [26 June 2023 - The month](posts/themonth.md "The month")
   - [29 May 2023 - Azure DevOps with interactive processes](posts/azdo.process.clean.md "Azure DevOps with interactive processes")
   - [18 Apr 2023 - On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell](posts/pwsh.unwrappingobjects.md "On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell")
   - [03 Apr 2023 - Azure DevOps and managed identities](posts/azdo.managedidentity.md "Azure DevOps and managed identities")

@@ -7,6 +7,16 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The month</title>
+			<link>https://www.bjompen.com/#/posts/themonth.md</link>
+			<description># Oh.. My.. God...
+
+There are times in your life that just makes you loose everything.
+
+I don't mean that in the bad way, even though we do have th...</description>
+			<pubDate>26 June 2023</pubDate>
+		</item> 
+		<item>
 			<title>Azure DevOps with interactive processes</title>
 			<link>https://www.bjompen.com/#/posts/azdo.process.clean.md</link>
 			<description># Azure DevOps and long living processes
