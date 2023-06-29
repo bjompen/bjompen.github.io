@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [29 June 2023 - Same task, different repos...](posts/github.sametaskdifferentrepo.md "Same task, different repos...")
   - [26 June 2023 - The month](posts/themonth.md "The month")
   - [29 May 2023 - Azure DevOps with interactive processes](posts/azdo.process.clean.md "Azure DevOps with interactive processes")
   - [18 Apr 2023 - On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell](posts/pwsh.unwrappingobjects.md "On arrays, unwrapping objects, and the less helpful helpfulness of PowerShell")
