@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The road to Az-204, pt. 1</title>
+			<link>https://www.bjompen.com/#/posts/az204.pt1.md</link>
+			<description>## Lets learn some Azure! Az204 Pt.1
+
+For quite some time I've been meaning to get the [Az-204 certification.](https://learn.microsoft.com/en-us/cert...</description>
+			<pubDate>30 June 2023</pubDate>
+		</item> 
+		<item>
 			<title>Same task, different repos...</title>
 			<link>https://www.bjompen.com/#/posts/github.sametaskdifferentrepo.md</link>
 			<description># Same same, but different.

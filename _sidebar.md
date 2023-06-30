@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [30 June 2023 - The road to Az-204, pt. 1](posts/az204.pt1.md "The road to Az204, pt. 1")
   - [29 June 2023 - Same task, different repos...](posts/github.sametaskdifferentrepo.md "Same task, different repos...")
   - [26 June 2023 - The month](posts/themonth.md "The month")
   - [29 May 2023 - Azure DevOps with interactive processes](posts/azdo.process.clean.md "Azure DevOps with interactive processes")
