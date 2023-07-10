@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The road to Az-204, pt. 2-App services</title>
+			<link>https://www.bjompen.com/#/posts/az204.pt2.md</link>
+			<description># Lets learn some Azure! Az204 Pt.2 - App services
+
+Head first in to the learning path, the first chapter of out journey is [Implement Azure App Serv...</description>
+			<pubDate>10 July 2023</pubDate>
+		</item> 
+		<item>
 			<title>The road to Az-204, pt. 1</title>
 			<link>https://www.bjompen.com/#/posts/az204.pt1.md</link>
 			<description>## Lets learn some Azure! Az204 Pt.1
