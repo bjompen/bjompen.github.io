@@ -6,7 +6,7 @@ After a year of silence, 4 posts in a week?
 
 Well this is just a short one.
 
-## While creating the [Set-AzDoPermission](.\holdmydecompiler.md) function
+## While creating the [Set-AzDoPermission](posts/holdmydecompiler.md) function
 
 I stumbled upon an interesting "bugg", and I thought it interesting to write about.
 

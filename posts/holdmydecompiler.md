@@ -29,7 +29,7 @@ I would absolutely lie if I said I found the truth there though, but some hints 
 
 Next step of data gathering was fireing up the browser, clicking through the GUI, all while checking the network log to see what was sent.
 
-Given [I have an entire blogpost on this](.\f12.md) I wont go in to more details, but the body and security details in the decompile was starting to make sense..
+Given [I have an entire blogpost on this](posts/f12.md) I wont go in to more details, but the body and security details in the decompile was starting to make sense..
 
 When we set git permissions in the GUI we post a body to the [AccessControllEntries](https://docs.microsoft.com/en-us/rest/api/azure/devops/security/access-control-entries/set-access-control-entries?view=azure-devops-rest-7.1) API. This *API is fairly good documented, so how come I "have to use tf.exe"? Well, one thing that _isn't_ documented anywhere is how to set access controll on a branch that doesn't yet exist in Azure DevOps..
 
