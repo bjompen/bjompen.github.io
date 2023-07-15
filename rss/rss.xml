@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The road to Az-204, pt. 3-Implement Azure Functions</title>
+			<link>https://www.bjompen.com/#/posts/az204.pt3.md</link>
+			<description># Lets learn some Azure! Az204 Pt.3 - Implement Azure Functions
+
+Back on the horse, this time for a shorter post. The Azure Functions chapter is but ...</description>
+			<pubDate>15 July 2023</pubDate>
+		</item> 
+		<item>
 			<title>The road to Az-204, pt. 2-App services</title>
 			<link>https://www.bjompen.com/#/posts/az204.pt2.md</link>
 			<description># Lets learn some Azure! Az204 Pt.2 - App services
