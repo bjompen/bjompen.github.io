@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [15 July 2023 - The road to Az-204, pt. 5-Develop solutions that use Azure Cosmos DB](posts/az204.pt5.md "The road to Az204, pt. 5-Develop solutions that use Azure Cosmos DB")
   - [15 July 2023 - The road to Az-204, pt. 4-Develop solutions that use Blob storage](posts/az204.pt4.md "The road to Az204, pt. 4-Develop solutions that use Blob storage")
   - [15 July 2023 - The road to Az-204, pt. 3-Implement Azure Functions](posts/az204.pt3.md "The road to Az204, pt. 3-Implement Azure Functions")
   - [10 July 2023 - The road to Az-204, pt. 2-App services](posts/az204.pt2.md "The road to Az204, pt. 2-App services")

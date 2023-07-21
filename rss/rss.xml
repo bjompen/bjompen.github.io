@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The road to Az-204, pt. 5-Develop solutions that use Azure Cosmos DB</title>
+			<link>https://www.bjompen.com/#/posts/az204.pt5.md</link>
+			<description># Lets learn some Azure! Az204 Pt.5 - Develop solutions that use Azure Cosmos DB
+
+![I know nothing about this - gif](../images/az204.pt5/knownothing....</description>
+			<pubDate>15 July 2023</pubDate>
+		</item> 
+		<item>
 			<title>The road to Az-204, pt. 4-Develop solutions that use Blob storage</title>
 			<link>https://www.bjompen.com/#/posts/az204.pt4.md</link>
 			<description># Lets learn some Azure! Az204 Pt.4 - Develop solutions that use Blob storage
