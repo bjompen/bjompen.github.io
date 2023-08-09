@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Wacken 2023</title>
+			<link>https://www.bjompen.com/#/posts/wacken2023.md</link>
+			<description># And now for something completely different - Wacken 2023, the adventure.
+
+I was supposed to go back to studying, but I kind of need to get this sto...</description>
+			<pubDate>09 Aug 2023</pubDate>
+		</item> 
+		<item>
 			<title>Onwards and upwards. ACR, ACI, and ACA.</title>
 			<link>https://www.bjompen.com/#/posts/az204.pt6.md</link>
 			<description># Lets learn some Azure! Az204 Pt.6 - Onwards and upwards
