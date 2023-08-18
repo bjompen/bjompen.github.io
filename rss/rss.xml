@@ -7,6 +7,15 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>The final frontier!</title>
+			<link>https://www.bjompen.com/#/posts/az204.pt7.md</link>
+			<description># Lets learn some Azure! Az204 Pt.7 - The final frontier!
+
+This is the last post in a series called `Let's learn some Azure! Az204`.
+To read them al...</description>
+			<pubDate>18 Aug 2023 - The road to Az-204, pt. 7</pubDate>
+		</item> 
+		<item>
 			<title>Wacken 2023</title>
 			<link>https://www.bjompen.com/#/posts/wacken2023.md</link>
 			<description># And now for something completely different - Wacken 2023, the adventure.
@@ -19,7 +28,8 @@ I was supposed to go back to studying, but I kind of need to get this sto...</de
 			<link>https://www.bjompen.com/#/posts/az204.pt6.md</link>
 			<description># Lets learn some Azure! Az204 Pt.6 - Onwards and upwards
 
-I've been away for a screen-detox vacation for a couple of days. Camping, fishing, and spe...</description>
+This is the sixth post in a series called `Let's learn some Azure! Az204`.
+To read them a...</description>
 			<pubDate>30 July 2023 - The road to Az-204, pt. 6</pubDate>
 		</item> 
 		<item>
@@ -27,7 +37,7 @@ I've been away for a screen-detox vacation for a couple of days. Camping, fishin
 			<link>https://www.bjompen.com/#/posts/az204.pt5.md</link>
 			<description># Lets learn some Azure! Az204 Pt.5 - Develop solutions that use Azure Cosmos DB
 
-![I know nothing about this - gif](../images/az204.pt5/knownothing....</description>
+This is the fifth post in a series called `Let's learn some Azure! ...</description>
 			<pubDate>21 July 2023</pubDate>
 		</item> 
 		<item>
@@ -35,9 +45,7 @@ I've been away for a screen-detox vacation for a couple of days. Camping, fishin
 			<link>https://www.bjompen.com/#/posts/az204.pt4.md</link>
 			<description># Lets learn some Azure! Az204 Pt.4 - Develop solutions that use Blob storage
 
-One more of those chapters I feel comfortable with.
-
-Is probably wha...</description>
+This is the fourth post in a series called `Let's learn some Azure! Az...</description>
 			<pubDate>18 July 2023</pubDate>
 		</item> 
 		<item>
@@ -45,7 +53,8 @@ Is probably wha...</description>
 			<link>https://www.bjompen.com/#/posts/az204.pt3.md</link>
 			<description># Lets learn some Azure! Az204 Pt.3 - Implement Azure Functions
 
-Back on the horse, this time for a shorter post. The Azure Functions chapter is but ...</description>
+This is the third post in a series called `Let's learn some Azure! Az204`.
+To read ...</description>
 			<pubDate>15 July 2023</pubDate>
 		</item> 
 		<item>
@@ -53,15 +62,17 @@ Back on the horse, this time for a shorter post. The Azure Functions chapter is 
 			<link>https://www.bjompen.com/#/posts/az204.pt2.md</link>
 			<description># Lets learn some Azure! Az204 Pt.2 - App services
 
-Head first in to the learning path, the first chapter of out journey is [Implement Azure App Serv...</description>
+This is the second post in a series called `Let's learn some Azure! Az204`.
+To read them all, an...</description>
 			<pubDate>10 July 2023</pubDate>
 		</item> 
 		<item>
 			<title>The road to Az-204, pt. 1</title>
 			<link>https://www.bjompen.com/#/posts/az204.pt1.md</link>
-			<description>## Lets learn some Azure! Az204 Pt.1
+			<description># Lets learn some Azure! Az204 Pt.1
 
-For quite some time I've been meaning to get the [Az-204 certification.](https://learn.microsoft.com/en-us/cert...</description>
+This is the first post in a series called `Let's learn some Azure! Az204`.
+To read them all, and in the right o...</description>
 			<pubDate>30 June 2023</pubDate>
 		</item> 
 		<item>
