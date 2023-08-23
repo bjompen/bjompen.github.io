@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [23 Aug 2023 - A follow up on the concept of certifications](posts/certifications.md "A follow up on the concept of certifications")
   - [18 Aug 2023 - The road to Az-204, pt. 7 - The final frontier!](posts/az204.pt7.md "The road to Az204, pt. 7 - The final frontier!")
   - [09 Aug 2023 - Wacken 2023](posts/wacken2023.md "Wacken 2023")
   - [30 July 2023 - The road to Az-204, pt. 6 - Onwards and upwards. ACR, ACI, and ACA.](posts/az204.pt6.md "The road to Az204, pt. 6 - Onwards and upwards. ACR, ACI, and ACA.")
