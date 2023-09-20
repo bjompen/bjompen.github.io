@@ -83,7 +83,7 @@ Before I get into what could sound a lot like pure negativity I would like to me
 
 * Ask. Have back office ever sat down with your front desk to see what they are really doing? Have you ever looked at how HR does things? When you picked your versioning tool, did you first check if the documentation team needed one? Make sure you include everyone before you make a decision. The easiest way to do this, I find, is back to talking and showing your way of work.
 
-* Trust. How many times have we said "IT would be so much easier without end users".. IT's reason of existence is to allow end users to do their job, so who can better tell you what they need but them? When an end user asks for something, try to understand the problem she or he is facing. Ask her why and how long this problem has existed, and if it can be tied in to another person or departments work. Understanding is the key to trusting each other.
+* Trust. How many times have we said "IT would be so much easier without end users".. IT's reason of existence is to allow end users to do their job, so who can better tell you what they need but them? When an end user asks for something, try to understand the problem she or he is facing. Ask them why and how long this problem has existed, and if it can be tied in to another person or departments work. Understanding is the key to trusting each other.
 
 ### What is my job really? (Process)
 
