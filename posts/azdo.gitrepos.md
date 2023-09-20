@@ -32,7 +32,7 @@ We can also set some project wide standards here, so lets start with those.
 ![All repositories settings](../images/azdo.gitrepos/git2.png)
 
 The Default repositories settings allows you to change default branch names, which I wont, Main is good, but more interesting is the ["Allow users to manage permissions..."](https://docs.microsoft.com/en-us/azure/devops/release-notes/2021/sprint-192-update#configure-branch-creators-to-not-get-manage-permissions-on-their-branches) setting.
-By default, any user can change access on a branch that user creates, so if "user1" creates a branch, he can give "externalHacker" access to that branch. If you set up your access properly this wont be a big problem, but it might be worth turning off.
+By default, any user can change access on a branch that user creates, so if "user1" creates a branch, they can give "externalHacker" access to that branch. If you set up your access properly this wont be a big problem, but it might be worth turning off.
 
 ### Policies
 

@@ -83,7 +83,7 @@ Before I get into what could sound a lot like pure negativity I would like to me
 
 * Ask. Have back office ever sat down with your front desk to see what they are really doing? Have you ever looked at how HR does things? When you picked your versioning tool, did you first check if the documentation team needed one? Make sure you include everyone before you make a decision. The easiest way to do this, I find, is back to talking and showing your way of work.
 
-* Trust. How many times have we said "IT would be so much easier without end users".. IT's reason of existance is to allow end users to do their job, so who can better tell you what they need but them? When an end user asks for something, try to understand the problem she or he is facing. Ask her why and how long this problem has existed, and if it can be tied in to another person or departments work. Understanding is the key to trusting each other.
+* Trust. How many times have we said "IT would be so much easier without end users".. IT's reason of existence is to allow end users to do their job, so who can better tell you what they need but them? When an end user asks for something, try to understand the problem she or he is facing. Ask her why and how long this problem has existed, and if it can be tied in to another person or departments work. Understanding is the key to trusting each other.
 
 ### What is my job really? (Process)
 
@@ -101,7 +101,7 @@ Before I get into what could sound a lot like pure negativity I would like to me
 
 * The only way to actually know if what you are doing is useful is to ask the people around you. Should we improve on something? Are we heading in the direction people need us to go? In poker there is a saying: It's never to late to fold. Even if you invested a lot of time in something we need to know if it is worth keeping alive, and we need feedback loops to get this information.
 
-  When I say feedback I do not only mean feedback on the end result. Ask your colleagues what they think you did right, and what can be improved. Ask your manager how he sees you and your work as a part of the companies main goals.
+  When I say feedback I do not only mean feedback on the end result. Ask your colleagues what they think you did right, and what can be improved. Ask your manager how they see you and your work as a part of the companies main goals.
 
   In fact, before you start doing any work at all, make sure you know who to ask for feedback.
 

@@ -74,7 +74,7 @@ Before I had something useful there was some filtering to do. Some words are too
 
 In the end I went the simple route and filtered on everything that starts with a character. This still results in the odd weird one, but it covers enough to not end up with pure crap.
 
-I honestly don't know how many was included in he wordlist to begin with, but the resulting wordlist contains no less than 96583 unique words.
+I honestly don't know how many was included in the wordlist to begin with, but the resulting wordlist contains no less than 96583 unique words.
 
 If we still follow the **CorrectHorseBatteryStaple** formula that would mean we have...
 
