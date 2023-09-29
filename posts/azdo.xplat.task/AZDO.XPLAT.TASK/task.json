@@ -1,0 +1,36 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "07d9735e-e36f-4f2c-abd4-c01e5a06a8a6",
+    "name": "FruitAPI",
+    "friendlyName": "FruitAPI",
+    "description": "Run the FruitAPI. Make fruit sallad in your pipeline!",
+    "author": "Björn 'Bjompen' Sundling",
+    "helpMarkDown": "[Link to your repo, maybe?](https://github.com/bjompen/)",
+    "category": "Utility",
+    "visibility": [
+      "Build",
+      "Release"
+    ],
+    "demands": [],
+    "version": {
+      "Major": "1",
+      "Minor": "0",
+      "Patch": "2"
+    },
+    "minimumAgentVersion": "1.95.0",
+    "instanceNameFormat": "FruitAPI $(message)",
+    "inputs": [
+      {
+        "name": "Icons",
+        "type": "string",
+        "label": "OutputIcons",
+        "required": false,
+        "helpMarkDown": "If any value is set here we will output icons instead of text."
+      }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

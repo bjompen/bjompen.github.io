@@ -1,0 +1,49 @@
+{
+    "manifestVersion": 1,
+    "id": "AZDOXPLAT",
+    "name": "A fruit sallad api for your pipelines!",
+    "version": "1.0.2",
+    "publisher": "bjompenlabbanddemopub",
+    "galleryFlags": [
+        "Public"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "A fruit sallad api for your pipelines!",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "icon.png"
+    },
+    "links": {
+        "support": {
+            "uri": "https://github.com/bjompen/"
+        }
+    },
+    "files": [
+        {
+            "path": "AZDO.XPLAT.TASK"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "AZDO.XPLAT.TASK",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "AZDO.XPLAT.TASK"
+            }
+        }
+    ]
+}
