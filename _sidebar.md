@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [14 Nov 2023 - Blob Lister. A lesson in JavaScript](posts/blobLister.md "Blob Lister. A lesson in JavaScript")
   - [29 Sep 2023 - Creating and releasing PowerShell Azure DevOps tasks](posts/azdo.xplat.task.md "Creating and releasing PowerShell Azure DevOps tasks")
   - [20 Sep 2023 - Metal moshing mad - A status update](posts/datamoshpit2023.md "Metal moshing mad - A status update")
   - [23 Aug 2023 - A follow up on the concept of certifications](posts/certifications.md "A follow up on the concept of certifications")

@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Blob Lister. A lesson in JavaScript</title>
+			<link>https://www.bjompen.com/#/posts/blobLister.md</link>
+			<description># Blob lister
+
+I've been having some morale issues lately. Hard to find the energy to get started with anything really, an instead of code I've mostl...</description>
+			<pubDate>14 Nov 2023</pubDate>
+		</item> 
+		<item>
 			<title>Creating and releasing PowerShell Azure DevOps tasks</title>
 			<link>https://www.bjompen.com/#/posts/azdo.xplat.task.md</link>
 			<description># Creating and releasing PowerShell Azure DevOps tasks
