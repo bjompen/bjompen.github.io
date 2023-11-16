@@ -1,6 +1,6 @@
 # Using Azure privileged access (PIM) to protect your Azure DevOps resources
 
-In my research around my forthcomming presentations I recently stumbled uppon the [Azure DevOps Administrator](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#azure-devops-administrator) role in Azure AD. I have of course used this before, but haven't really thought much about what it does before. After all, I'm the super duper admin of my Azure DevOps environment, right?
+In my research around my forthcomming presentations I recently stumbled uppon the [Azure DevOps Administrator](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference?wt.mc_id=DT-MVP-5005317#azure-devops-administrator) role in Azure AD. I have of course used this before, but haven't really thought much about what it does before. After all, I'm the super duper admin of my Azure DevOps environment, right?
 But it got me thinking: Can we use Azure PIM to protect stuff in our Azure DevOps environment outside of the AD stuff? Well, turns out, the answer, like most cases in IT, is "Yes, but..."
 
 ## About PIM
@@ -9,7 +9,7 @@ So what is this PIM im talking about? Well, the short of it, what we are going t
 
 **Let me be a member of the group _xyz_ for $TimeSpan time please**
 
-Of course there is more info over at [Microsoft Docs](https://docs.microsoft.com/en-gb/azure/active-directory/privileged-identity-management/pim-configure)
+Of course there is more info over at [Microsoft Docs](https://docs.microsoft.com/azure/active-directory/privileged-identity-management/pim-configure?wt.mc_id=DT-MVP-5005317)
 
 ## Built in roles
 

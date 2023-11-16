@@ -48,7 +48,7 @@ And so, the chaos engineering part
 
 ## So imagine my interest
 
-When Microsoft released [Azure Chaos studio](https://docs.microsoft.com/en-gb/azure/chaos-studio/chaos-studio-overview)!
+When Microsoft released [Azure Chaos studio](https://docs.microsoft.com/azure/chaos-studio/chaos-studio-overview?wt.mc_id=DT-MVP-5005317)!
 
 A chaos monkey for my Azure stuff! This is going to be so much fun!
 
@@ -159,14 +159,14 @@ When creating AKS faults we need to install [Chaos Mesh](https://chaos-mesh.org/
 
 > Chaos Mesh could not be found on the specified cluster 'ClusterNane'. Please ensure that Chaos Mesh is installed in the expected 'namespace' namespace.
 
-Fortunately, as always, [there is a great guide for this over at Docs](https://docs.microsoft.com/en-gb/azure/chaos-studio/chaos-studio-tutorial-aks-portal#set-up-chaos-mesh-on-your-aks-cluster)
+Fortunately, as always, [there is a great guide for this over at Docs](https://docs.microsoft.com/azure/chaos-studio/chaos-studio-tutorial-aks-portal?wt.mc_id=DT-MVP-5005317#set-up-chaos-mesh-on-your-aks-cluster)
 
 Once installed we can sety up our experiments.
 
 ![AKS actions](../images/AzureChaosStudio/6.png)
 
 When adding an AKS action we need to supply a parameter called `jsonSpec`.
-If you haven't worked specifically with chaos mesh before these can be really hard to find or figure out, and I'm not going to claim to understand them myself, but reading [the docs](https://docs.microsoft.com/en-gb/azure/chaos-studio/chaos-studio-fault-library#aks-chaos-mesh-network-faults) is as always a great start, and we can steal the example code from there.
+If you haven't worked specifically with chaos mesh before these can be really hard to find or figure out, and I'm not going to claim to understand them myself, but reading [the docs](https://docs.microsoft.com/azure/chaos-studio/chaos-studio-fault-library?wt.mc_id=DT-MVP-5005317#aks-chaos-mesh-network-faults) is as always a great start, and we can steal the example code from there.
 
 ```Text
 {\"action\":\"delay\",\"mode\":\"one\",\"selector\":{\"namespaces\":[\"default\"],\"labelSelectors\":{\"app\":\"web-show\"}},\"delay\":{\"latency\":\"10ms\",\"correlation\":\"100\",\"jitter\":\"0ms\"}}
@@ -180,12 +180,12 @@ Once we have filled in these fields we can select our AKS resource and call this
 
 ### VMSS Shutdown
 
-Let's create a new step and select the `VMSS Shutdown` fault instead. interestingly enough the closes documentation on the [fault library page](https://docs.microsoft.com/en-gb/azure/chaos-studio/chaos-studio-fault-library#arm-virtual-machine-scale-set-instance-shutdown) is for ARM VMSS, which as far as I know wasnt even available when the documentation was last updated.. But as the parameters are the same that might not matter.
+Let's create a new step and select the `VMSS Shutdown` fault instead. interestingly enough the closes documentation on the [fault library page](https://docs.microsoft.com/azure/chaos-studio/chaos-studio-fault-library?wt.mc_id=DT-MVP-5005317#arm-virtual-machine-scale-set-instance-shutdown) is for ARM VMSS, which as far as I know wasnt even available when the documentation was last updated.. But as the parameters are the same that might not matter.
 
 ![VMSS Shutdown](../images/AzureChaosStudio/8.png)
 
 Again, we are greeted with unexpected parameters.. Instances.
-From the docs we can see that this is a list of [instances in our scaleset](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-instance-ids).
+From the docs we can see that this is a list of [instances in our scaleset](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-instance-ids?wt.mc_id=DT-MVP-5005317).
 
 The only possible data to put here is numbers and comma, sp lets just put a list in and hope our instances happens to be in there.
 

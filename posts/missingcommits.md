@@ -1,7 +1,7 @@
 # Bjompen Potter and the hair pulling case of the missing commits
 
 In my research around Azure DevOps I recently stumbled on an interesting problem.
-I wanted to add [Environments](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops) to add some easy and fancy traceability to my pipelines.
+I wanted to add [Environments](https://docs.microsoft.com/azure/devops/pipelines/process/environments?view=azure-devops&wt.mc_id=DT-MVP-5005317) to add some easy and fancy traceability to my pipelines.
 
 ## Always start with reading the docs
 
@@ -12,7 +12,7 @@ According to the documentation linked above, getting started with environments i
 
 Sounds simple enough, doesn't it? And it is! My environments are created and used.
 
-[So lets read some more](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops)
+[So lets read some more](https://docs.microsoft.com/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops&wt.mc_id=DT-MVP-5005317)
 
 ---
 No `checkout` steps
@@ -25,7 +25,7 @@ but...
 
 ## Dude, where's my commits?
 
-The feature I am currently looking at in environments is the [Deployment history](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops#deployment-history), and more exactly, the commit history.
+The feature I am currently looking at in environments is the [Deployment history](https://docs.microsoft.com/azure/devops/pipelines/process/environments?view=azure-devops&wt.mc_id=DT-MVP-5005317#deployment-history), and more exactly, the commit history.
 
 So after setting everything up according to the documentation, I had a pipeline looking like this:
 

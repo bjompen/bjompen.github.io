@@ -10,9 +10,9 @@ Well, It work again, and I thought that in order to really check it of my list I
 
 Every Azure DevOps organization comes with a number of built in service accounts. You can find them by going to `Organization settings` -> `Permissions` -> `Users`.
 
-Basically these are accounts that makes sure your stuff  such as service connections, board connections, Build services, and more run. Of course, Like always, there's a brilliant [MS learn page describing this.](https://learn.microsoft.com/en-us/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page)
+Basically these are accounts that makes sure your stuff  such as service connections, board connections, Build services, and more run. Of course, Like always, there's a brilliant [MS learn page describing this.](https://learn.microsoft.com/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page&wt.mc_id=DT-MVP-5005317)
 
-One of these accounts, the [agent pool service](https://learn.microsoft.com/en-us/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#service-accounts), takes care of, amongst other things, sending the "startup" command to your Azure hosted agent pool (commonly called `Azure Pipelines` in your organization)
+One of these accounts, the [agent pool service](https://learn.microsoft.com/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page&wt.mc_id=DT-MVP-5005317#service-accounts), takes care of, amongst other things, sending the "startup" command to your Azure hosted agent pool (commonly called `Azure Pipelines` in your organization)
 
 Now if you read the above linked learn page, it rather specifically states
 

@@ -71,7 +71,7 @@ No biggie, not hard to fix, but interesting.
 
 ### Boards
 
-The project we created is of course in place, and looking in to the project settings the first thing I notice is that we're running a ['basic' process.](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process)
+The project we created is of course in place, and looking in to the project settings the first thing I notice is that we're running a ['basic' process.](https://docs.microsoft.com/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process&wt.mc_id=DT-MVP-5005317)
 
 ![Basic process](../images/azdo.createaccount/azdo2.png)
 
@@ -84,7 +84,7 @@ The rest of board settings seems pretty basic. I'm no big fan of using boards, s
 
 ### Pipelines
 
-as soon as your project is set up you have two [agent pools](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues?view=azure-devops&tabs=yaml%2Cbrowser) created.
+as soon as your project is set up you have two [agent pools](https://docs.microsoft.com/azure/devops/pipelines/agents/pools-queues?view=azure-devops&tabs=yaml%2Cbrowser&wt.mc_id=DT-MVP-5005317) created.
 - Azure pipelines. This is the pool for hosted agents in Azure, such as `ubuntu-latest`
 - Default. Ment to be used to register your own self hosted build agents.
 

@@ -23,7 +23,7 @@ __People who works in GUIs.__
 
 ## Defender for Cloud - Security for GUI people
 
-Before we go install defender for DevOps, we may need to take a very short look at [Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction) since that is in fact where Defender for DevOps "lives".
+Before we go install defender for DevOps, we may need to take a very short look at [Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction?wt.mc_id=DT-MVP-5005317) since that is in fact where Defender for DevOps "lives".
 
 Wo what is Defender for Cloud? We can let Microsoft explain it to us in the most abstract way:
 
@@ -40,7 +40,7 @@ With this in mind I guess it makes sense to place Defender for DevOps here as we
 
 Well, first a short yet important note:
 
-> NOTE: At the time of this writing Defender for DevOps is in [public preview](https://azure.microsoft.com/en-gb/support/legal/preview-supplemental-terms/), and running it is free of cost, however this may change and a price at some time in the future may be charged. I take no responsibility for any costs inferred by using this guide. Remove your resources once you're done playing around 😉
+> NOTE: At the time of this writing Defender for DevOps is in [public preview](https://azure.microsoft.com/support/legal/preview-supplemental-terms?wt.mc_id=DT-MVP-5005317), and running it is free of cost, however this may change and a price at some time in the future may be charged. I take no responsibility for any costs inferred by using this guide. Remove your resources once you're done playing around 😉
 
 Ok, now lets set things up.
 
@@ -59,7 +59,7 @@ Once we are in the Defender for DevOps blade, we go to the `DevOps security` tab
 
 ![An unconfigured DevOps security blade](../images/azure.defenderfordevops.pt2/3.png)
 
-I highly recommend to go read the documentation linked in the [read more](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction) button as well, as it contains a lot of good to knows, but here we'll just click `Add connector`
+I highly recommend to go read the documentation linked in the [read more](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-devops-introduction?wt.mc_id=DT-MVP-5005317) button as well, as it contains a lot of good to knows, but here we'll just click `Add connector`
 
 We are going to set up a connection to our previously created pipeline in Azure DevOps, so the first thing we must do is to let Azure connect there.
 
@@ -108,7 +108,7 @@ Even though I pick `MyOrganization` in the dropdown I was greeted a number of ti
 ![Error message claiming my org does not exist, and only finding my lab org](../images/azure.defenderfordevops.pt2/10.png)
 The fix is to go to [this page](https://aex.dev.azure.com/me), and in the drop down of your available directories make sure the correct one is selected.
 ![Select your directory in this drop down](../images/azure.defenderfordevops.pt2/11.png)</br>
-> more info can be found [here](https://learn.microsoft.com/en-us/azure/defender-for-cloud/troubleshooting-guide#troubleshoot-azure-devops-organization-connector-issues)
+> more info can be found [here](https://learn.microsoft.com/azure/defender-for-cloud/troubleshooting-guide?wt.mc_id=DT-MVP-5005317#troubleshoot-azure-devops-organization-connector-issues)
 
 ## A post installation note
 
@@ -130,7 +130,7 @@ Depending on the choices you make during setup the resources created are in orde
 - Microsoft.securitydevops/azureDevOpsConnectors/orgs/projects/
 - Microsoft.securitydevops/azureDevOpsConnectors/orgs/projects/repos
 
-Going about to create these resources in [bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep) was not as straight forward as expected since none of them have any documentation available on learn, and the little docs [I could find](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/securitydevops/resource-manager/Microsoft.SecurityDevOps/preview/2022-09-01-preview/examples) (thank you [Stefan](https://github.com/StefanIvemo))was far from complete.
+Going about to create these resources in [bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep&wt.mc_id=DT-MVP-5005317) was not as straight forward as expected since none of them have any documentation available on learn, and the little docs [I could find](https://github.com/Azure/azure-rest-api-specs/tree/main/specification/securitydevops/resource-manager/Microsoft.SecurityDevOps/preview/2022-09-01-preview/examples) (thank you [Stefan](https://github.com/StefanIvemo))was far from complete.
 
 One thing I got stuck on was the `azureDevOpsConnectors` resource requiring a authorization code. The API spec has the following information
 
@@ -172,7 +172,7 @@ This is a bit of a misleading headline though as it actually has nothing to do w
 
 ### The first thing we want to do
 
-is go to our Azure DevOps project and [follow this guide](https://learn.microsoft.com/en-us/azure/defender-for-cloud/enable-pull-request-annotations#enable-build-validation-policy-for-the-ci-build) to set up build validation.
+is go to our Azure DevOps project and [follow this guide](https://learn.microsoft.com/azure/defender-for-cloud/enable-pull-request-annotations?wt.mc_id=DT-MVP-5005317#enable-build-validation-policy-for-the-ci-build) to set up build validation.
 
 > Note: This guide is actually a bit misleading. You have to select a pipeline to run on pull request to set up build validation, and this actually opens up another security issue completely, but that is out of scope for this blog post and something I may write about in the future.
 

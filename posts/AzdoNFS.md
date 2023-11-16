@@ -61,7 +61,7 @@ And on to networking.
 
 Of course you need to know which network and subnet you want to connect to. For my post here I'm going to reuse the network I placed my VMSS hosts in and I will use a private endpoint. You may also select `Public access...` and pick the networks needed, but that's another blog post I guess.
 
-What I will to do is create a [private endpoint](https://docs.microsoft.com/en-gb/azure/private-link/private-endpoint-overview) to our resource. This way no machines not on our dedicated network will be able to access our blobs. At all.
+What I will to do is create a [private endpoint](https://docs.microsoft.com/azure/private-link/private-endpoint-overview?wt.mc_id=DT-MVP-5005317) to our resource. This way no machines not on our dedicated network will be able to access our blobs. At all.
 
 ![Click here to create private endpoint](../images/AzdoNFS/2.png)
 
@@ -85,7 +85,7 @@ If we click the blob to browse it using the portal we will, although we do have 
 
 Like I mentioned in the beginning I know nothing about Linux, So of to google we go.
 
-Of course, like (almost) always, theres a [great article on Docs](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-support-how-to) describing this.
+Of course, like (almost) always, theres a [great article on Docs](https://docs.microsoft.com/azure/storage/blobs/network-file-system-protocol-support-how-to?wt.mc_id=DT-MVP-5005317) describing this.
 
 The first thing to note is that we are currently using a vanilla Ubuntu image on our VMSS, and those does not have the packages to mount nfs installed.
 

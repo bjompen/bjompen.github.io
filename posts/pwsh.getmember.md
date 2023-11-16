@@ -14,7 +14,7 @@ By [Joshua McKinnon](https://infosec.exchange/@onelin) on an interesting behavio
 
 ![Why doesn't PowerShell show all members?](../images/pwsh.getmember/1.png)
 
-Get-Member being one of [the](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-7.3) [big](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.3) [three](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-member?view=powershell-7.3) CmdLets you should know I decided this needs to be written about again.
+Get-Member being one of [the](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-help?view=powershell-7.3&wt.mc_id=DT-MVP-5005317) [big](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.3) [three](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-member?view=powershell-7.3) CmdLets you should know I decided this needs to be written about again.
 
 ## PowerShell, the quirks, and why I love it
 
@@ -77,7 +77,7 @@ So why can't we see it? And why do we see what we do? And how do we see _everyth
 
 The first answer is rather easy: Because screen size is limited and the objects still exists in their fullest we don't need to see everything.
 
-The second question though is more intricate. To explain it _very_ shortly PowerShell will start by looking at what _type_ of object we are working with. If it is a known type, PowerShell will check for a [format.ps1xml](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_format.ps1xml?view=powershell-7.3) file that tell it what to ouput. If no such file is found it will try to work some magic to figure out what data to display (yes, you may read this as "Bjompen doesn't really know, its some kind of magic".)
+The second question though is more intricate. To explain it _very_ shortly PowerShell will start by looking at what _type_ of object we are working with. If it is a known type, PowerShell will check for a [format.ps1xml](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_format.ps1xml?view=powershell-7.3&wt.mc_id=DT-MVP-5005317) file that tell it what to ouput. If no such file is found it will try to work some magic to figure out what data to display (yes, you may read this as "Bjompen doesn't really know, its some kind of magic".)
 
 The third one is both the easiest, and the hardest... Simply because there are about a million different ways to do it.
 

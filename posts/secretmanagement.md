@@ -12,7 +12,7 @@ One of our ancient problems in the PowerShell world is this question:
 
 Well, sure, we've had [CliXML](https://powershellcookbook.com/recipe/PukO/securely-store-credentials-on-disk) for some time now,
 
-And sure, we can use [SecureString](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/convertto-securestring),
+And sure, we can use [SecureString](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/convertto-securestring?wt.mc_id=DT-MVP-5005317),
 
 But there has never been one standardized, cross platform, way of doing so.
 

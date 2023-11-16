@@ -9,7 +9,7 @@ As quite recently stated, screamed, and blogged about, I'm doing two sessions at
 
 Since this is probably the biggest moment of my career so far, I dont wan't to be unprepared or stressed, so of course I already started writing material for them.
 
-When reading through some related [Microsoft docs on setting up branching strategies](https://docs.microsoft.com/en-us/azure/devops/repos/git/require-branch-folders?view=azure-devops&tabs=command-line) I stumbled upon something interesting...
+When reading through some related [Microsoft docs on setting up branching strategies](https://docs.microsoft.com/azure/devops/repos/git/require-branch-folders?view=azure-devops&tabs=command-line&wt.mc_id=DT-MVP-5005317) I stumbled upon something interesting...
 
 `You will need the Team Foundation version control command (tf.exe).`
 
@@ -31,7 +31,7 @@ Next step of data gathering was fireing up the browser, clicking through the GUI
 
 Given [I have an entire blogpost on this](posts/f12.md) I wont go in to more details, but the body and security details in the decompile was starting to make sense..
 
-When we set git permissions in the GUI we post a body to the [AccessControllEntries](https://docs.microsoft.com/en-us/rest/api/azure/devops/security/access-control-entries/set-access-control-entries?view=azure-devops-rest-7.1) API. This *API is fairly good documented, so how come I "have to use tf.exe"? Well, one thing that _isn't_ documented anywhere is how to set access controll on a branch that doesn't yet exist in Azure DevOps..
+When we set git permissions in the GUI we post a body to the [AccessControllEntries](https://docs.microsoft.com/rest/api/azure/devops/security/access-control-entries/set-access-control-entries?view=azure-devops-rest-7.1&wt.mc_id=DT-MVP-5005317) API. This *API is fairly good documented, so how come I "have to use tf.exe"? Well, one thing that _isn't_ documented anywhere is how to set access controll on a branch that doesn't yet exist in Azure DevOps..
 
 ## Looking at the data gathered
 
@@ -96,7 +96,7 @@ Some things are refered to as "legacy", without there beeing replacements for th
 
 PUID (or is it just UID?), it turns out, is legacy.
 
-I found [this API](https://docs.microsoft.com/en-us/rest/api/azure/devops/ims/identities/read-identities?view=azure-devops-rest-7.1) that documents how to get the UID, but I have to search using data from another API, and only some types of queries include what I need.
+I found [this API](https://docs.microsoft.com/rest/api/azure/devops/ims/identities/read-identities?view=azure-devops-rest-7.1&wt.mc_id=DT-MVP-5005317) that documents how to get the UID, but I have to search using data from another API, and only some types of queries include what I need.
 
 But at least we have all we need.
 

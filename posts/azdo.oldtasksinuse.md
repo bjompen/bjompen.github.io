@@ -12,7 +12,7 @@
 
 Well, the year started with a continued war in Ukraine, a terrorist coup in Brazil, The highest covid counts in a _long_ time including a closed down China, and the general chaos we seem to have gotten used to lately, but anyway...
 
-For me personally it started out on top. Had a long vacation, spent time with family and friends, had time to successfully renew one of my [Azure certificates](https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/), read a couple of books, wrote some code, and got used to an in to my new [Mastodon](https://mastodon.nu/@bjompen) adventures!
+For me personally it started out on top. Had a long vacation, spent time with family and friends, had time to successfully renew one of my [Azure certificates](https://learn.microsoft.com/certifications/azure-solutions-architect?wt.mc_id=DT-MVP-5005317), read a couple of books, wrote some code, and got used to an in to my new [Mastodon](https://mastodon.nu/@bjompen) adventures!
 
 But maybe most important of it all:
 
@@ -47,7 +47,7 @@ You can find ADOPS over at [GitHub](https://github.com/AZDOPS/AZDOPS), but easie
 Find-Module ADOPS | Install-Module
 ```
 
-In order to perform actions we also need to create a [PAT, Personal access token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows), in Azure DevOps. It will need at least read access to repos and pipelines, probably also extensions and extension data, and possibly more. I'm lazy and generate a full access token with a very short lifespan instead.
+In order to perform actions we also need to create a [PAT, Personal access token](https://learn.microsoft.com/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows&wt.mc_id=DT-MVP-5005317), in Azure DevOps. It will need at least read access to repos and pipelines, probably also extensions and extension data, and possibly more. I'm lazy and generate a full access token with a very short lifespan instead.
 
 ## Some basic task information
 

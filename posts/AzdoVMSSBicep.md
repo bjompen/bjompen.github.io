@@ -19,15 +19,15 @@ Time to make a change.
 I wrote about how to [set up a VMSS to run your pipelines](posts/AzdoVMSS.md). Fine and dandy, but we can't be running large scale operations using clicks right? Let go explore and try to set up everything again, but this time using code!
 
 Before we can get going there are a few things we need to set up to be able to write and run Bicep code.
-Like always, [there's a guide on docs for it](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/install), but like always I will go through how I did it as well.
+Like always, [there's a guide on docs for it](https://docs.microsoft.com/azure/azure-resource-manager/bicep/install?wt.mc_id=DT-MVP-5005317), but like always I will go through how I did it as well.
 
 ## Bicep tooling
 
 The first thing we need is of course the Bicep CLI. There are a number of different ways to install and run this depending on how and what your preferred way of working is.
 
 - [Download](https://github.com/Azure/bicep/releases/latest/) and install directly from latest over at GitHub. Bicep is released as a self containing executable, and you can run it from the CLI. Remember to add it to your path though.
-- (do not?) Install it using [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/). If you are using Azure PowerShell to deploy Bicep files it will run whatever Bicep is installed to your CLI. Basically, this will wrap the `bicep.exe <command>` in some PowerShell magic.
-- Install it with the [az cli](https://docs.microsoft.com/en-us/cli/azure/). This is kind of the odd one out here. If you run `az Bicep install` (or `az Bicep upgrade`) to get the latest and greatest, az cli will install a self contained version of the Bicep executable. This one will _not_ be available to the other CLIs or command line to run.
+- (do not?) Install it using [Azure PowerShell](https://docs.microsoft.com/powershell/azure?wt.mc_id=DT-MVP-5005317). If you are using Azure PowerShell to deploy Bicep files it will run whatever Bicep is installed to your CLI. Basically, this will wrap the `bicep.exe <command>` in some PowerShell magic.
+- Install it with the [az cli](https://docs.microsoft.com/cli/azure?wt.mc_id=DT-MVP-5005317). This is kind of the odd one out here. If you run `az Bicep install` (or `az Bicep upgrade`) to get the latest and greatest, az cli will install a self contained version of the Bicep executable. This one will _not_ be available to the other CLIs or command line to run.
 
 The downside here is of course that **if you run multiple tools and use them all to deploy Bicep code, you may have different versions of the tooling depending on where and how you run it, and hence you might get different results from different tools**
 
@@ -58,7 +58,7 @@ Once in there we get, well.. a json view over how this resource looks and what i
 
 What we first want to note here is the line **type**.
 
-This is the actual resource type in azure that we are going to create. You can learn a whole lot more about these types [here for example](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types), but that topic is waaay to big for me right now.
+This is the actual resource type in azure that we are going to create. You can learn a whole lot more about these types [here for example](https://docs.microsoft.com/azure/azure-resource-manager/management/resource-providers-and-types?wt.mc_id=DT-MVP-5005317), but that topic is waaay to big for me right now.
 
 another thing worth noting is that the type key is not always available. Some resources, for example Resource groups, doesn't have them.
 
@@ -544,7 +544,7 @@ $ElasticPool = New-ADOPSElasticPool -ElasticPoolObject $ElasticPoolObject -PoolN
 There are still a couple of things I want to add before I drop out and make this Friday a Friday. These are some of the questions I had during the research for this post.
 
 - How come you set up the subnet as part of the vnet instead of as its own resource?
-  - A Bicep deploy _only changes what needs to be changed_. If something is already in a correct state nothing will happen. If I create subnet resource and then connect that one to my vnet, a redeploy may in some cases end up deploying the vnet _without any subnets_, then check and see the subnet exists, and reconnect it. See [this article on docs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/scenarios-virtual-networks#configure-subnets-by-using-the-subnets-property)
+  - A Bicep deploy _only changes what needs to be changed_. If something is already in a correct state nothing will happen. If I create subnet resource and then connect that one to my vnet, a redeploy may in some cases end up deploying the vnet _without any subnets_, then check and see the subnet exists, and reconnect it. See [this article on docs](https://docs.microsoft.com/azure/azure-resource-manager/bicep/scenarios-virtual-networks?wt.mc_id=DT-MVP-5005317#configure-subnets-by-using-the-subnets-property)
 - In my vmss.bicep file I kept a large commented out section on `extensionProfile`.
   - This is the magic that happens when you connect a VMSS to Azure DevOps! The ElasticPool connection actually edits the json deploy in Azure and adds this block to it. It it not needed for deploy, but I found it interesting to keep there, and you _can_ have it there if you want to. (I tried)
 - My run.ps1 is ugly and should be refactored. I know. But it works. I used it for research.

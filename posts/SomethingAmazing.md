@@ -37,7 +37,7 @@ There are more lines to it, but for now, this is what matters.
 
 Because there is somethign _really_ interesting here.
 
-This endpoint, `<organization>/<ProjectID>/_apis/pipelines/environments/<PipelineID>/providers/virtualmachines` Does not exist in the [Azure DevOps API documentation](https://docs.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-7.1).
+This endpoint, `<organization>/<ProjectID>/_apis/pipelines/environments/<PipelineID>/providers/virtualmachines` Does not exist in the [Azure DevOps API documentation](https://docs.microsoft.com/rest/api/azure/devops?view=azure-devops-rest-7.1&wt.mc_id=DT-MVP-5005317).
 
 ![You had my curiosity, now you have my attention](../images/SomethingAmazing/2.png)
 
@@ -265,7 +265,7 @@ And the data we could find? Well the data is mostly just metadata about the endp
 
 But _Nowwhere_ is this behaviour documented! It just works like this. There are a couple of discussions on the developer forums around this topic, but I could not find one single place where this is all written down. (You're welcome 😉)
 
-Last but not least: The reason I could not get any reply from certain places is [you can actually disable the anonymous access](https://docs.microsoft.com/en-us/azure/devops/organizations/public/make-project-public?view=azure-devops#enable-anonymous-access-to-projects-for-your-organization) by switching this button of!
+Last but not least: The reason I could not get any reply from certain places is [you can actually disable the anonymous access](https://docs.microsoft.com/azure/devops/organizations/public/make-project-public?view=azure-devops&wt.mc_id=DT-MVP-5005317#enable-anonymous-access-to-projects-for-your-organization) by switching this button of!
 
 ![flip the flip to the flipside](../images/SomethingAmazing/11.png)
 

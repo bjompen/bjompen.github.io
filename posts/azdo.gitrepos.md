@@ -31,7 +31,7 @@ We can also set some project wide standards here, so lets start with those.
 
 ![All repositories settings](../images/azdo.gitrepos/git2.png)
 
-The Default repositories settings allows you to change default branch names, which I wont, Main is good, but more interesting is the ["Allow users to manage permissions..."](https://docs.microsoft.com/en-us/azure/devops/release-notes/2021/sprint-192-update#configure-branch-creators-to-not-get-manage-permissions-on-their-branches) setting.
+The Default repositories settings allows you to change default branch names, which I wont, Main is good, but more interesting is the ["Allow users to manage permissions..."](https://docs.microsoft.com/azure/devops/release-notes/2021/sprint-192-update?wt.mc_id=DT-MVP-5005317#configure-branch-creators-to-not-get-manage-permissions-on-their-branches) setting.
 By default, any user can change access on a branch that user creates, so if "user1" creates a branch, they can give "externalHacker" access to that branch. If you set up your access properly this wont be a big problem, but it might be worth turning off.
 
 ### Policies
@@ -64,7 +64,7 @@ The last tab here is the security tab.
 
 ![security](../images/azdo.gitrepos/git6.png)
 
-Some pretty standard ACL style access lists? Yes, but the important thing to note when it comes to ACL in Azure DevOps is that ACLs can be set on `Projects`, `Repositories`, `branches`, `tags`, and probably some other places to. There's a good reason [the docs chapter on it is big](https://docs.microsoft.com/en-us/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page), and we will use this in out advantage to create a good security baseline in a few sentences..
+Some pretty standard ACL style access lists? Yes, but the important thing to note when it comes to ACL in Azure DevOps is that ACLs can be set on `Projects`, `Repositories`, `branches`, `tags`, and probably some other places to. There's a good reason [the docs chapter on it is big](https://docs.microsoft.com/azure/devops/organizations/security/about-permissions?view=azure-devops&tabs=preview-page&wt.mc_id=DT-MVP-5005317), and we will use this in out advantage to create a good security baseline in a few sentences..
 
 ### But first, back to the first tab, "repositories"
 
@@ -76,9 +76,9 @@ I tould you there are lots of levels of security here.
 
 What I want to do now is setting up a good default Git branching strategy, enforced using security settings, and on all my repos, exisitng and new.
 
-First, of course, we need to figure out [what strategy to use](https://docs.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops) which can be a chapter of its own, but I usualy prefer a simple version of the [GitHub flow](https://www.w3schools.com/git/git_github_flow.asp)
+First, of course, we need to figure out [what strategy to use](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance?view=azure-devops&wt.mc_id=DT-MVP-5005317) which can be a chapter of its own, but I usualy prefer a simple version of the [GitHub flow](https://www.w3schools.com/git/git_github_flow.asp)
 
-According to [Microsofts documentation on branch policies](https://docs.microsoft.com/en-us/azure/devops/repos/git/require-branch-folders?view=azure-devops&tabs=command-line) The only way to do this is by using the `tf.exe` tool, like I wrote a couple of days ago.
+According to [Microsofts documentation on branch policies](https://docs.microsoft.com/azure/devops/repos/git/require-branch-folders?view=azure-devops&tabs=command-line&wt.mc_id=DT-MVP-5005317) The only way to do this is by using the `tf.exe` tool, like I wrote a couple of days ago.
 
 ## Anakin, don't do anything without consulting either myself or the Council
 

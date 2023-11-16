@@ -97,7 +97,7 @@ WARNING: Unexpected output: GitVersion.GitVersionException: Cannot find commit 2
 
 So what has happened, and why can't we run GitVersion in our pipeline?
 
-Turns out some time ago, in [September 2022](https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-checkout?view=azure-pipelines#shallow-fetch) to be exact, Azure DevOps changed the default behaviour of the checkout task.
+Turns out some time ago, in [September 2022](https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/steps-checkout?view=azure-pipelines&wt.mc_id=DT-MVP-5005317#shallow-fetch) to be exact, Azure DevOps changed the default behaviour of the checkout task.
 
 In Azure DevOps you normally don't even have to add a checkout step in order to get your sources. If no `checkout: self` step is added it does this automagically.
 

@@ -28,7 +28,7 @@ Yet all of these tools require quite a lot of setup.
 - Some requires you to "send" your code somewhere for scanning.
 - Some costs money.
 
-Enter: [Defender for DevOps](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)
+Enter: [Defender for DevOps](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-devops-introduction?wt.mc_id=DT-MVP-5005317)
 
 ## What is Defender for DevOps?
 
@@ -39,7 +39,7 @@ MSDO is a tool that scans for things like
 - Bad settings in Infrastructure as Code such as Bicep, ARM, and Terraform.
 - Accidently exposed secrets
 - Badly configured container images
-- [and more...](https://learn.microsoft.com/en-us/azure/defender-for-cloud/azure-devops-extension)
+- [and more...](https://learn.microsoft.com/azure/defender-for-cloud/azure-devops-extension?wt.mc_id=DT-MVP-5005317)
 
 In short, it does what many of the tools above mentioned does. In fact, it even uses many of those tools behind the scenes.
 
@@ -135,7 +135,7 @@ steps:
   displayName: 'Microsoft Security DevOps'
 ```
 
-> Note: According to [documentation over at MS learn](https://learn.microsoft.com/en-us/azure/defender-for-cloud/azure-devops-extension#configure-your-pipelines-using-yaml) we also need to include .net version 5, however according to [the documentation at GitHub](https://github.com/microsoft/security-devops-azdevops#dependencies) .net 5 _isn't_ needed. From my testing so far GitHub is correct, and we do not need to include version 5 for now at least.
+> Note: According to [documentation over at MS learn](https://learn.microsoft.com/azure/defender-for-cloud/azure-devops-extension?wt.mc_id=DT-MVP-5005317#configure-your-pipelines-using-yaml) we also need to include .net version 5, however according to [the documentation at GitHub](https://github.com/microsoft/security-devops-azdevops#dependencies) .net 5 _isn't_ needed. From my testing so far GitHub is correct, and we do not need to include version 5 for now at least.
 
 > Note: Right now only windows is supported, but work is on its way to get everything working in Ubuntu as well. You _can_ run it in Ubuntu today, but some tools seems to require non default config to run and I haven't spent enough time to figure this out yet.
 
@@ -348,7 +348,7 @@ But ok, no patterns, no idea why. We'll come back to this again soon.
 
 First let's try to tell credscan that these passwords are ok. It's just part of our documentation.
 
-The way to "approve" a secret according to [the documentation](https://learn.microsoft.com/en-us/azure/defender-for-cloud/detect-exposed-secrets#suppress-a-same-line-secret) is to insert either this as a comment on the same line
+The way to "approve" a secret according to [the documentation](https://learn.microsoft.com/azure/defender-for-cloud/detect-exposed-secrets?wt.mc_id=DT-MVP-5005317#suppress-a-same-line-secret) is to insert either this as a comment on the same line
 
 ```text
 [SuppressMessage("Microsoft.Security", "CS001:SecretInLine", Justification="... .")]
@@ -365,7 +365,7 @@ Now already before I do this I see two issues here..
 - This is an attribute class. I'm writing text. Classes don't exist in text, and neither does comments.
 - Say I'm writing this as documentation (not to strange to do in text), would I want a blob of random data in there?
 
-The obvious solution would be to exclude .txt files (or this specific file), but since we don't have no documentation on credscan like I said in the .gdnconfig chapter, there is no clear way of doing this. In fact, credscan will scan [a rather crazy amount of different file types!](https://learn.microsoft.com/en-us/azure/defender-for-cloud/detect-exposed-secrets#supported-file-types-and-exit-codes).
+The obvious solution would be to exclude .txt files (or this specific file), but since we don't have no documentation on credscan like I said in the .gdnconfig chapter, there is no clear way of doing this. In fact, credscan will scan [a rather crazy amount of different file types!](https://learn.microsoft.com/azure/defender-for-cloud/detect-exposed-secrets?wt.mc_id=DT-MVP-5005317#supported-file-types-and-exit-codes).
 
 But let's try to add this attribute to our text file anyway.
 
@@ -393,7 +393,7 @@ I guess in order to have passwords in documentation we have to add a "remove sup
 
 ## In conclusion - MSDO
 
-MSDO is still in public beta, and as such it is expected to still be bugs, issues, and lacking documentation, and I'm ok with that. The lack of consistent documentation is an issue, but it's being worked on, and I'll also try to help when finding erroneous parts. The biggest issue I find is the inconsistency of it. Different things said depending on if you are at [the GitHub page for the Azure DevOps extension](https://github.com/microsoft/security-devops-azdevops), [the GitHub page for the GitHub extension](https://github.com/microsoft/security-devops-action), or [docs](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction).
+MSDO is still in public beta, and as such it is expected to still be bugs, issues, and lacking documentation, and I'm ok with that. The lack of consistent documentation is an issue, but it's being worked on, and I'll also try to help when finding erroneous parts. The biggest issue I find is the inconsistency of it. Different things said depending on if you are at [the GitHub page for the Azure DevOps extension](https://github.com/microsoft/security-devops-azdevops), [the GitHub page for the GitHub extension](https://github.com/microsoft/security-devops-action), or [docs](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-devops-introduction?wt.mc_id=DT-MVP-5005317).
 
 As for the product itself I find that whatever it might lack in advanced and detailed features it makes up for in multitudes by being incredibly easy to get started with. I dare say there is no competing product out there that is this easy to get up and running.
 

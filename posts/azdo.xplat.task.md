@@ -12,9 +12,9 @@ Recently I released my first public cross platform Azure DevOps task [Which you 
 
 The first thing I would recommend you to do is setting up a publisher. It is necessary to have one no matter if you publish your action publicly or just for yourself, but if you do it publicly _getting the approver verification needed to do so may take quite some time._
 
-Creating a publisher is a fairly straight forward process: [just follow this guide](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops#create-a-publisher). Do fill in as much data as you can and want to, some of it ~~will~~ may be needed to get verified.
+Creating a publisher is a fairly straight forward process: [just follow this guide](https://learn.microsoft.com/azure/devops/extend/publish/overview?view=azure-devops&wt.mc_id=DT-MVP-5005317#create-a-publisher). Do fill in as much data as you can and want to, some of it ~~will~~ may be needed to get verified.
 
-Once your profile is created one would easily believe the [related page on making an extension public](https://learn.microsoft.com/en-us/azure/devops/extend/publish/publicize?view=azure-devops) would be a good step to continue with. One would be wrong.
+Once your profile is created one would easily believe the [related page on making an extension public](https://learn.microsoft.com/azure/devops/extend/publish/publicize?view=azure-devops&wt.mc_id=DT-MVP-5005317) would be a good step to continue with. One would be wrong.
 
 Instead the guide to follow is located [here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#verify-a-publisher). Although this guide only talks about Visual Studio extensions, the process is the same and you need to verify your publisher. This is done by adding a [DNS txt entry](https://www.google.com/search?client=firefox-b-d&q=dns+txt+entry) to your domain (yes, you will need a purchased domain name).
 
@@ -44,7 +44,7 @@ Almost. First you will need some stuff. Like I said, DevOps tasks aren't as easy
 
 > Note: This guide is for a Windows development environment. If you run any other OS your mileage may vary.
 
-You can follow the [official guide here](https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops) and jump to the next chapter, or get the short of it here. I will however add a few extra things that may be needed.
+You can follow the [official guide here](https://learn.microsoft.com/azure/devops/extend/get-started/node?view=azure-devops&wt.mc_id=DT-MVP-5005317) and jump to the next chapter, or get the short of it here. I will however add a few extra things that may be needed.
 
 ----
 
@@ -416,7 +416,7 @@ And fill it with data (replace this as needed for your project of course).
 }
 ```
 
-Most of these fields should be pretty self explanatory, And some of them is there mostly because _I_ wanted them, but if not you can read the [official docs here](https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?view=azure-devops#create-custom-task), and for a full detailed list, you can go check out [the entire schema here](https://github.com/Microsoft/azure-pipelines-task-lib/blob/master/tasks.schema.json).
+Most of these fields should be pretty self explanatory, And some of them is there mostly because _I_ wanted them, but if not you can read the [official docs here](https://learn.microsoft.com/azure/devops/extend/develop/add-build-task?view=azure-devops&wt.mc_id=DT-MVP-5005317#create-custom-task), and for a full detailed list, you can go check out [the entire schema here](https://github.com/Microsoft/azure-pipelines-task-lib/blob/master/tasks.schema.json).
 
 Also do note that even though some are not required _as per the schema_ you will need to set them if you want to publish a public task!
 
@@ -516,7 +516,7 @@ As seen in the filename this, just like task manifests, is a json formatted file
 }
 ```
 
-Just like before, I do recommend reading the [Reference documentation](https://learn.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azure-devops)! There are _a lot_ of things you can set here, and many of those above are not _required_ but I wanted them there. Also do note that even though some are not required _as per the schema_ you will need to set them if you want to publish a public extension!
+Just like before, I do recommend reading the [Reference documentation](https://learn.microsoft.com/azure/devops/extend/develop/manifest?view=azure-devops&wt.mc_id=DT-MVP-5005317)! There are _a lot_ of things you can set here, and many of those above are not _required_ but I wanted them there. Also do note that even though some are not required _as per the schema_ you will need to set them if you want to publish a public extension!
 
 Lets look at the highlights again.
 
@@ -524,9 +524,9 @@ Lets look at the highlights again.
 
 - Version. This version number _must match the version set in your task manifest earlier!_
 - publisher. This must match the name of your visual studio publisher created in the beginning!
-- content -> details -> path. Even though I haven't added it here, every git project should have a README.md file describing it. This lets you set this README as an extension documentation. (see [this screenshot](https://learn.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azure-devops#details-page-example))
+- content -> details -> path. Even though I haven't added it here, every git project should have a README.md file describing it. This lets you set this README as an extension documentation. (see [this screenshot](https://learn.microsoft.com/azure/devops/extend/develop/manifest?view=azure-devops&wt.mc_id=DT-MVP-5005317#details-page-example))
 - target. Does it support Azure DevOps Server, Azure DevOps Services, or both?
-- icons. You can create your own personal extension icon and include it on the published page. (again, see [this screenshot](https://learn.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azure-devops#details-page-example))
+- icons. You can create your own personal extension icon and include it on the published page. (again, see [this screenshot](https://learn.microsoft.com/azure/devops/extend/develop/manifest?view=azure-devops&wt.mc_id=DT-MVP-5005317#details-page-example))
 - links -> support -> uri. This is required to be set if you want to publish a public extension. (At least according to the docs, I haven't verified it 😉)
 
 ### Files
@@ -535,15 +535,15 @@ I want to put this one separate because it may require some extra comments.
 
 this is where you define what files and folders will be included in the final compiled vsix file.
 
-The basic setting defines a path relative to the manifest root. In our case we want to include the entire 'AZDO.XPLAT.TASK' folder, so we simply input this folder name, but in some cases you may also want to include more files, external references, or shared files. For example, If you develop your module in a separate repository and [check out multiple git repos](https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops) during build we may end up with a lot of different and non related folders.
+The basic setting defines a path relative to the manifest root. In our case we want to include the entire 'AZDO.XPLAT.TASK' folder, so we simply input this folder name, but in some cases you may also want to include more files, external references, or shared files. For example, If you develop your module in a separate repository and [check out multiple git repos](https://learn.microsoft.com/azure/devops/pipelines/repos/multi-repo-checkout?view=azure-devops&wt.mc_id=DT-MVP-5005317) during build we may end up with a lot of different and non related folders.
 
 You can also use this setting to "move" files and have them included in different places depending on the setup such as I did with `UpgradePWSH.ps1` in [this manifest](https://github.com/bjompen/UpdatePWSHAction/blob/main/vss-extension.json)
 
-If you need to include more files and folders go check out the docs [here](https://learn.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azure-devops#files)
+If you need to include more files and folders go check out the docs [here](https://learn.microsoft.com/azure/devops/extend/develop/manifest?view=azure-devops&wt.mc_id=DT-MVP-5005317#files)
 
 ----
 
-For the rest of the manifest, the documentation is actually fairly good. [No need for me to replicate information](https://learn.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azure-devops).
+For the rest of the manifest, the documentation is actually fairly good. [No need for me to replicate information](https://learn.microsoft.com/azure/devops/extend/develop/manifest?view=azure-devops&wt.mc_id=DT-MVP-5005317).
 
 And with this we are actually done! The only thing left to do is check out the resulting folder structure:
 
@@ -624,7 +624,7 @@ In the top menu there is a "+ New extension" button. Click it and select "Azure 
 
 ![uploading a vsix file. It's super advanced!](../images/azdo.xplat.task/12.gif)
 
-Once verification of your task is complete (this commonly takes not more than a minute or two and the blue arrow changes to a green check mark) you can share, install and test it. How you do this depends on the status of your publisher though. Following [this guide](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops#share-your-extension) will get you there.
+Once verification of your task is complete (this commonly takes not more than a minute or two and the blue arrow changes to a green check mark) you can share, install and test it. How you do this depends on the status of your publisher though. Following [this guide](https://learn.microsoft.com/azure/devops/extend/publish/overview?view=azure-devops&wt.mc_id=DT-MVP-5005317#share-your-extension) will get you there.
 
 Once shared, install it to your organization like you would any other extension
 

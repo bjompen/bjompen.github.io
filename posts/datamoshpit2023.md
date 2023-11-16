@@ -30,7 +30,7 @@ Bicep normally is a self contained executable. This is a good thing as you can s
 
 This now lead to a compatibility issue.
 
-In Azure DevOps and GitHub runners, if you run a PWSH script task, it will always run the latest [LTS version](https://learn.microsoft.com/en-us/powershell/scripting/install/powershell-support-lifecycle). Right now this is 7.2.
+In Azure DevOps and GitHub runners, if you run a PWSH script task, it will always run the latest [LTS version](https://learn.microsoft.com/powershell/scripting/install/powershell-support-lifecycle?wt.mc_id=DT-MVP-5005317). Right now this is 7.2.
 
 This version runs DLLs that is incompatible with the latest Bicep release.
 
@@ -60,7 +60,7 @@ Last but not least in todays big three: More certifications!
 
 I already wrote about my journey towards Az200 so no need to redo that one, But quite recently [FreeCodeCamp](https://www.freecodecamp.org/) together with Microsoft launched the [Foundational C# with Microsoft](https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/) certification. I am not a C# Developer, but I have dabbled in it a bit, so I thought this would be a fun one to go through.
 
-And it was! The layout of the certification is that for each question in the FreeCodeCamp course you _have_ to go through one chapter in Microsoft learn. This is verified by connection your [learn profile](https://learn.microsoft.com/en-us/users/me/activity/) and your FreeCodeCamp account. This also means it is not possible to just "answer the question and move on".
+And it was! The layout of the certification is that for each question in the FreeCodeCamp course you _have_ to go through one chapter in Microsoft learn. This is verified by connection your [learn profile](https://learn.microsoft.com/users/me/activity?wt.mc_id=DT-MVP-5005317) and your FreeCodeCamp account. This also means it is not possible to just "answer the question and move on".
 
 Sure, you could just go to the learn chapter and go "next -> next -> finish", and I do confess, some chapters I just skimmed through (I already knew the difference between `Console.Write()` and `Console.WriteLine()`) but I did actively try to do each and every challenge and test.
 

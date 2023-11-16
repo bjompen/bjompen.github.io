@@ -21,7 +21,7 @@ Ok, first of, let's grab the bull by its horns.
 The above linked article is not about output _to the console_ but output between different job.
 I can use this to get the result from my pwsh code `job1` and use that value as input to my code in `job2`.
 
-I would say this reminds me mostly of the [task.setvariable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=powershell#set-an-output-variable-for-use-in-future-jobs) function in Azure DevOps.
+I would say this reminds me mostly of the [task.setvariable](https://learn.microsoft.com/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=powershell&wt.mc_id=DT-MVP-5005317#set-an-output-variable-for-use-in-future-jobs) function in Azure DevOps.
 
 I would call this dependency or passing data between jobs, not output, but ok GitHub. Like I said: I don't like GitHub documentation.
 

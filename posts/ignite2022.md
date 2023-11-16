@@ -22,11 +22,11 @@ Ignite is big, although this is the smallest one yet, and Microsoft does spend _
 We joined for the keynote and opening sessions, and there was some seriously cool stuff presented. My key takeaways that I will go home and research are
 
 - [Defender for DevOps](https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-devops)
-- [Codex](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/work-with-code)
-- [Microsoft dev box](https://azure.microsoft.com/en-us/services/dev-box/)
-- [Azure deployment environments](https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments)
-- [GitHub advanced security for Azure DevOps](https://devblogs.microsoft.com/devops/integrate-security-into-your-developer-workflow-with-github-advanced-security-for-azure-devops/)
-- [Azure kubernetes fleet manager](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-kubernetes-fleet-manager-preview/ba-p/3651516)
+- [Codex](https://learn.microsoft.com/azure/cognitive-services/openai/how-to/work-with-code?wt.mc_id=DT-MVP-5005317)
+- [Microsoft dev box](https://azure.microsoft.com/services/dev-box?wt.mc_id=DT-MVP-5005317)
+- [Azure deployment environments](https://learn.microsoft.com/azure/deployment-environments/overview-what-is-azure-deployment-environments?wt.mc_id=DT-MVP-5005317)
+- [GitHub advanced security for Azure DevOps](https://devblogs.microsoft.com/devops/integrate-security-into-your-developer-workflow-with-github-advanced-security-for-azure-devops?wt.mc_id=DT-MVP-5005317)
+- [Azure kubernetes fleet manager](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-kubernetes-fleet-manager-preview/ba-p/3651516?wt.mc_id=DT-MVP-5005317)
 
 Unfortunately, this is pretty much where the good ended...
 

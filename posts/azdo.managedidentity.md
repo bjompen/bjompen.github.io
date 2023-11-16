@@ -4,7 +4,7 @@ I truly can't think of any fancier or better headline.
 
 Normally I start my posts with some witty, funny, or random story from life, but this is the biggest thing that has happened since last post.
 
-[The Azure DevOps team released support for managed identities!](https://devblogs.microsoft.com/devops/introducing-service-principal-and-managed-identity-support-on-azure-devops/)
+[The Azure DevOps team released support for managed identities!](https://devblogs.microsoft.com/devops/introducing-service-principal-and-managed-identity-support-on-azure-devops?wt.mc_id=DT-MVP-5005317)
 
 So why is this such a big deal? It finally makes managing Azure DevOps possible without using personal accounts!
 
@@ -221,7 +221,7 @@ steps:
 A brief walkthrough:
 
 - Like mentioned, we are running a vanilla Ubuntu image, and need to manually install prerequisites. No PowerShell per default in Ubuntu.
-- We use the brilliant little tool [AzAuth](https://github.com/PalmEmanuel/AzAuth) to get a OAuth token. The resource id given is one of the [well known ids](https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in#application-ids-of-commonly-used-microsoft-applications)
+- We use the brilliant little tool [AzAuth](https://github.com/PalmEmanuel/AzAuth) to get a OAuth token. The resource id given is one of the [well known ids](https://learn.microsoft.com/troubleshoot/azure/active-directory/verify-first-party-apps-sign-in?wt.mc_id=DT-MVP-5005317#application-ids-of-commonly-used-microsoft-applications)
 - When creating a new project we need do define the id of a process template. In this case we simply get the default one.
 - Lastly we create a project with, shall we say, absolute minimum settings.
 

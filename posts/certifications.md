@@ -34,7 +34,7 @@ Well I am not 100% convinced, and we need to discuss both sides.
 
 ## Your job requires a certification
 
-These are not to common in Sweden, but it exists. One of the reasons a workplace may require a certification is that Microsoft actually has bonus programs based on this. If your company wants to achieve "Partner status" it needs [a number of qualified certificates](https://learn.microsoft.com/en-us/partner-center/solutions-partner-azure#skilling).
+These are not to common in Sweden, but it exists. One of the reasons a workplace may require a certification is that Microsoft actually has bonus programs based on this. If your company wants to achieve "Partner status" it needs [a number of qualified certificates](https://learn.microsoft.com/partner-center/solutions-partner-azure?wt.mc_id=DT-MVP-5005317#skilling).
 
 The backside of this is that it may also include things you, quite frankly, aren't interested in. 
 

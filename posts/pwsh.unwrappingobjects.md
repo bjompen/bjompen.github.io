@@ -214,7 +214,7 @@ PS > (DontUnwrap -OneOrMore 1).Count
 1
 ```
 
-so what does comma do? In this case it works as a [unary operator](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3#comma-operator-) creating an array with one member. 
+so what does comma do? In this case it works as a [unary operator](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.3&wt.mc_id=DT-MVP-5005317#comma-operator-) creating an array with one member. 
 
 One member you say? What if we get no results at all? Let's verify the behaviour shall we?
 
@@ -267,7 +267,7 @@ Well... It does work, but another of the key aspects of PowerShell is readabilit
 
 I try to write code that requires little to no google of what a command does given you know PowerShell and finding a random comma would require me to google what it does.
 
-So back in PowerShell version 4 "we" actually added a parameter to solve this using `Write-Output`: [`-NoEnumerate`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output?view=powershell-7.2&WT.mc_id=ps-gethelp#-noenumerate)
+So back in PowerShell version 4 "we" actually added a parameter to solve this using `Write-Output`: [`-NoEnumerate`](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/write-output?view=powershell-7.2&WT.mc_id=ps-gethelp&wt.mc_id=DT-MVP-5005317#-noenumerate)
 
 Using this parameter and Write-Output instead of implicitly returning our result we can achieve the same result but a bit more readable.
 
@@ -322,7 +322,7 @@ Sure, we just broke compatibility with PowerShell version 3 and earlier, but ser
 One thing I haven't mentioned yet is the concept of OutputType. Mainly because it will not actually matter to our issue at hand since like mentioned the unwrapping occurs _after_ output.
 But there is a way to let your console know what type of object you are returning from your function.
 
-[The `[OutputType()]` class.](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute?view=powershell-7.3)
+[The `[OutputType()]` class.](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_outputtypeattribute?view=powershell-7.3&wt.mc_id=DT-MVP-5005317)
 
 Wo what does it do if it doesn't help us with unwrapping? 
 

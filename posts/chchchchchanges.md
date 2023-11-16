@@ -96,6 +96,6 @@ Well, the "Currently building $Project" if statement should actually also trigge
 
 ## Quick and simple
 
-That's the way we like it, right? Gives us more time to play with more fun stuff, such as [this](https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/service-principal-managed-identity?view=azure-devops) that I spent most of today with, and hopefully a post on how we can use this will be done before the weekend is over.
+That's the way we like it, right? Gives us more time to play with more fun stuff, such as [this](https://learn.microsoft.com/azure/devops/integrate/get-started/authentication/service-principal-managed-identity?view=azure-devops&wt.mc_id=DT-MVP-5005317) that I spent most of today with, and hopefully a post on how we can use this will be done before the weekend is over.
 
 'Til next time, happy pipelining!

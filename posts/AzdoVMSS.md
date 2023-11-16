@@ -24,7 +24,7 @@ It is also kind of a prerequisite for many of the other blogposts on my schedule
 
 ## Now I admit
 
-[This guide over at Docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/scale-set-agents?view=azure-devops) is actually fantastic and covers it all, but aditional views is never wrong, so here we go.
+[This guide over at Docs](https://docs.microsoft.com/azure/devops/pipelines/agents/scale-set-agents?view=azure-devops&wt.mc_id=DT-MVP-5005317) is actually fantastic and covers it all, but aditional views is never wrong, so here we go.
 
 ## Creating a VM scale set in Azure
 

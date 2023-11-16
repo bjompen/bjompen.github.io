@@ -51,7 +51,7 @@ If we go to project settings there are a number of things to configure under pip
 ### Agent pools
 
 This is where you configure where your pipelines will run.
-On a standard installation you have [two pools set up](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/pools-queues?view=azure-devops&tabs=yaml%2Cbrowser#default-agent-pools):
+On a standard installation you have [two pools set up](https://docs.microsoft.com/azure/devops/pipelines/agents/pools-queues?view=azure-devops&tabs=yaml%2Cbrowser&wt.mc_id=DT-MVP-5005317#default-agent-pools):
 
 - Azure pipelines.
   - This is the pool of Azure hosted build agents provided by Microsoft.
@@ -74,10 +74,10 @@ Worth noting though is that some of these settings actually does not apply to YA
 ![badges](../images/azdo.pipelines/5.png)
 - Limit variables that can be set at queue time
   - If this setting is not checked a user can potentially override default variable values in pipelines. Keeping it checked lets you set which variables can be overwritten.
-- [Limit job authorization...](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml)
+- [Limit job authorization...](https://docs.microsoft.com/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml&wt.mc_id=DT-MVP-5005317)
   - I'm batching theese together as they are similar in what they do. the "Release pipelines" on eonly applies to classic pipelines.
   - This settings limits the access of your build runner token. If this is unchecked a pipeline can for example access repos outside of the pipelines organization. Own one pipeline to own them all!
-- [Publish metadata from pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/artifact-policy?view=azure-devops)
+- [Publish metadata from pipelines](https://docs.microsoft.com/azure/devops/pipelines/process/artifact-policy?view=azure-devops&wt.mc_id=DT-MVP-5005317)
   - This is a tricky one. Not much is documented around what it actually does, but enabling this lets you create query based locks when using environments and deploying to kubernetes or container images.
 - Protect access to repositories in YAML files
   - This setting mucks about in your build runner access token. Very good to have enabled to prevent unwanted access to external repos, but can mess up things like [external git dependencies](https://github.com/MicrosoftDocs/azure-devops-docs/issues/11939).
@@ -100,7 +100,7 @@ For our recently created starter pipeline it looks like this:
 The first thing we nbeed to fix here is the trigger. Since we are storing our pipeline YAML files in a repo that will not contain our code we need to set up a trigger and a Git fetch to get the code we want to build.
 
 What we need to add is a repository resource.
-Reading [the docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/resources?view=azure-devops&tabs=schema#define-a-repositories-resource) we can see there are many settings we can set. First of, we need to turn of the default trigger of our main branch (So we don't trigger builds in the pipeline repo).
+Reading [the docs](https://docs.microsoft.com/azure/devops/pipelines/process/resources?view=azure-devops&tabs=schema&wt.mc_id=DT-MVP-5005317#define-a-repositories-resource) we can see there are many settings we can set. First of, we need to turn of the default trigger of our main branch (So we don't trigger builds in the pipeline repo).
 
 ```YAML
 trigger: none
@@ -167,7 +167,7 @@ It does! but it wont finnsh just yet. If we click the blue "clock" and go in to 
 
 ![waiting for approval](../images/azdo.pipelines/8.png)
 
-Like I've said before, there are approximately a million levels of ACLs in Azure DevOps, and this is one of them. Before a pipeline can access a [protected resource](https://docs.microsoft.com/en-us/azure/devops/pipelines/security/resources?view=azure-devops#protected-resources) you need to grant the pipeline access to it.
+Like I've said before, there are approximately a million levels of ACLs in Azure DevOps, and this is one of them. Before a pipeline can access a [protected resource](https://docs.microsoft.com/azure/devops/pipelines/security/resources?view=azure-devops&wt.mc_id=DT-MVP-5005317#protected-resources) you need to grant the pipeline access to it.
 
 In our case, the protected resource is the code repo.
 
