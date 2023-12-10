@@ -24,7 +24,7 @@ $sites = @(
 )
 
 # Get all posts
-$AllPosts = Get-ChildItem .\content\*.md -Recurse
+$AllPosts = Get-ChildItem .\posts\*.md
 
 # Regex pattern to find links in markdown files
 $pattern = '(?<=]\()[^)]*'
