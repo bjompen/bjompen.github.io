@@ -300,7 +300,7 @@ All done!
 
 Log analytics is fast, but not to start with. For me it took some time until the first logs showed up, but once it started the logs show up _almost immediately_.
 
-If we go in to our workspace, in the "logs" blade, we can now query our pipeline logs. Now I admit, it does contain more data than our logs, yes, but that's up to you and your [Kusto queries](https://learn.microsoft.com/en-gb/azure/data-explorer/kusto/query/)
+If we go in to our workspace, in the "logs" blade, we can now query our pipeline logs. Now I admit, it does contain more data than our logs, yes, but that's up to you and your [Kusto queries](https://learn.microsoft.com/azure/data-explorer/kusto/query?wt.mc_id=DT-MVP-5005317)
 
 ![searching logs in Azure Log Analytics](../images/azdo.pipelinelogging/25.png)
 
