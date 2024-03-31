@@ -7,6 +7,15 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Who am I?</title>
+			<link>https://www.bjompen.com/#/posts/azdo.whoami.md</link>
+			<description># Who am I?
+
+Yeah, that didn't work out as planned. Apparently writing this year is harder than it has been in a long time!
+Mainly I think there are...</description>
+			<pubDate>31 Mar 2024</pubDate>
+		</item> 
+		<item>
 			<title>On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell</title>
 			<link>https://www.bjompen.com/#/posts/pwsh.emumeratehash.md</link>
 			<description># On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell

@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [31 Mar 2024 - Who am I?](posts/azdo.whoami.md "Who am I?")
   - [01 Feb 2024 - On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell](posts/pwsh.emumeratehash.md "On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell")
   - [29 Dec 2023 - 2023 - A summary.](posts/2023asummary.md "2023 - A summary.")
   - [09 Dec 2023 - Live logging Azure DevOps pipelines.](posts/azdo.pipelinelogging.md "Live logging Azure DevOps pipelines.")
