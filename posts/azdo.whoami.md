@@ -77,7 +77,7 @@ And yes, the output tells us that the user we are running as is indeed `vsts`.
 
 The problem still persists though. `vsts` after all, is not one of the afore mentioned users.
 
-In fact, looking through [every single log available](https://learn.microsoft.com/en-us/azure/devops/pipelines/troubleshooting/review-logs?view=azure-devops&tabs=windows-agent) still doesn't tell us how the `vsts`user maps to our internal accounts, nor which one we are using.
+In fact, looking through [every single log available](https://learn.microsoft.com/azure/devops/pipelines/troubleshooting/review-logs?view=azure-devops&tabs=windows-agent&wt.mc_id=DT-MVP-5005317) still doesn't tell us how the `vsts`user maps to our internal accounts, nor which one we are using.
 
 We got to go deeper!
 
@@ -216,7 +216,7 @@ But naturally there is a logical explanation and an easier way to figure out whi
 
 Already from the start my initial guess was that this account is in some way the result of the "Limit job authorization scope to current project for ... pipelines" settings, and I was correct.
 
-In fact, this is pretty much [the only somewhat well documented detail](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml#job-authorization-scope)
+In fact, this is pretty much [the only somewhat well documented detail](https://learn.microsoft.com/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml&wt.mc_id=DT-MVP-5005317#job-authorization-scope)
 
 There is a setting in both organization and project level called "Limit job authorization scope to current project for non-release pipelines". If this setting is `Enabled` you _will_ use the project scope identity - `projectName Build Service (myOrg)`. If this setting is `Disabled` you  will use the `Project Collection Build Service (orgName)`.
 
@@ -232,7 +232,7 @@ But this is not all...
 
 ## And another thing
 
-I mentioned this was quite badly documented. One of the reasons for this hate is that the first and as far as I know only place the build service accounts are documented and mentioned _using name_ is [this page](https://learn.microsoft.com/en-us/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#service-accounts)
+I mentioned this was quite badly documented. One of the reasons for this hate is that the first and as far as I know only place the build service accounts are documented and mentioned _using name_ is [this page](https://learn.microsoft.com/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page&wt.mc_id=DT-MVP-5005317#service-accounts)
 
 One could imagine that the official documentation would suggest that the local project scope account is quite important. After all, the above linked access tokens page specifically says you should always enable this setting, and when you do, this service account will be used.
 
