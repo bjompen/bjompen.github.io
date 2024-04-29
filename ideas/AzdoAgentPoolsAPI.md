@@ -1,1 +1,0 @@
-Agent pools arent called agent pools and are created in multiple places. thats confusing. lets figure the AgentPools apis out.
