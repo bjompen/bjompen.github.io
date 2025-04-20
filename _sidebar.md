@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [20 Apr 2025 - All the APIs you can imagine.. And more!](posts/azdo.endpoints.md "All the APIs you can imagine.. And more!")
   - [19 July 2024 - Azure DevOps Managed DevOps pools](posts/azdo.mdp.md "Azure DevOps Managed DevOps pools")
   - [31 Mar 2024 - Who am I?](posts/azdo.whoami.md "Who am I?")
   - [01 Feb 2024 - On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell](posts/pwsh.emumeratehash.md "On ICollections, and the ~~less helpful helpfulness~~ weirdness of PowerShell")

@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>All the APIs you can imagine.. And more!</title>
+			<link>https://www.bjompen.com/#/posts/azdo.endpoints.md</link>
+			<description># Holy moly this is hard...
+
+Writing a blog with somewhat regular posts that is. I am very much aware that I haven't, and I honestly kind of envy tho...</description>
+			<pubDate>20 Apr 2025</pubDate>
+		</item> 
+		<item>
 			<title>Azure DevOps Managed DevOps pools</title>
 			<link>https://www.bjompen.com/#/posts/azdo.mdp.md</link>
 			<description># Azure DevOps Managed DevOps pools
