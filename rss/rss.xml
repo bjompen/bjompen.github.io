@@ -7,6 +7,14 @@
 		<description>I write text. Mostly PowerShell, but also stuff.</description>
 
 		<item>
+			<title>Another year, another hype</title>
+			<link>https://www.bjompen.com/#/posts/anotherYearAnotherHype.md</link>
+			<description># A long time coming...
+
+..this post. I have done some cool stuff, as always, gotten to work a whole lot more with GitHub (Including getting some cer...</description>
+			<pubDate>20 Aug 2025</pubDate>
+		</item> 
+		<item>
 			<title>All the APIs you can imagine.. And more!</title>
 			<link>https://www.bjompen.com/#/posts/azdo.endpoints.md</link>
 			<description># Holy moly this is hard...
