@@ -545,24 +545,19 @@
     const modalBody = document.getElementById('modal-body');
     const retryBtn  = document.getElementById('retry-btn');
 
-    // ── Cookie / storage helpers ──
+    // ── Storage helpers (localStorage only — cookies are unreliable across web hosts) ──
     function setJailCookie() {
       const midnight = new Date();
       midnight.setHours(24, 0, 0, 0);
-      const secure = location.protocol === 'https:' ? '; Secure' : '';
-      document.cookie = `jailed=1; expires=${midnight.toUTCString()}; path=/; SameSite=Lax${secure}`;
       try { localStorage.setItem('jailed_until', String(midnight.getTime())); } catch(e) {}
     }
 
     function clearJailCookie() {
-      const secure = location.protocol === 'https:' ? '; Secure' : '';
-      document.cookie = `jailed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax${secure}`;
       try { localStorage.removeItem('jailed_until'); } catch(e) {}
     }
 
     function isJailed() {
       try {
-        if (document.cookie.split(';').some(c => c.trim().startsWith('jailed=1'))) return true;
         const until = localStorage.getItem('jailed_until');
         return !!(until && Date.now() < parseInt(until, 10));
       } catch(e) { return false; }
