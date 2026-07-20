@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SundlingAppen</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #00dd00 0%, #cc00ff 25%, #0055ff 50%, #ff0033 75%, #00ffee 100%);
+      color: #fff;
+    }
+
+    #game-title {
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 18px;
+      background: linear-gradient(90deg, #ff00ff, #00ff00, #ff6600, #00ffff, #ff0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(3px 3px 0px #ffff00) drop-shadow(-2px -2px 0px #ff00ff);
+      letter-spacing: 0.04em;
+      transform: rotate(-2deg);
+    }
+
+    /* ── Game view ── */
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 48px 56px;
+      text-align: center;
+      max-width: 560px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+      line-height: 1.4;
+      color: #e0e7ff;
+      white-space: nowrap;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1.1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]::placeholder { color: rgba(255,255,255,0.4); }
+    input[type="text"]:focus { border-color: #818cf8; }
+
+    button {
+      padding: 14px 28px;
+      border-radius: 12px;
+      border: none;
+      background: #6366f1;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:hover  { background: #4f46e5; }
+    button:active { transform: scale(0.97); }
+
+    .modal.golden {
+      background: linear-gradient(145deg, #1c1400, #2e2000, #1c1400);
+      border-color: #c8960c;
+      box-shadow: 0 16px 48px rgba(200,150,12,0.45), 0 0 0 1px #c8960c, inset 0 1px 0 rgba(255,215,0,0.15);
+    }
+
+    .modal.olive {
+      background: linear-gradient(145deg, #111600, #1e2608, #111600);
+      border-color: #6b7c2d;
+      box-shadow: 0 16px 48px rgba(107,124,45,0.45), 0 0 0 1px #6b7c2d, inset 0 1px 0 rgba(180,210,50,0.1);
+    }
+
+    .modal.olive .modal-title.lose {
+      color: #b5cc4a;
+      text-shadow: 0 0 20px rgba(150,185,40,0.6);
+    }
+
+    .modal.olive .modal-icon {
+      filter: drop-shadow(0 0 12px rgba(150,185,40,0.8));
+    }
+
+    .modal.olive #retry-btn {
+      background: linear-gradient(135deg, #3d4a0f, #6b7c2d, #8fa832, #6b7c2d, #3d4a0f);
+      color: #f0f5d0;
+      font-weight: 800;
+      box-shadow: 0 4px 20px rgba(107,124,45,0.55);
+    }
+
+    .modal.olive #retry-btn:hover {
+      background: linear-gradient(135deg, #6b7c2d, #8fa832, #b5cc4a, #8fa832, #6b7c2d);
+    }
+
+    .modal.golden .modal-title.secret {
+      color: #FFD700;
+      text-shadow: 0 0 24px rgba(255,215,0,0.7), 0 0 48px rgba(255,165,0,0.4);
+    }
+
+    .modal.golden .modal-icon {
+      filter: drop-shadow(0 0 14px rgba(255,215,0,0.9));
+    }
+
+    .modal.golden #retry-btn {
+      background: linear-gradient(135deg, #92680a, #c8960c, #FFD700, #c8960c, #92680a);
+      color: #1c1400;
+      font-weight: 800;
+      box-shadow: 0 4px 20px rgba(200,150,12,0.6);
+    }
+
+    .modal.golden #retry-btn:hover {
+      background: linear-gradient(135deg, #c8960c, #FFD700, #FFE866, #FFD700, #c8960c);
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* ── Modal ── */
+    #modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      animation: fadeIn 0.2s ease;
+    }
+
+    #modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #1e2a45;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 48px 56px;
+      max-width: 560px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+      animation: slideUp 0.25s ease;
+    }
+
+    .modal-icon  { font-size: 5rem; line-height: 1; margin-bottom: 16px; }
+    .modal-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+    .modal-title.lose   { color: #fca5a5; }
+    .modal-title.secret { color: #fde68a; }
+
+    .modal .officer { font-size: 5rem; animation: wobble 0.5s ease; margin-top: 8px; }
+
+    .modal .speech-bubble {
+      position: relative;
+      background: #fff;
+      color: #1e293b;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 16px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .modal .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #fff;
+    }
+
+    .jail-sentence {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .jail-sentence .escape-link {
+      color: #f87171;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    .jail-sentence .escape-link:hover { color: #fca5a5; background: none; }
+
+    #retry-btn {
+      padding: 14px 36px;
+      border-radius: 12px;
+      border: none;
+      background: #6366f1;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 8px;
+    }
+
+    #retry-btn:hover  { background: #4f46e5; }
+    #retry-btn:active { transform: scale(0.97); }
+
+    /* ── Jail view ── */
+    #jail-view {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      text-align: center;
+      width: 100%;
+      padding: 24px;
+    }
+
+    #jail-view.visible { display: flex; }
+
+    .jail-window-wrap {
+      filter: drop-shadow(0 0 32px rgba(180, 220, 255, 0.25));
+    }
+
+    .jail-text {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.02em;
+    }
+
+    .countdown-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px 36px;
+      position: fixed;
+      display: none;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: grab;
+      user-select: none;
+      z-index: 50;
+      touch-action: none;
+    }
+
+    .countdown-box:active { cursor: grabbing; }
+
+    .countdown-label {
+      font-size: 0.85rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    #countdown {
+      font-size: 2.8rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: #f1f5f9;
+      letter-spacing: 0.05em;
+    }
+
+    #nail-file {
+      position: fixed;
+      display: none;
+      cursor: grab;
+      user-select: none;
+      z-index: 49;
+      touch-action: none;
+      filter: drop-shadow(0 3px 8px rgba(0,0,0,0.6));
+    }
+
+    #nail-file:active { cursor: grabbing; }
+
+    #fly-btn-wrap {
+      display: none;
+      position: fixed;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 60;
+    }
+
+    #fly-btn {
+      padding: 16px 56px;
+      border-radius: 16px;
+      border: none;
+      background: #22c55e;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(34,197,94,0.5);
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    #fly-btn:hover { background: #16a34a; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1);    box-shadow: 0 4px 24px rgba(34,197,94,0.5); }
+      50%       { transform: scale(1.06); box-shadow: 0 4px 36px rgba(34,197,94,0.7); }
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    @keyframes wobble {
+      0%   { transform: rotate(0deg); }
+      25%  { transform: rotate(-8deg); }
+      50%  { transform: rotate(8deg); }
+      75%  { transform: rotate(-4deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.85; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Normal game view ── -->
+  <div id="game-view">
+    <h2 id="game-title">Sundling-appen</h2>
+    <div class="card">
+      <h1>Välj ett nummer mellan 1 och&nbsp;10</h1>
+      <div class="input-row">
+        <input type="text" id="guess" placeholder="Ditt svar…" autocomplete="off" />
+        <button onclick="checkGuess()">Gissa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Jail view ── -->
+  <div id="jail-view">
+    <!-- SVG: stone-framed barred window -->
+    <p class="jail-text">Du är i fängelset i en dag.</p>
+
+    <div class="jail-window-wrap" id="jail-window">
+      <svg width="280" height="320" viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Stone wall background -->
+        <rect width="280" height="320" fill="#1c1917"/>
+        <!-- Stone blocks -->
+        <g fill="none" stroke="#292524" stroke-width="1.5">
+          <!-- Row 1 -->
+          <rect x="0"   y="0"   width="70"  height="40" fill="#27211e"/>
+          <rect x="70"  y="0"   width="80"  height="40" fill="#231f1c"/>
+          <rect x="150" y="0"   width="70"  height="40" fill="#272120"/>
+          <rect x="220" y="0"   width="60"  height="40" fill="#251f1d"/>
+          <!-- Row 2 -->
+          <rect x="0"   y="40"  width="50"  height="40" fill="#251f1d"/>
+          <rect x="50"  y="40"  width="90"  height="40" fill="#272120"/>
+          <rect x="140" y="40"  width="75"  height="40" fill="#231f1c"/>
+          <rect x="215" y="40"  width="65"  height="40" fill="#27211e"/>
+          <!-- Row 3 (top of window) -->
+          <rect x="0"   y="80"  width="30"  height="40" fill="#27211e"/>
+          <rect x="30"  y="80"  width="30"  height="40" fill="#231f1c"/>
+          <!-- window gap 60–220 -->
+          <rect x="220" y="80"  width="30"  height="40" fill="#251f1d"/>
+          <rect x="250" y="80"  width="30"  height="40" fill="#272120"/>
+          <!-- Rows 4-6 (sides of window) -->
+          <rect x="0"   y="120" width="60"  height="40" fill="#231f1c"/>
+          <rect x="220" y="120" width="60"  height="40" fill="#27211e"/>
+          <rect x="0"   y="160" width="60"  height="40" fill="#272120"/>
+          <rect x="220" y="160" width="60"  height="40" fill="#251f1d"/>
+          <rect x="0"   y="200" width="60"  height="40" fill="#27211e"/>
+          <rect x="220" y="200" width="60"  height="40" fill="#231f1c"/>
+          <!-- Row bottom of window -->
+          <rect x="0"   y="240" width="30"  height="40" fill="#251f1d"/>
+          <rect x="30"  y="240" width="30"  height="40" fill="#272120"/>
+          <rect x="220" y="240" width="40"  height="40" fill="#27211e"/>
+          <rect x="260" y="240" width="20"  height="40" fill="#231f1c"/>
+          <!-- Bottom rows -->
+          <rect x="0"   y="280" width="70"  height="40" fill="#272120"/>
+          <rect x="70"  y="280" width="80"  height="40" fill="#27211e"/>
+          <rect x="150" y="280" width="65"  height="40" fill="#231f1c"/>
+          <rect x="215" y="280" width="65"  height="40" fill="#251f1d"/>
+        </g>
+
+        <!-- Window opening: night sky -->
+        <rect x="60" y="80" width="160" height="160" fill="#0a0f1e"/>
+
+        <!-- Stars -->
+        <g fill="#e2e8f0" opacity="0.8">
+          <circle cx="80"  cy="95"  r="1"/>
+          <circle cx="110" cy="105" r="1.2"/>
+          <circle cx="145" cy="88"  r="0.8"/>
+          <circle cx="175" cy="100" r="1"/>
+          <circle cx="200" cy="92"  r="1.3"/>
+          <circle cx="93"  cy="120" r="0.7"/>
+          <circle cx="185" cy="115" r="0.9"/>
+          <circle cx="160" cy="130" r="0.6"/>
+          <circle cx="75"  cy="145" r="1.1"/>
+          <circle cx="205" cy="150" r="0.8"/>
+        </g>
+
+        <!-- Moon -->
+        <circle cx="170" cy="130" r="22" fill="#fef3c7" opacity="0.92"/>
+        <circle cx="180" cy="122" r="18" fill="#0a0f1e"/>
+
+        <!-- Moon glow -->
+        <circle cx="170" cy="130" r="22" fill="none" stroke="#fef3c7" stroke-width="4" opacity="0.2"/>
+
+        <!-- Window frame -->
+        <rect x="56" y="76" width="168" height="168" fill="none" stroke="#44403c" stroke-width="8" rx="2"/>
+
+        <!-- Bars (vertical) -->
+        <g fill="#3d3228" stroke="#2c231a" stroke-width="1">
+          <rect x="88"  y="76" width="12" height="168"/>
+          <rect x="122" y="76" width="12" height="168"/>
+          <rect x="156" y="76" width="12" height="168"/>
+          <rect x="190" y="76" width="12" height="168"/>
+        </g>
+
+        <!-- Horizontal bar -->
+        <rect x="56" y="156" width="168" height="10" fill="#3d3228" stroke="#2c231a" stroke-width="1"/>
+
+        <!-- Bar highlights (3D feel) -->
+        <g fill="#5c4a38" opacity="0.6">
+          <rect x="88"  y="76" width="3" height="168"/>
+          <rect x="122" y="76" width="3" height="168"/>
+          <rect x="156" y="76" width="3" height="168"/>
+          <rect x="190" y="76" width="3" height="168"/>
+        </g>
+
+        <!-- Moonlight glow on floor -->
+        <ellipse cx="140" cy="255" rx="50" ry="10" fill="#fef3c7" opacity="0.06" style="animation: flicker 3s ease-in-out infinite"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- Draggable countdown box (fixed, positioned by JS) -->
+  <div class="countdown-box" id="countdown-box">
+    <div class="countdown-label">Frigiven om</div>
+    <div id="countdown">--:--:--</div>
+  </div>
+
+  <!-- Nail file hidden under countdown box, revealed when box is moved -->
+  <div id="nail-file" title="En nagelfil...">
+    <svg width="130" height="32" viewBox="0 0 130 32" xmlns="http://www.w3.org/2000/svg">
+      <!-- Handle -->
+      <rect x="0" y="7" width="34" height="18" rx="5" fill="#8b5e3c"/>
+      <!-- Handle grain lines -->
+      <g stroke="#6b4323" stroke-width="0.7" opacity="0.55">
+        <line x1="9"  y1="9"  x2="9"  y2="23"/>
+        <line x1="16" y1="9"  x2="16" y2="23"/>
+        <line x1="23" y1="9"  x2="23" y2="23"/>
+      </g>
+      <!-- File body -->
+      <rect x="32" y="10" width="92" height="12" rx="3" fill="#c9a96e"/>
+      <!-- Diagonal texture -->
+      <g stroke="#a07840" stroke-width="0.9" opacity="0.65">
+        <line x1="40"  y1="10" x2="33"  y2="22"/>
+        <line x1="49"  y1="10" x2="42"  y2="22"/>
+        <line x1="58"  y1="10" x2="51"  y2="22"/>
+        <line x1="67"  y1="10" x2="60"  y2="22"/>
+        <line x1="76"  y1="10" x2="69"  y2="22"/>
+        <line x1="85"  y1="10" x2="78"  y2="22"/>
+        <line x1="94"  y1="10" x2="87"  y2="22"/>
+        <line x1="103" y1="10" x2="96"  y2="22"/>
+        <line x1="112" y1="10" x2="105" y2="22"/>
+        <line x1="121" y1="11" x2="114" y2="22"/>
+      </g>
+      <!-- Tip -->
+      <polygon points="124,13 130,16 124,19" fill="#b8954a"/>
+    </svg>
+  </div>
+
+  <!-- Shown after nail-file escape -->
+  <div id="fly-btn-wrap">
+    <button id="fly-btn" onclick="fly()">🕊️ Fly!</button>
+  </div>
+
+  <!-- Hidden YT player for "då vann jag" audio -->
+  <div style="position:fixed;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;">
+    <div id="yt-player"></div>
+  </div>
+
+  <!-- ── Modal ── -->
+  <div id="modal-overlay">
+    <div class="modal">
+      <div id="modal-body"></div>
+      <button id="retry-btn" onclick="closeModal()">Pröva igen</button>
+    </div>
+  </div>
+
+  <script>
+    const ytAudio  = null; // replaced by YT IFrame API below
+    const jailView  = document.getElementById('jail-view');
+    const input     = document.getElementById('guess');
+    const overlay   = document.getElementById('modal-overlay');
+    const modalBody = document.getElementById('modal-body');
+    const retryBtn  = document.getElementById('retry-btn');
+
+    // ── Cookie / storage helpers ──
+    function setJailCookie() {
+      const midnight = new Date();
+      midnight.setHours(24, 0, 0, 0);
+      document.cookie = `jailed=1; expires=${midnight.toUTCString()}; path=/`;
+      localStorage.setItem('jailed_until', midnight.getTime());
+    }
+
+    function clearJailCookie() {
+      document.cookie = 'jailed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      localStorage.removeItem('jailed_until');
+    }
+
+    function isJailed() {
+      if (document.cookie.split(';').some(c => c.trim().startsWith('jailed=1'))) return true;
+      const until = localStorage.getItem('jailed_until');
+      return until && Date.now() < parseInt(until, 10);
+    }
+
+    // ── Countdown ──
+    function updateCountdown() {
+      const now      = new Date();
+      const midnight = new Date();
+      midnight.setHours(24, 0, 0, 0);
+      const diff = midnight - now;
+
+      if (diff <= 0) {
+        clearJailCookie();
+        location.reload();
+        return;
+      }
+
+      const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+      const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+      document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+    }
+
+    // ── Page init ──
+    if (isJailed()) {
+      gameView.style.display = 'none';
+      jailView.classList.add('visible');
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      initJailDraggables();
+    } else {
+      input.addEventListener('keydown', e => { if (e.key === 'Enter') checkGuess(); });
+    }
+
+    // ── Game logic ──
+    function checkGuess() {
+      const raw = input.value.trim();
+
+      if (raw === 'Sundling') {
+        showModal('🏆', 'Grattis, du vann!', 'secret');
+        return;
+      }
+
+      const num = Number(raw);
+      if (raw !== '' && Number.isInteger(num) && num >= 1 && num <= 10) {
+        showModal('😏', 'då vann jag', 'lose');
+        return;
+      }
+
+      setJailCookie();
+      showPoliceModal();
+    }
+
+    function showModal(icon, message, type) {
+      const modal = document.querySelector('.modal');
+      modalBody.innerHTML = `
+        <div class="modal-icon">${icon}</div>
+        <div class="modal-title ${type}">${message}</div>
+      `;
+      retryBtn.style.display = '';
+      modal.classList.remove('golden', 'olive');
+      if (type === 'secret') {
+        modal.classList.add('golden');
+        startConfetti('rect');
+      } else if (type === 'lose') {
+        modal.classList.add('olive');
+        startConfetti('haha');
+        playYTAudio();
+      }
+      overlay.classList.add('open');
+    }
+
+    function showPoliceModal() {
+      modalBody.innerHTML = `
+        <div class="speech-bubble">Olaga fel!</div>
+        <div class="officer">👮</div>
+        <p class="jail-sentence">
+          Du skrev fel och är i fängelset.
+          <button class="escape-link" onclick="goToJail()">Försök rymma</button>
+          så får du se vad som händer...
+        </p>
+      `;
+      retryBtn.style.display = 'none';
+      overlay.classList.add('open');
+    }
+
+    function goToJail() {
+      overlay.classList.remove('open');
+      gameView.style.display = 'none';
+      jailView.classList.add('visible');
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      initJailDraggables();
+    }
+
+    // ── Jail draggables ──
+    let countdownMoved = false;
+
+    function initJailDraggables() {
+      const box      = document.getElementById('countdown-box');
+      const nail     = document.getElementById('nail-file');
+      const jailWin  = document.getElementById('jail-window');
+
+      // Position after first paint so offsetWidth is known
+      requestAnimationFrame(() => {
+        const vh   = window.innerHeight;
+        const bH   = box.offsetHeight || 90;
+
+        // CSS handles horizontal centering; just set vertical position
+        box.style.top     = (vh * 0.82) + 'px';
+        box.style.display = 'block';
+
+        // Centre nail file using calc so it matches exactly
+        nail.style.left = 'calc(50% - 65px)';
+        nail.style.top  = (vh * 0.82 + (bH - 32) / 2) + 'px';
+      });
+
+      makeDraggable(box, () => {
+        if (!countdownMoved) {
+          countdownMoved = true;
+          nail.style.display = 'block';
+        }
+      }, null);
+
+      makeDraggable(nail, null, () => {
+        const nRect = nail.getBoundingClientRect();
+        const jRect = jailWin.getBoundingClientRect();
+        const hits  = !(nRect.right  < jRect.left  ||
+                        nRect.left   > jRect.right  ||
+                        nRect.bottom < jRect.top    ||
+                        nRect.top    > jRect.bottom);
+        if (hits) triggerEscape();
+      });
+    }
+
+    function makeDraggable(el, onMove, onDrop) {
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        const x0   = e.clientX;
+        const y0   = e.clientY;
+        const rect = el.getBoundingClientRect();
+        const l0   = rect.left;
+        const t0   = rect.top;
+        // Switch from any CSS centering to explicit pixels before dragging
+        el.style.transform = 'none';
+        el.style.left = l0 + 'px';
+        el.style.top  = t0 + 'px';
+        el.style.cursor = 'grabbing';
+        el.style.zIndex = 200;
+
+        function move(e) {
+          el.style.left = (l0 + e.clientX - x0) + 'px';
+          el.style.top  = (t0 + e.clientY - y0) + 'px';
+          if (onMove) onMove();
+        }
+
+        function up() {
+          el.style.cursor = 'grab';
+          el.style.zIndex = el.id === 'nail-file' ? 49 : 50;
+          document.removeEventListener('mousemove', move);
+          document.removeEventListener('mouseup', up);
+          if (onDrop) onDrop();
+        }
+
+        document.addEventListener('mousemove', move);
+        document.addEventListener('mouseup', up);
+      });
+    }
+
+    function triggerEscape() {
+      clearJailCookie();
+      document.getElementById('nail-file').style.display      = 'none';
+      document.getElementById('countdown-box').style.display  = 'none';
+      document.getElementById('fly-btn-wrap').style.display   = 'block';
+    }
+
+    function fly() { location.reload(); }
+
+    // ── Confetti ──
+    let confettiCanvas = null, confettiCtx = null, confettiPieces = [], confettiAnim = null, confettiMode = 'rect';
+    const CONFETTI_COLORS = ['#FFD700','#FFA500','#FF6347','#FF69B4','#00CED1','#7B68EE','#ADFF2F','#FF4500','#FFE866','#DA70D6'];
+    const HAHA_COLORS     = ['#6b7c2d','#8fa832','#b5cc4a','#d4e860','#4a5a14','#c8e000','#a0b830','#e8ff80'];
+
+    function startConfetti(mode = 'rect') {
+      stopConfetti();
+      confettiMode = mode;
+      confettiCanvas = document.createElement('canvas');
+      confettiCanvas.id = 'confetti-canvas';
+      confettiCanvas.style.zIndex = mode === 'haha' ? '101' : '99';
+      document.body.appendChild(confettiCanvas);
+      confettiCtx = confettiCanvas.getContext('2d');
+      resizeConfetti();
+      window.addEventListener('resize', resizeConfetti);
+
+      const count = mode === 'haha' ? 60 : 180;
+      const colors = mode === 'haha' ? HAHA_COLORS : CONFETTI_COLORS;
+      for (let i = 0; i < count; i++) {
+        confettiPieces.push({
+          x:        Math.random() * window.innerWidth,
+          y:        Math.random() * -window.innerHeight,
+          color:    colors[Math.floor(Math.random() * colors.length)],
+          rot:      Math.random() * Math.PI * 2,
+          rotV:     (Math.random() - 0.5) * 0.14,
+          vx:       (Math.random() - 0.5) * 2.5,
+          vy:       Math.random() * 2.5 + 1.2,
+          // rect mode
+          w:        Math.random() * 12 + 6,
+          h:        Math.random() * 6  + 4,
+          // text mode
+          size:     Math.random() * 14 + 11,
+        });
+      }
+      drawConfetti();
+    }
+
+    function resizeConfetti() {
+      if (!confettiCanvas) return;
+      confettiCanvas.width  = window.innerWidth;
+      confettiCanvas.height = window.innerHeight;
+    }
+
+    function drawConfetti() {
+      confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      for (const p of confettiPieces) {
+        p.x += p.vx; p.y += p.vy; p.rot += p.rotV;
+        if (p.y > confettiCanvas.height + 40) {
+          p.y = -40;
+          p.x = Math.random() * confettiCanvas.width;
+        }
+        confettiCtx.save();
+        confettiCtx.translate(p.x, p.y);
+        confettiCtx.rotate(p.rot);
+        confettiCtx.fillStyle = p.color;
+        if (confettiMode === 'haha') {
+          confettiCtx.shadowBlur = 0;
+          confettiCtx.shadowColor = 'transparent';
+          confettiCtx.font = `bold ${p.size}px 'Comic Sans MS', cursive`;
+          confettiCtx.fillText('haha', -20, 0);
+        } else {
+          confettiCtx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        }
+        confettiCtx.restore();
+      }
+      confettiAnim = requestAnimationFrame(drawConfetti);
+    }
+
+    function stopConfetti() {
+      if (confettiAnim) { cancelAnimationFrame(confettiAnim); confettiAnim = null; }
+      if (confettiCanvas) { window.removeEventListener('resize', resizeConfetti); confettiCanvas.remove(); confettiCanvas = null; }
+      confettiPieces = [];
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.querySelector('.modal').classList.remove('golden', 'olive');
+      stopConfetti();
+      stopYTAudio();
+      input.value = '';
+      input.focus();
+    }
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay && retryBtn.style.display !== 'none') closeModal();
+    });
+
+    // ── YouTube IFrame API ──
+    let ytPlayer = null, ytReady = false;
+
+    window.onYouTubeIframeAPIReady = function() {
+      ytPlayer = new YT.Player('yt-player', {
+        videoId: 'BqvOvncWbXw',
+        playerVars: { autoplay: 0, loop: 1, playlist: 'BqvOvncWbXw', controls: 0, fs: 0 },
+        events: {
+          onReady: () => { ytReady = true; }
+        }
+      });
+    };
+
+    function playYTAudio() {
+      if (ytReady && ytPlayer) {
+        ytPlayer.seekTo(0);
+        ytPlayer.playVideo();
+      }
+    }
+
+    function stopYTAudio() {
+      if (ytReady && ytPlayer) {
+        ytPlayer.pauseVideo();
+        ytPlayer.seekTo(0);
+      }
+    }
+  </script>
+</body>
+</html>
