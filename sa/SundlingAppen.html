@@ -257,6 +257,76 @@
       filter: grayscale(1) contrast(1.45);
     }
 
+    body.bettan {
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='120'%3E%3Crect width='100%25' height='100%25' fill='none'/%3E%3Ctext x='12' y='44' font-family='Comic Sans MS, Segoe UI, sans-serif' font-size='26' fill='%23ff5fa2' fill-opacity='0.26'%3EI %F0%9F%A9%B7 kpop%3C/text%3E%3Ctext x='64' y='92' font-family='Comic Sans MS, Segoe UI, sans-serif' font-size='24' fill='%23ff7db8' fill-opacity='0.22'%3EI %F0%9F%A9%B7 kpop%3C/text%3E%3C/svg%3E"),
+        linear-gradient(135deg, #ffedf7 0%, #ffd2e8 35%, #ffb6da 70%, #ff9ccc 100%);
+      background-size: 320px 120px, 100% 100%;
+    }
+
+    body.bettan .card,
+    body.bettan .modal,
+    body.bettan .countdown-box,
+    body.bettan .modal.golden,
+    body.bettan .modal.olive {
+      background:
+        radial-gradient(circle at 10px 10px, rgba(255,255,255,0.45) 1.8px, transparent 2px),
+        linear-gradient(145deg, #ffe6f3, #ffd0e9, #ffc0e2);
+      background-size: 26px 26px, 100% 100%;
+      border-color: #ff78b9 !important;
+      box-shadow: 0 12px 28px rgba(228, 85, 156, 0.35), inset 0 0 0 1px rgba(255,255,255,0.35);
+    }
+
+    body.bettan h1,
+    body.bettan #game-title,
+    body.bettan .modal-title,
+    body.bettan .jail-text,
+    body.bettan .countdown-label,
+    body.bettan #countdown,
+    body.bettan .jail-sentence,
+    body.bettan .speech-bubble {
+      color: #c21874 !important;
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+    }
+
+    body.bettan #game-title {
+      background: linear-gradient(90deg, #ff2f92, #ff79be, #ff45a5, #ff98cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: none;
+      transform: rotate(0deg);
+    }
+
+    body.bettan input[type="text"] {
+      background: rgba(255, 240, 248, 0.95);
+      color: #c21874;
+      border-color: #ff78b9;
+    }
+
+    body.bettan input[type="text"]::placeholder {
+      color: rgba(194,24,116,0.55);
+    }
+
+    body.bettan button,
+    body.bettan #retry-btn,
+    body.bettan #fly-btn {
+      background: linear-gradient(135deg, #ff61ad, #ff8fc6, #ff4ea1);
+      color: #fff;
+      border-color: #ff3f97;
+      box-shadow: 0 4px 16px rgba(228, 85, 156, 0.45);
+    }
+
+    body.bettan button:hover,
+    body.bettan #retry-btn:hover,
+    body.bettan #fly-btn:hover {
+      background: linear-gradient(135deg, #ff4ea1, #ff79be, #ff3f97);
+    }
+
+    body.bettan #jail-window svg {
+      filter: hue-rotate(315deg) saturate(1.2) brightness(1.05);
+    }
+
     .modal.golden {
       background: linear-gradient(145deg, #1c1400, #2e2000, #1c1400);
       border-color: #c8960c;
@@ -761,8 +831,8 @@
 
     // ── Game logic ──
     function setEasterTheme(themeName) {
-      document.body.classList.remove('anaglyph', 'crochet', 'manga');
-      if (themeName === 'anaglyph' || themeName === 'crochet' || themeName === 'manga') {
+      document.body.classList.remove('anaglyph', 'crochet', 'manga', 'bettan');
+      if (themeName === 'anaglyph' || themeName === 'crochet' || themeName === 'manga' || themeName === 'bettan') {
         document.body.classList.add(themeName);
       }
     }
@@ -785,6 +855,12 @@
 
       if (rawLower === 'mira') {
         setEasterTheme('manga');
+        input.value = '';
+        return;
+      }
+
+      if (rawLower === 'bettan') {
+        setEasterTheme('bettan');
         input.value = '';
         return;
       }
