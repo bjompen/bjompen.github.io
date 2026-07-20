@@ -92,6 +92,171 @@
     button:hover  { background: #4f46e5; }
     button:active { transform: scale(0.97); }
 
+    body.anaglyph {
+      background: radial-gradient(circle at 50% 25%, #151515 0%, #050505 70%);
+    }
+
+    body.anaglyph .card,
+    body.anaglyph .modal,
+    body.anaglyph .countdown-box {
+      background: rgba(15, 15, 15, 0.88);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: -8px 0 24px rgba(255, 0, 60, 0.32), 8px 0 24px rgba(0, 229, 255, 0.32);
+    }
+
+    body.anaglyph h1,
+    body.anaglyph #game-title,
+    body.anaglyph .modal-title,
+    body.anaglyph .jail-text,
+    body.anaglyph .countdown-label,
+    body.anaglyph #countdown,
+    body.anaglyph .jail-sentence {
+      color: #f2f2f2 !important;
+      text-shadow: -2px 0 #ff2047, 2px 0 #00dfff;
+    }
+
+    body.anaglyph .speech-bubble {
+      box-shadow: -3px 0 0 #ff2047, 3px 0 0 #00dfff;
+    }
+
+    body.anaglyph #jail-window svg {
+      filter: grayscale(1) contrast(1.2) saturate(0.1);
+    }
+
+    body.crochet {
+      background:
+        radial-gradient(circle at 10px 10px, rgba(255,255,255,0.2) 2px, transparent 2.3px),
+        radial-gradient(circle at 30px 30px, rgba(96,70,50,0.1) 1.6px, transparent 2px),
+        linear-gradient(135deg, #ead8c8 0%, #dfc3aa 45%, #cfb297 100%);
+      background-size: 40px 40px, 40px 40px, 100% 100%;
+    }
+
+    body.crochet .card,
+    body.crochet .modal,
+    body.crochet .countdown-box {
+      background:
+        radial-gradient(circle at 8px 8px, rgba(255,255,255,0.23) 1.6px, transparent 2px),
+        radial-gradient(circle at 22px 22px, rgba(121,88,61,0.12) 1.2px, transparent 1.6px),
+        linear-gradient(150deg, #f2e2d1, #e7d2bb, #dbc3a8);
+      background-size: 28px 28px, 28px 28px, 100% 100%;
+      border-color: #b89674;
+      box-shadow: 0 12px 30px rgba(81, 56, 36, 0.28), inset 0 0 0 1px rgba(255,255,255,0.2);
+    }
+
+    body.crochet h1,
+    body.crochet #game-title,
+    body.crochet .modal-title,
+    body.crochet .jail-text,
+    body.crochet .countdown-label,
+    body.crochet #countdown,
+    body.crochet .jail-sentence {
+      color: #6d4a2f !important;
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+      letter-spacing: 0.01em;
+    }
+
+    body.crochet #game-title {
+      transform: rotate(0deg);
+      filter: none;
+      background: linear-gradient(90deg, #b86f4e, #8f6ab8, #5c8fb3, #b88a4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    body.crochet input[type="text"] {
+      background: rgba(255,255,255,0.62);
+      color: #6d4a2f;
+      border-color: #b89674;
+    }
+
+    body.crochet input[type="text"]::placeholder {
+      color: rgba(109,74,47,0.58);
+    }
+
+    body.crochet button,
+    body.crochet #retry-btn {
+      background: linear-gradient(135deg, #c28a64, #a77bc6);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(95, 62, 40, 0.35);
+    }
+
+    body.crochet button:hover,
+    body.crochet #retry-btn:hover {
+      background: linear-gradient(135deg, #b67f5b, #946bb4);
+    }
+
+    body.crochet #jail-window svg {
+      filter: sepia(0.35) saturate(0.85) brightness(1.04);
+    }
+
+    body.manga {
+      background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,0.9) 0 2px, transparent 2px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.8) 0 1.5px, transparent 1.5px),
+        repeating-linear-gradient(120deg, #111 0 2px, #1e1e1e 2px 10px),
+        linear-gradient(160deg, #000 0%, #202020 100%);
+      background-size: 24px 24px, 18px 18px, 100% 100%, 100% 100%;
+    }
+
+    body.manga .card,
+    body.manga .modal,
+    body.manga .countdown-box {
+      background:
+        radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1.2px) 0 0 / 6px 6px,
+        #fff;
+      border: 3px solid #000;
+      box-shadow: 8px 8px 0 #000;
+      color: #000;
+    }
+
+    body.manga h1,
+    body.manga #game-title,
+    body.manga .modal-title,
+    body.manga .jail-text,
+    body.manga .countdown-label,
+    body.manga #countdown,
+    body.manga .jail-sentence {
+      color: #000 !important;
+      text-shadow: none;
+      letter-spacing: 0.02em;
+    }
+
+    body.manga #game-title {
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      transform: rotate(0deg);
+      filter: none;
+      background: none;
+      -webkit-text-fill-color: #000;
+    }
+
+    body.manga input[type="text"] {
+      background: #fff;
+      color: #000;
+      border: 3px solid #000;
+    }
+
+    body.manga input[type="text"]::placeholder {
+      color: rgba(0,0,0,0.55);
+    }
+
+    body.manga button,
+    body.manga #retry-btn {
+      background: #fff;
+      color: #000;
+      border: 3px solid #000;
+      box-shadow: 4px 4px 0 #000;
+    }
+
+    body.manga button:hover,
+    body.manga #retry-btn:hover {
+      background: #f3f3f3;
+    }
+
+    body.manga #jail-window svg {
+      filter: grayscale(1) contrast(1.45);
+    }
+
     .modal.golden {
       background: linear-gradient(145deg, #1c1400, #2e2000, #1c1400);
       border-color: #c8960c;
@@ -595,10 +760,36 @@
     }
 
     // ── Game logic ──
+    function setEasterTheme(themeName) {
+      document.body.classList.remove('anaglyph', 'crochet', 'manga');
+      if (themeName === 'anaglyph' || themeName === 'crochet' || themeName === 'manga') {
+        document.body.classList.add(themeName);
+      }
+    }
+
     function checkGuess() {
       const raw = input.value.trim();
+      const rawLower = raw.toLowerCase();
 
-      if (raw === 'Sundling') {
+      if (rawLower === 'vide') {
+        setEasterTheme('anaglyph');
+        input.value = '';
+        return;
+      }
+
+      if (rawLower === 'frieda') {
+        setEasterTheme('crochet');
+        input.value = '';
+        return;
+      }
+
+      if (rawLower === 'mira') {
+        setEasterTheme('manga');
+        input.value = '';
+        return;
+      }
+
+      if (rawLower === 'sundling') {
         showModal('🏆', 'Grattis, du vann!', 'secret');
         return;
       }
