@@ -1,5 +1,6 @@
 - Blogposts
 
+  - [18 Nov 2026 - azclips - The next generation az cli](posts/azclips.md "azclips - The next generation az cli")
   - [01 Oct 2026 - On regex, and the less helpful helpfullness of PowerShell](posts/doublematch.md "On regex, and the less helpful helpfullness of PowerShell")
   - [05 May 2026 - AI. A Continuation](posts/AI.A.Continuation.md "AI. A Continuation")
   - [20 Aug 2025 - Another year, another hype](posts/anotherYearAnotherHype.md "Another year, another hype")
